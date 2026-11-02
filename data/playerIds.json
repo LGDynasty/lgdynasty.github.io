@@ -735,7 +735,7 @@
   "sportRadarId": "b488b3e2-3c1d-44c9-aa3e-5f27a6f0a099",
   "name": "Morgan, Zach",
   "fantraxId": "0657p",
-  "team": "SF",
+  "team": "BAL",
   "position": "C"
  },
  "0657s": {
@@ -1300,7 +1300,7 @@
   "sportRadarId": "1944cfd4-9767-45bf-bb80-954a3ef08f14",
   "name": "Schultz, Paxton",
   "fantraxId": "051b2",
-  "team": "WSH",
+  "team": "CIN",
   "position": "RP"
  },
  "051b4": {
@@ -1394,7 +1394,7 @@
   "sportRadarId": "bac78171-d751-4663-8a2c-381acc728165",
   "name": "Abner, Philip",
   "fantraxId": "05uab",
-  "team": "NYM",
+  "team": "BAL",
   "position": "RP"
  },
  "077b8": {
@@ -11466,7 +11466,7 @@
   "sportRadarId": "d2f40d23-5921-4392-95f0-9305bbc9cde3",
   "name": "Weston, Cameron",
   "fantraxId": "066b1",
-  "team": "NYM",
+  "team": "MIA",
   "position": "SP"
  },
  "06zfo": {
@@ -13825,7 +13825,7 @@
   "sportRadarId": "b7c4a4b3-5a90-4e52-9863-7d40446efa52",
   "name": "Davitt, Duncan",
   "fantraxId": "066f4",
-  "team": "SF",
+  "team": "CIN",
   "position": "SP"
  },
  "066dl": {
@@ -22134,7 +22134,7 @@
   "sportRadarId": "5cc840a3-6662-47d9-aeb7-d348a494afaa",
   "name": "Pauley, Graham",
   "fantraxId": "066lr",
-  "team": "MIA",
+  "team": "CHW",
   "position": "3B"
  },
  "05y31": {
@@ -24422,7 +24422,7 @@
   "sportRadarId": "082e9fc7-087e-4e1b-95f6-80822f711a6b",
   "name": "Hampton, Chase",
   "fantraxId": "05yh3",
-  "team": "STL",
+  "team": "BAL",
   "position": "SP"
  },
  "05yfn": {
@@ -25642,7 +25642,7 @@
   "sportRadarId": "35d2d2c8-a117-445b-a693-688697b2643c",
   "name": "Ohl, Pierson",
   "fantraxId": "05ylk",
-  "team": "COL",
+  "team": "NYM",
   "position": "SP"
  },
  "04ei8": {
@@ -31276,7 +31276,7 @@
   "sportRadarId": "a845cf84-1aa5-43f1-a25d-21c98bbfde3a",
   "name": "Mattson, Isaac",
   "fantraxId": "04eqw",
-  "team": "PIT",
+  "team": "SEA",
   "position": "RP"
  },
  "06ky9": {
@@ -33849,7 +33849,7 @@
   "sportRadarId": "3dafa2d3-e47c-4bf2-aff9-4efd6853e93d",
   "name": "Parker, Mitchell",
   "fantraxId": "05jqy",
-  "team": "WSH",
+  "team": "ATL",
   "position": "RP"
  },
  "031gh": {
@@ -35454,7 +35454,7 @@
   "sportRadarId": "c3f3ddb5-8434-42a3-bc07-f33392086c10",
   "name": "White, Josh",
   "fantraxId": "05zyb",
-  "team": "MIA",
+  "team": "BAL",
   "position": "SP"
  },
  "05zyc": {
@@ -49853,7 +49853,7 @@
   "sportRadarId": "2d371f35-e3f8-45f0-903c-8021b3662924",
   "name": "Butto, Jose",
   "fantraxId": "05oz7",
-  "team": "SF",
+  "team": "TEX",
   "position": "RP"
  },
  "04n96": {
@@ -59285,7 +59285,7 @@
   "sportRadarId": "64c909ff-17cd-4aaf-9c56-681ed492363b",
   "name": "Anderson, Jack",
   "fantraxId": "060uk",
-  "team": "MIN",
+  "team": "NYM",
   "position": "RP"
  },
  "060w0": {
