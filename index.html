@@ -32,7 +32,7 @@ summary{cursor:pointer}
 <script>
 const D = {};
 let tab = "standings", team = null, names = {}, teams = {};
-const TABS = [["standings","Standings"],["matchups","Matchups"],["rosters","Rosters"]];
+const TABS = [["standings","Standings"],["matchups","Matchups"],["rosters","Rosters"],["picks","Picks"]];
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 
 async function load(n){
@@ -99,6 +99,25 @@ const V = {
       ${missing ? `<p class="muted text-xs mt-2">${missing} player names not resolved yet (showing Fantrax IDs).</p>`:""}`;
   }
 };
+V.picks = function(){
+  if(!D.picks || !D.picks.length) return empty("No draft pick data yet.");
+  const ids = Object.keys(D.teamNames).sort((a,b)=>D.teamNames[a].localeCompare(D.teamNames[b]));
+  if(!team || !D.teamNames[team]) team = ids[0];
+  const sel = ids.map(i=>`<option value="${i}" ${i===team?"selected":""}>${esc(D.teamNames[i])}</option>`).join("");
+  const mine = D.picks.filter(p=>p.currentOwnerTeamId===team).sort((a,b)=>a.year-b.year||a.round-b.round);
+  const years = [...new Set(mine.map(p=>p.year))];
+  const ord = n => n + (["th","st","nd","rd"][(n%100>10&&n%100<14)?0:Math.min(n%10,4)%4] || "th");
+  const body = years.map(y => `<div class="px-4 py-2 text-xs muted row">${y}</div>` +
+    mine.filter(p=>p.year===y).map(p => {
+      const via = p.originalOwnerTeamId !== team;
+      return `<div class="px-4 py-2 flex justify-between items-center row"><span>${ord(p.round)} round</span>${via ? `<span class="pill">via ${esc(teamName(p.originalOwnerTeamId))}</span>` : `<span class="muted text-xs">own</span>`}</div>`;
+    }).join("")).join("");
+  const acquired = mine.filter(p=>p.originalOwnerTeamId!==team).length;
+  const traded = D.picks.filter(p=>p.originalOwnerTeamId===team && p.currentOwnerTeamId!==team).length;
+  return `<select id="sel" class="card w-full p-3 mb-3" style="color:var(--text)">${sel}</select>
+    <p class="muted text-sm mb-2">${mine.length} picks · ${acquired} acquired · ${traded} traded away</p>
+    <div class="card overflow-hidden">${body || `<div class="p-4 muted text-sm">No picks.</div>`}</div>`;
+};
 function render(){
   document.getElementById("tabs").innerHTML = TABS.map(([k,l])=>`<button class="tab ${k===tab?"on":""}" data-k="${k}">${l}</button>`).join("");
   document.getElementById("view").innerHTML = V[tab]();
@@ -106,7 +125,8 @@ function render(){
   const s = document.getElementById("sel"); if(s) s.onchange = e => { team=e.target.value; render(); };
 }
 (async () => {
-  const [st, mu, ro, li, meta] = await Promise.all(["standings","matchups","rosters","playerIds","meta"].map(load));
+  const [st, mu, ro, li, meta, dp] = await Promise.all(["standings","matchups","rosters","playerIds","meta","draftPicks"].map(load));
+  D.picks = dp && dp.futureDraftPicks;
   D.standings = Array.isArray(st) ? st : (st && st.standings) || null;
   D.matchups = mu; D.rosters = ro;
   D.teamNames = {};
