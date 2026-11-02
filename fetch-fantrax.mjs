@@ -14,13 +14,14 @@ const ENDPOINTS = {
   rosters: "getTeamRosters",    // current period by default
   draftPicks: "getDraftPicks",
   draftResults: "getDraftResults",
+  playerIds: "getPlayerIds?sport=MLB", // maps Fantrax player IDs to names
 };
 
 await mkdir("data", { recursive: true });
 const meta = { updatedAt: new Date().toISOString(), leagueId: LEAGUE_ID, ok: {}, errors: {} };
 
 for (const [name, path] of Object.entries(ENDPOINTS)) {
-  const url = `${BASE}/${path}?leagueId=${LEAGUE_ID}`;
+  const url = path.includes("?") ? `${BASE}/${path}` : `${BASE}/${path}?leagueId=${LEAGUE_ID}`;
   try {
     const res = await fetch(url, { headers: HEADERS });
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
