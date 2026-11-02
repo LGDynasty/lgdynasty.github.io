@@ -31,7 +31,7 @@ summary{cursor:pointer}
 </div>
 <script>
 const D = {};
-let tab = "standings", team = null, names = {};
+let tab = "standings", team = null, names = {}, teams = {};
 const TABS = [["standings","Standings"],["matchups","Matchups"],["rosters","Rosters"]];
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 
@@ -44,8 +44,12 @@ function buildNames(src){
   const add = (id,p) => { if(!id || p==null) return;
     if(typeof p==="string"){ m[id]=p; return; }
     if(typeof p!=="object") return;
-    const n = p.name || p.playerName || p.fullName || `${p.firstName||""} ${p.lastName||""}`.trim();
-    if(n) m[id] = n; };
+    let n = p.name || p.playerName || p.fullName || `${p.firstName||""} ${p.lastName||""}`.trim();
+    if(!n) return;
+    const i = n.indexOf(", ");
+    if(i > 0) n = n.slice(i+2) + " " + n.slice(0,i);
+    m[id] = n;
+    if(p.team && p.team !== "(N/A)") teams[id] = p.team; };
   if(!src) return m;
   const pi = Array.isArray(src) ? src : (src.players || src.playerIds || src);
   if(Array.isArray(pi)) pi.forEach(p => add(p && (p.fantraxId || p.id || p.playerId), p));
@@ -87,7 +91,7 @@ const V = {
       const list = items.filter(p=>p.status===k);
       if(!list.length) return "";
       return `<div class="px-4 py-2 text-xs muted row">${l} · ${list.length}</div>` + list.map(p =>
-        `<div class="px-4 py-2 flex justify-between row"><span>${esc(names[p.id] || p.id)}</span><span class="pill">${esc(p.position)}</span></div>`).join("");
+        `<div class="px-4 py-2 flex justify-between items-center row"><span>${esc(names[p.id] || p.id)}${teams[p.id] ? ` <span class="muted text-xs">${esc(teams[p.id])}</span>` : ""}</span><span class="pill">${esc(p.position)}</span></div>`).join("");
     }).join("");
     const missing = items.filter(p=>!names[p.id]).length;
     return `<select id="sel" class="card w-full p-3 mb-3" style="color:var(--text)">${sel}</select>
