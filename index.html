@@ -39,13 +39,17 @@ async function load(n){
   try { const r = await fetch(`data/${n}.json`, {cache:"no-cache"}); if(!r.ok) throw 0; return await r.json(); }
   catch(e){ return null; }
 }
-function buildNames(li){
-  const m = {}, pi = li && (li.playerInfo || li.players);
-  const add = (id,p) => { if(!id || !p || typeof p!=="object") return;
+function buildNames(src){
+  const m = {};
+  const add = (id,p) => { if(!id || p==null) return;
+    if(typeof p==="string"){ m[id]=p; return; }
+    if(typeof p!=="object") return;
     const n = p.name || p.playerName || p.fullName || `${p.firstName||""} ${p.lastName||""}`.trim();
     if(n) m[id] = n; };
-  if(Array.isArray(pi)) pi.forEach(p => add(p.id || p.playerId || p.fantraxId, p));
-  else if(pi && typeof pi==="object") Object.entries(pi).forEach(([k,p]) => add(p.id || p.playerId || k, p));
+  if(!src) return m;
+  const pi = Array.isArray(src) ? src : (src.players || src.playerIds || src);
+  if(Array.isArray(pi)) pi.forEach(p => add(p && (p.fantraxId || p.id || p.playerId), p));
+  else if(typeof pi==="object") Object.entries(pi).forEach(([k,p]) => add((p && (p.fantraxId || p.id || p.playerId)) || k, p));
   return m;
 }
 const teamName = id => (D.teamNames && D.teamNames[id]) || id;
@@ -98,7 +102,7 @@ function render(){
   const s = document.getElementById("sel"); if(s) s.onchange = e => { team=e.target.value; render(); };
 }
 (async () => {
-  const [st, mu, ro, li, meta] = await Promise.all(["standings","matchups","rosters","leagueInfo","meta"].map(load));
+  const [st, mu, ro, li, meta] = await Promise.all(["standings","matchups","rosters","playerIds","meta"].map(load));
   D.standings = Array.isArray(st) ? st : (st && st.standings) || null;
   D.matchups = mu; D.rosters = ro;
   D.teamNames = {};
