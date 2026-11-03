@@ -20658,7 +20658,7 @@
   "sportRadarId": "40a852d1-ab0a-4a24-bd67-50e3aa831a28",
   "name": "Rivera, Eduardo",
   "fantraxId": "05y40",
-  "team": "BOS",
+  "team": "STL",
   "position": "SP"
  },
  "066o2": {
@@ -30254,6 +30254,7 @@
   "position": "2B"
  },
  "056j7": {
+  "sportRadarId": "461251f4-7b0b-4eda-b35f-112aea360d0e",
   "name": "Gutierrez, Luis",
   "fantraxId": "056j7",
   "team": "SD",
@@ -38641,6 +38642,13 @@
   "name": "Lizarraga, Victor",
   "fantraxId": "05n5o",
   "team": "SD",
+  "position": "SP"
+ },
+ "07awt": {
+  "rotowireId": 21307,
+  "name": "Garcia, Juan",
+  "fantraxId": "07awt",
+  "team": "BOS",
   "position": "SP"
  },
  "05lt9": {
@@ -63400,7 +63408,7 @@
   "name": "De Paula, Josue",
   "fantraxId": "061zv",
   "team": "LAD",
-  "position": "DH"
+  "position": "LF"
  },
  "061zu": {
   "rotowireId": 19175,
