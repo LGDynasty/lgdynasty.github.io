@@ -1,0 +1,90 @@
+{
+ "label": "2026 final standings",
+ "note": "Replace this file with the preseason survey results when they're in.",
+ "teams": [
+  {
+   "rank": 1,
+   "teamId": "tmbonzbmmhspuuiy",
+   "name": "Portland Pioneers",
+   "record": "16-5-0"
+  },
+  {
+   "rank": 2,
+   "teamId": "exu2oyc7mhspuuiy",
+   "name": "Washington State Winners",
+   "record": "15-6-0"
+  },
+  {
+   "rank": 3,
+   "teamId": "as3cegazmhspuuix",
+   "name": "Fenton Melonheads",
+   "record": "14-7-0"
+  },
+  {
+   "rank": 4,
+   "teamId": "zaz8plfhmhspuuiy",
+   "name": "North Pole Natty Bohs",
+   "record": "13-8-0"
+  },
+  {
+   "rank": 5,
+   "teamId": "09956kirmhspuuix",
+   "name": "Seoul Sovereigns",
+   "record": "13-8-0"
+  },
+  {
+   "rank": 6,
+   "teamId": "agj706lvmhspuuix",
+   "name": "The Valley Giflords",
+   "record": "12-9-0"
+  },
+  {
+   "rank": 7,
+   "teamId": "oers8dk6mhspuuix",
+   "name": "Arizona Asphalt",
+   "record": "11-10-0"
+  },
+  {
+   "rank": 8,
+   "teamId": "n41h8me0mk8wumhx",
+   "name": "Arctic Real Survivors",
+   "record": "10-11-0"
+  },
+  {
+   "rank": 9,
+   "teamId": "beaf9cbomhspuuiy",
+   "name": "St. Petersburg Tropapologists",
+   "record": "10-11-0"
+  },
+  {
+   "rank": 10,
+   "teamId": "wg86uwvdmhspuuix",
+   "name": "Southwest Kansas Rabid Coyotes",
+   "record": "9-12-0"
+  },
+  {
+   "rank": 11,
+   "teamId": "fld7b6vqmhspuuiy",
+   "name": "Bronx Bandoleros",
+   "record": "8-13-0"
+  },
+  {
+   "rank": 12,
+   "teamId": "409tbv2xmhspuuix",
+   "name": "Cuyahoga County Black Panthers",
+   "record": "7-14-0"
+  },
+  {
+   "rank": 13,
+   "teamId": "l1dz6rrjmhspuuiy",
+   "name": "Joinville Friendly Capybaras",
+   "record": "6-15-0"
+  },
+  {
+   "rank": 14,
+   "teamId": "5x8tg8k4mlfsxfaa",
+   "name": "Sault Ste. Marie Locks",
+   "record": "3-18-0"
+  }
+ ]
+}
