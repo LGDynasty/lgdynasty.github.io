@@ -44,8 +44,8 @@ summary{cursor:pointer}
 const LOGO = `<svg viewBox="0 0 100 100" width="76" height="76" xmlns="http://www.w3.org/2000/svg" aria-label="League logo"><circle cx="50" cy="50" r="46" fill="#0c2340" stroke="#e8710a" stroke-width="5"/><circle cx="50" cy="50" r="39" fill="none" stroke="#fff" stroke-width="1.5"/><path d="M27 24H57V31H48V65H67V53H75V77H27V70H37V31H27Z" fill="#fff"/></svg>`;
 const CFG = { name: "Dynasty Hub", sub: "Official League Scorebook" };
 // ------------------------
-const D = {}; let names = {}, teams = {};
-const TABS = [["home","Home"],["standings","Standings"],["matchups","Matchups"],["teams","Teams"]];
+const D = {}; let names = {}, teams = {}, pos = {};
+const TABS = [["home","Home"],["standings","Standings"],["matchups","Matchups"],["teams","Teams"],["draft","Draft"]];
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const tn = id => D.tn[id] || id;
 const lnk = id => `<a class="lnk" href="#team-${id}">${esc(tn(id))}</a>`;
@@ -58,7 +58,7 @@ function buildNames(src){
   const add = (id,p) => { if(!id || !p || typeof p!=="object") return;
     let n = p.name || p.playerName || p.fullName; if(!n) return;
     const i = n.indexOf(", "); if(i>0) n = n.slice(i+2)+" "+n.slice(0,i);
-    m[id] = n; if(p.team && p.team!=="(N/A)") teams[id] = p.team; };
+    m[id] = n; if(p.position) pos[id] = p.position; if(p.team && p.team!=="(N/A)") teams[id] = p.team; };
   const pi = Array.isArray(src) ? src : (src.players || src);
   if(Array.isArray(pi)) pi.forEach(p => add(p&&(p.fantraxId||p.id), p));
   else Object.entries(pi).forEach(([k,p]) => add((p&&p.fantraxId)||k, p));
@@ -130,6 +130,18 @@ const V = {
       <div class="card mt-4 overflow-hidden"><div class="slab px-4 py-3">Draft picks</div>${picks || `<div class="p-4 text-sm">No picks.</div>`}</div>`;
   }
 };
+V.draft = function(){
+  const dp = D.draft && D.draft.draftPicks;
+  if(!dp || !dp.length) return empty("No draft results yet.");
+  const rounds = [...new Set(dp.map(p=>p.round))].sort((a,b)=>a-b);
+  let date = "";
+  const ds = D.draft.draftDate;
+  if(ds){ const [y,m,d] = ds.slice(0,10).split("-").map(Number); date = new Date(Date.UTC(y,m-1,d)).toLocaleDateString(undefined,{timeZone:"UTC",dateStyle:"long"}); }
+  return `<p class="lbl mb-3">${date ? "Draft held "+date+" · " : ""}${dp.length} picks</p>` + rounds.map(r =>
+    `<details class="card mb-3" ${r===rounds[0]?"open":""}><summary class="slab px-4 py-3">Round ${r}</summary>` +
+    dp.filter(p=>p.round===r).sort((a,b)=>a.pick-b.pick).map(p =>
+      `<div class="px-4 py-2 flex items-center gap-3 row text-sm"><span class="mono w-8" style="color:var(--muted)">${p.pick}</span><span class="flex-1">${esc(names[p.playerId]||p.playerId)}${pos[p.playerId]?` <span class="pill ml-1">${esc(pos[p.playerId])}</span>`:""}${teams[p.playerId]?` <span class="mono text-xs" style="color:var(--muted)">${esc(teams[p.playerId])}</span>`:""}</span><span class="text-xs text-right">${lnk(p.teamId)}</span></div>`).join("") + `</details>`).join("");
+};
 function route(){
   const h = location.hash.slice(1) || "home", isTeam = h.startsWith("team-");
   const cur = isTeam ? "teams" : (TABS.some(t=>t[0]===h) ? h : "home");
@@ -143,9 +155,9 @@ function route(){
   const fav = document.createElement("link"); fav.rel = "icon"; fav.href = "data:image/svg+xml," + encodeURIComponent(LOGO); document.head.appendChild(fav);
   document.getElementById("lname").textContent = CFG.name;
   document.getElementById("lsub").textContent = CFG.sub;
-  const [st,mu,ro,pi,meta,dp] = await Promise.all(["standings","matchups","rosters","playerIds","meta","draftPicks"].map(load));
+  const [st,mu,ro,pi,meta,dp,dr] = await Promise.all(["standings","matchups","rosters","playerIds","meta","draftPicks","draftResults"].map(load));
   D.standings = Array.isArray(st) ? st : (st && st.standings) || null;
-  D.matchups = mu; D.rosters = ro; D.picks = dp && dp.futureDraftPicks;
+  D.matchups = mu; D.rosters = ro; D.picks = dp && dp.futureDraftPicks; D.draft = dr;
   D.tn = {}; (D.standings||[]).forEach(t => D.tn[t.teamId] = t.teamName);
   names = buildNames(pi);
   document.getElementById("updated").textContent = meta && meta.updatedAt ? "Updated " + new Date(meta.updatedAt).toLocaleString() : "Waiting for first data update";
