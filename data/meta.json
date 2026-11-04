@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-04T20:27:46.800Z",
+ "updatedAt": "2026-11-04T20:44:21.423Z",
  "leagueId": "j3rxu8e0mhspuuim",
  "ok": {
   "leagueInfo": true,
@@ -9,9 +9,7 @@
   "draftPicks": true,
   "draftResults": true,
   "playerIds": true,
-  "sheet:Trades": true,
-  "sheet:2026Trades": true,
-  "sheet:2025Trades": true
+  "sheet:Trades": true
  },
  "errors": {}
 }
