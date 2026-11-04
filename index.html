@@ -1,823 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Dynasty Hub</title>
-  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
-  <style>
-    :root {
-      --bg: #edf1f5;
-      --panel: #f6f8fb;
-      --card: #ffffff;
-      --card-alt: #f2f6fb;
-      --ink: #1d2430;
-      --muted: #607084;
-      --line: #d9e0ea;
-      --navy: #12253d;
-      --navy-2: #0b1b2d;
-      --red: #d9272e;
-      --red-soft: #fbe7e9;
-      --green: #1a7c5b;
-      --green-soft: #e6f7f0;
-      --gold: #d9a53f;
-      --shadow: 0 10px 28px rgba(18, 31, 46, 0.08);
-    }
-
-    * { box-sizing: border-box; }
-
-    html { scroll-behavior: smooth; }
-
-    body {
-      margin: 0;
-      background: linear-gradient(180deg, #edf1f5 0%, #e5eaf0 100%);
-      color: var(--ink);
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      padding-top: env(safe-area-inset-top, 0px);
-      padding-bottom: env(safe-area-inset-bottom, 0px);
-    }
-
-    .topbar {
-      background: linear-gradient(180deg, var(--navy) 0%, var(--navy-2) 100%);
-      border-bottom: 3px solid var(--red);
-      box-shadow: 0 8px 18px rgba(11, 27, 45, 0.18);
-      margin: 0 0 20px;
-    }
-
-    .topbar-inner {
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 16px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 16px;
-    }
-
-    .brand {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      color: white;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      font-size: 0.78rem;
-      font-weight: 900;
-    }
-
-    .brand-mark {
-      width: 26px;
-      height: 26px;
-      border-radius: 8px;
-      background: linear-gradient(135deg, #ffd97c, #d9972a);
-      color: var(--navy-2);
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 900;
-      font-size: 0.8rem;
-    }
-
-    .status-box {
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: 10px;
-      padding: 10px 14px;
-      min-width: 220px;
-      color: rgba(255,255,255,0.92);
-    }
-
-    .status-label {
-      display: block;
-      font-size: 0.65rem;
-      font-weight: 800;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.64);
-    }
-
-    .status-value {
-      display: block;
-      margin-top: 4px;
-      font-size: 0.92rem;
-      font-weight: 700;
-    }
-
-    .page-shell {
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 0 16px 36px;
-    }
-
-    .page-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      margin-bottom: 18px;
-    }
-
-    .title-wrap {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    .league-pill {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      background: var(--red-soft);
-      color: var(--red);
-      border: 1px solid rgba(217, 39, 46, 0.12);
-      border-radius: 999px;
-      padding: 6px 10px;
-      font-size: 0.68rem;
-      font-weight: 900;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-
-    h1 {
-      margin: 0;
-      font-size: clamp(2rem, 4vw, 3rem);
-      font-weight: 900;
-      letter-spacing: -0.055em;
-      color: var(--navy-2);
-    }
-
-    .metrics-grid {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 14px;
-      margin-bottom: 18px;
-    }
-
-    .metric-card {
-      background: linear-gradient(180deg, #ffffff 0%, #f2f7fb 100%);
-      border: 1px solid var(--line);
-      border-radius: 14px;
-      box-shadow: var(--shadow);
-      padding: 14px 16px;
-    }
-
-    .metric-label {
-      display: block;
-      color: var(--muted);
-      font-size: 0.7rem;
-      font-weight: 800;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-
-    .metric-value {
-      display: block;
-      margin-top: 8px;
-      font-size: clamp(1.15rem, 2vw, 1.75rem);
-      font-weight: 900;
-      letter-spacing: -0.04em;
-      color: var(--navy);
-    }
-
-    .metric-note {
-      display: block;
-      margin-top: 4px;
-      color: var(--muted);
-      font-size: 0.72rem;
-      line-height: 1.3;
-    }
-
-    .tabs-wrap {
-      margin-bottom: 18px;
-    }
-
-    #tabs {
-      display: flex;
-      gap: 10px;
-      overflow-x: auto;
-      padding-bottom: 6px;
-    }
-
-    .tab {
-      appearance: none;
-      border: 1px solid var(--line);
-      background: var(--card);
-      color: var(--navy);
-      padding: 11px 16px;
-      border-radius: 999px;
-      font-size: 0.82rem;
-      font-weight: 800;
-      letter-spacing: 0.02em;
-      cursor: pointer;
-      white-space: nowrap;
-      transition: all 0.15s ease;
-    }
-
-    .tab:hover {
-      transform: translateY(-1px);
-    }
-
-    .tab.on {
-      background: linear-gradient(135deg, var(--navy) 0%, #203a66 100%);
-      border-color: transparent;
-      color: white;
-      box-shadow: 0 10px 18px rgba(18, 37, 61, 0.15);
-    }
-
-    .card {
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: 14px;
-      box-shadow: var(--shadow);
-    }
-
-    .table-card {
-      overflow: hidden;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-    }
-
-    th {
-      background: #f3f6fa;
-      color: var(--muted);
-      font-size: 0.72rem;
-      font-weight: 800;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      text-align: left;
-      padding: 12px 14px;
-    }
-
-    td {
-      padding: 13px 14px;
-      border-top: 1px solid var(--line);
-      font-size: 0.94rem;
-    }
-
-    .rank-cell {
-      width: 48px;
-      font-weight: 800;
-      color: var(--muted);
-    }
-
-    .team-cell {
-      font-weight: 800;
-      color: var(--navy);
-    }
-
-    .leader-row {
-      background: linear-gradient(180deg, rgba(217,39,46,0.04), rgba(217,39,46,0.01));
-    }
-
-    .leader-row .team-cell {
-      color: var(--red);
-    }
-
-    .muted { color: var(--muted); }
-
-    .pill {
-      display: inline-block;
-      padding: 4px 8px;
-      background: #f3f5f7;
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      font-size: 0.72rem;
-      font-weight: 700;
-      color: var(--muted);
-    }
-
-    .details-wrap {
-      display: grid;
-      gap: 14px;
-    }
-
-    .matchup-card {
-      padding: 16px;
-    }
-
-    .matchup-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 10px;
-      font-weight: 800;
-    }
-
-    .matchup-teams {
-      display: grid;
-      grid-template-columns: 1fr auto 1fr;
-      align-items: center;
-      gap: 16px;
-      padding: 8px 0;
-    }
-
-    .team-score {
-      font-size: 1.7rem;
-      font-weight: 900;
-      letter-spacing: -0.04em;
-    }
-
-    .team-score.winner { color: var(--navy); }
-    .team-score.loser { color: var(--muted); }
-
-    .team-name {
-      font-size: 0.95rem;
-      font-weight: 800;
-      color: var(--navy);
-    }
-
-    .matchup-divider {
-      color: var(--muted);
-      font-size: 0.72rem;
-      font-weight: 800;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-
-    details summary {
-      cursor: pointer;
-      list-style: none;
-      color: var(--red);
-      font-size: 0.72rem;
-      font-weight: 800;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      margin-top: 10px;
-    }
-
-    details summary::-webkit-details-marker {
-      display: none;
-    }
-
-    .category-list {
-      margin-top: 10px;
-      border-top: 1px solid var(--line);
-      padding-top: 10px;
-    }
-
-    .category-item {
-      display: grid;
-      grid-template-columns: 1fr auto 1fr;
-      gap: 8px;
-      align-items: center;
-      padding: 6px 0;
-      font-size: 0.83rem;
-    }
-
-    .category-name {
-      color: var(--muted);
-      font-size: 0.72rem;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      text-align: center;
-    }
-
-    .player-list {
-      padding: 0;
-    }
-
-    .player-row {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-      padding: 11px 14px;
-      border-top: 1px solid var(--line);
-    }
-
-    .player-name {
-      font-weight: 800;
-      color: var(--navy);
-    }
-
-    .team-chip {
-      color: var(--muted);
-      font-size: 0.76rem;
-      font-weight: 700;
-    }
-
-    select.card {
-      appearance: none;
-      border: 1px solid var(--line);
-      background: #fff;
-      color: var(--ink);
-      border-radius: 12px;
-      padding: 12px 44px 12px 14px;
-      font-weight: 800;
-      width: 100%;
-      margin-bottom: 12px;
-      background-image:
-        linear-gradient(45deg, transparent 50%, var(--muted) 50%),
-        linear-gradient(135deg, var(--muted) 50%, transparent 50%);
-      background-position:
-        calc(100% - 18px) calc(50% - 2px),
-        calc(100% - 13px) calc(50% - 2px);
-      background-size: 5px 5px, 5px 5px;
-      background-repeat: no-repeat;
-    }
-
-    @media (max-width: 900px) {
-      .metrics-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-    }
-
-    @media (max-width: 640px) {
-      .topbar-inner,
-      .page-header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .status-box {
-        width: 100%;
-      }
-
-      .metrics-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .matchup-teams {
-        grid-template-columns: 1fr;
-      }
-
-      .matchup-divider {
-        display: none;
-      }
-
-      th, td {
-        padding: 10px 10px;
-      }
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dynasty Hub</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Courier+Prime:wght@400;700&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<style>
+:root{--paper:#f3efe4;--card:#fbf8ef;--ink:#0c2340;--red:#e8710a;--line:#cfc6ad;--muted:#5d6577}
+body{background:var(--paper);color:var(--ink);font-family:"Libre Baskerville",Georgia,serif;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+background-image:repeating-linear-gradient(0deg,transparent 0 31px,rgba(31,42,68,.06) 31px 32px)}
+.slab{font-family:"Alfa Slab One",Georgia,serif;letter-spacing:.02em}
+.mono{font-family:"Courier Prime","Courier New",monospace}
+.lbl{font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.card{background:var(--card);border:1.5px solid var(--ink);border-radius:4px;box-shadow:3px 3px 0 var(--line)}
+.rule{border-top:3px double var(--ink)}
+.row{border-top:1px dashed var(--line)}
+.tab{padding:.45rem .8rem;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap;border-bottom:3px solid transparent;color:var(--muted)}
+.tab.on{color:var(--ink);border-bottom-color:var(--red);font-weight:700}
+.lnk{color:var(--ink);text-decoration:underline;text-decoration-color:var(--red);text-underline-offset:3px}
+.pill{font-size:.65rem;padding:.05rem .4rem;border:1px solid var(--ink);border-radius:2px;letter-spacing:.06em}
+.stamp{color:var(--red);border:2px solid var(--red);padding:.05rem .4rem;font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;transform:rotate(-3deg);display:inline-block}
+th{font-weight:400;text-align:left;padding:.5rem .6rem}
+td{padding:.55rem .6rem;font-size:.88rem}
+summary{cursor:pointer}
+</style>
 </head>
 <body>
-  <div class="topbar">
-    <div class="topbar-inner">
-      <div class="brand">
-        <span class="brand-mark">E</span>
-        Dynasty Hub
-      </div>
+<div class="max-w-3xl mx-auto px-4 pb-12">
+  <header class="mt-4 mb-3 py-5 px-4 text-center" style="background:var(--ink);color:#fff;border-bottom:5px solid var(--red);border-radius:4px">
+    <div id="emblem" class="flex justify-center"></div>
+    <h1 id="lname" class="slab text-3xl mt-2"></h1>
+    <p id="lsub" class="mt-1" style="font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:#f5b77a"></p>
+    <p id="updated" class="mono text-xs mt-2" style="color:#aab4c8">Loading…</p>
+  </header>
+  <nav id="tabs" class="flex justify-center overflow-x-auto"></nav>
+  <div class="rule mb-4"></div>
+  <main id="view"></main>
+</div>
+<script>
+// ---- Customize here ----
+const LOGO = `<svg viewBox="0 0 100 100" width="76" height="76" xmlns="http://www.w3.org/2000/svg" aria-label="League logo"><circle cx="50" cy="50" r="46" fill="#0c2340" stroke="#e8710a" stroke-width="5"/><circle cx="50" cy="50" r="39" fill="none" stroke="#fff" stroke-width="1.5"/><path d="M27 24H57V31H48V65H67V53H75V77H27V70H37V31H27Z" fill="#fff"/></svg>`;
+const CFG = { name: "Dynasty Hub", sub: "Official League Scorebook" };
+// ------------------------
+const D = {}; let names = {}, teams = {};
+const TABS = [["home","Home"],["standings","Standings"],["matchups","Matchups"],["teams","Teams"]];
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const tn = id => D.tn[id] || id;
+const lnk = id => `<a class="lnk" href="#team-${id}">${esc(tn(id))}</a>`;
+const ord = n => n + (["th","st","nd","rd"][(n%100>10&&n%100<14)?0:Math.min(n%10,4)%4] || "th");
+const empty = t => `<div class="card p-4 text-sm" style="color:var(--muted)">${t}</div>`;
+const load = async n => { try { const r = await fetch(`data/${n}.json`,{cache:"no-cache"}); if(!r.ok) throw 0; return await r.json(); } catch(e){ return null; } };
 
-      <div class="status-box">
-        <span class="status-label">Last updated</span>
-        <span id="updated" class="status-value">Loading…</span>
-      </div>
+function buildNames(src){
+  const m = {}; if(!src) return m;
+  const add = (id,p) => { if(!id || !p || typeof p!=="object") return;
+    let n = p.name || p.playerName || p.fullName; if(!n) return;
+    const i = n.indexOf(", "); if(i>0) n = n.slice(i+2)+" "+n.slice(0,i);
+    m[id] = n; if(p.team && p.team!=="(N/A)") teams[id] = p.team; };
+  const pi = Array.isArray(src) ? src : (src.players || src);
+  if(Array.isArray(pi)) pi.forEach(p => add(p&&(p.fantraxId||p.id), p));
+  else Object.entries(pi).forEach(([k,p]) => add((p&&p.fantraxId)||k, p));
+  return m;
+}
+const stat = (l,v,s) => `<div class="card p-4"><div class="lbl">${l}</div><div class="slab text-xl mt-1">${v}</div><div class="text-xs mt-1" style="color:var(--muted)">${s||""}</div></div>`;
+
+const V = {
+  home(){
+    const S = D.standings; if(!S) return empty("No data yet. Run the “Update Fantrax data” action.");
+    const lead = [...S].sort((a,b)=>a.rank-b.rank)[0];
+    const pf = [...S].sort((a,b)=>b.totalPointsFor-a.totalPointsFor)[0];
+    const ms = (D.matchups && D.matchups.matchups) || [];
+    let close = null; ms.forEach(m => { const d = Math.abs(m.away.score-m.home.score); if(!close || d<close.d) close = {m,d}; });
+    const firsts = {}; (D.picks||[]).filter(p=>p.round===1).forEach(p => firsts[p.currentOwnerTeamId] = (firsts[p.currentOwnerTeamId]||0)+1);
+    const hoard = Object.entries(firsts).sort((a,b)=>b[1]-a[1])[0];
+    const moved = (D.picks||[]).filter(p=>p.currentOwnerTeamId!==p.originalOwnerTeamId).length;
+    const sb = ms.map(m => { const aw = m.away.score>m.home.score;
+      return `<div class="row py-2 text-sm"><div class="flex justify-between ${aw?"font-bold":""}"><span>${lnk(m.away.teamId)}</span><span class="mono">${m.away.score}</span></div><div class="flex justify-between ${!aw?"font-bold":""}"><span>${lnk(m.home.teamId)}</span><span class="mono">${m.home.score}</span></div></div>`; }).join("");
+    return `<div class="grid grid-cols-2 gap-3">
+      ${stat("League leader", esc(lead.teamName), lead.points)}
+      ${stat("Points leader", esc(pf.teamName), Math.round(pf.totalPointsFor).toLocaleString()+" pts")}
+      ${hoard ? stat("First-round hoard", esc(tn(hoard[0])), hoard[1]+" first-round picks") : ""}
+      ${stat("Picks on the move", moved, "held by a team that didn’t originate them")}
     </div>
-  </div>
-
-  <div class="page-shell">
-    <header class="page-header">
-      <div class="title-wrap">
-        <span class="league-pill">League</span>
-        <h1>Dynasty Hub</h1>
-      </div>
-    </header>
-
-    <div id="metrics" class="metrics-grid"></div>
-
-    <nav class="tabs-wrap">
-      <div id="tabs"></div>
-    </nav>
-
-    <main id="view"></main>
-  </div>
-
-  <script>
-    const D = {};
-    let tab = "standings", team = null, names = {}, teams = {};
-    const TABS = [
-      ["standings", "Standings"],
-      ["matchups", "Matchups"],
-      ["rosters", "Rosters"],
-      ["picks", "Picks"]
-    ];
-
-    const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({
-      "&": "&amp;",
-      "<": "&lt;",
-      ">": "&gt;",
-      '"': "&quot;"
-    }[c]));
-
-    async function load(n) {
-      try {
-        const r = await fetch(`data/${n}.json`, { cache: "no-cache" });
-        if (!r.ok) throw 0;
-        return await r.json();
-      } catch (e) {
-        return null;
-      }
-    }
-
-    function buildNames(src) {
-      const m = {};
-      const add = (id, p) => {
-        if (!id || p == null) return;
-        if (typeof p === "string") { m[id] = p; return; }
-        if (typeof p !== "object") return;
-
-        let n = p.name || p.playerName || p.fullName || `${p.firstName || ""} ${p.lastName || ""}`.trim();
-        if (!n) return;
-
-        const i = n.indexOf(", ");
-        if (i > 0) n = n.slice(i + 2) + " " + n.slice(0, i);
-
-        m[id] = n;
-
-        if (p.team && p.team !== "(N/A)") teams[id] = p.team;
-      };
-
-      if (!src) return m;
-      const pi = Array.isArray(src) ? src : (src.players || src.playerIds || src);
-
-      if (Array.isArray(pi)) {
-        pi.forEach(p => add(p && (p.fantraxId || p.id || p.playerId), p));
-      } else if (typeof pi === "object") {
-        Object.entries(pi).forEach(([k, p]) => add((p && (p.fantraxId || p.id || p.playerId)) || k, p));
-      }
-
-      return m;
-    }
-
-    const teamName = id => (D.teamNames && D.teamNames[id]) || id;
-    const empty = t => `<div class="card" style="padding:18px 20px;color:var(--muted);font-weight:700;">${t}</div>`;
-
-    function renderMetrics() {
-      const standings = D.standings || [];
-      const leader = standings[0] || null;
-      const avg = standings.length
-        ? standings.reduce((total, t) => total + Number(t.pointsFor || 0), 0) / standings.length
-        : 0;
-      const topScore = standings.length
-        ? Math.max(...standings.map(t => Number(t.pointsFor || 0)))
-        : 0;
-
-      document.getElementById("metrics").innerHTML = `
-        <div class="metric-card">
-          <span class="metric-label">League Size</span>
-          <span class="metric-value">${standings.length || 0}</span>
-          <span class="metric-note">teams</span>
-        </div>
-        <div class="metric-card">
-          <span class="metric-label">Leader</span>
-          <span class="metric-value">${leader ? esc(leader.teamName) : "—"}</span>
-          <span class="metric-note">${leader ? `${leader.wins}-${leader.losses}-${leader.ties} record` : "Waiting for data"}</span>
-        </div>
-        <div class="metric-card">
-          <span class="metric-label">Avg PF</span>
-          <span class="metric-value">${avg ? avg.toFixed(1) : "0.0"}</span>
-          <span class="metric-note">points per team</span>
-        </div>
-        <div class="metric-card">
-          <span class="metric-label">Top Score</span>
-          <span class="metric-value">${topScore.toFixed(1)}</span>
-          <span class="metric-note">best weekly output</span>
-        </div>
-      `;
-    }
-
-    const V = {
-      standings() {
-        if (!D.standings) return empty("No standings data yet. Run the “Update Fantrax data” action.");
-        const rows = [...D.standings]
-          .sort((a, b) => a.rank - b.rank)
-          .map(t => {
-            const leader = t.rank === 1 ? "leader-row" : "";
-            return `
-              <tr class="${leader}">
-                <td class="rank-cell">${t.rank}</td>
-                <td class="team-cell">${esc(t.teamName)}</td>
-                <td>${esc(t.wins)}-${esc(t.losses)}-${esc(t.ties)}</td>
-                <td>${Number(t.winPercentage || 0).toFixed(3).replace(/^0/, "")}</td>
-                <td>${esc(t.gamesBack)}</td>
-                <td>${esc(t.pointsFor)}</td>
-              </tr>
-            `;
-          }).join("");
-
-        return `
-          <div class="card table-card">
-            <table>
-              <thead>
-                <tr>
-                  <th>#</th>
-                  <th>Team</th>
-                  <th>W-L-T</th>
-                  <th>Win%</th>
-                  <th>GB</th>
-                  <th>PF</th>
-                </tr>
-              </thead>
-              <tbody>${rows}</tbody>
-            </table>
-          </div>
-        `;
-      },
-
-      matchups() {
-        const ms = D.matchups && D.matchups.matchups;
-        if (!ms || !ms.length) return empty("No matchup data yet.");
-
-        return `
-          <div class="details-wrap">
-            ${ms.map(m => {
-              const a = m.away, h = m.home, aw = a.score > h.score;
-              const cats = (m.categories || [])
-                .filter(c => (c.away.display || c.home.display))
-                .map(c => `
-                  <div class="category-item">
-                    <span>${esc(c.away.display ?? "–")}</span>
-                    <span class="category-name">${esc(c.shortName)}<br><span class="muted">(${esc(c.group)})</span></span>
-                    <span>${esc(c.home.display ?? "–")}</span>
-                  </div>
-                `).join("");
-
-              return `
-                <div class="card matchup-card">
-                  <div class="matchup-header">
-                    <span class="pill">Scoring Period ${D.matchups.period}</span>
-                    <span class="muted">${aw ? "Winner" : "Result"}</span>
-                  </div>
-
-                  <div class="matchup-teams">
-                    <div>
-                      <div class="team-name">${esc(a.teamName)}</div>
-                      <div class="team-score ${aw ? "winner" : "loser"}">${a.score}</div>
-                    </div>
-                    <div class="matchup-divider">@</div>
-                    <div style="text-align:right;">
-                      <div class="team-name">${esc(h.teamName)}</div>
-                      <div class="team-score ${!aw ? "winner" : "loser"}">${h.score}</div>
-                    </div>
-                  </div>
-
-                  <details>
-                    <summary>Category breakdown</summary>
-                    <div class="category-list">
-                      ${cats || '<div class="muted">No category detail available.</div>'}
-                    </div>
-                  </details>
-                </div>
-              `;
-            }).join("")}
-          </div>
-        `;
-      },
-
-      rosters() {
-        const R = D.rosters && D.rosters.rosters;
-        if (!R) return empty("No roster data yet.");
-
-        const ids = Object.keys(R).sort((a, b) => R[a].teamName.localeCompare(R[b].teamName));
-        if (!team || !R[team]) team = ids[0];
-
-        const sel = ids.map(i => `
-          <option value="${i}" ${i === team ? "selected" : ""}>${esc(R[i].teamName)}</option>
-        `).join("");
-
-        const groups = [
-          ["ACTIVE", "Active"],
-          ["RESERVE", "Reserve"],
-          ["INJURED_RESERVE", "Injured reserve"],
-          ["MINORS", "Minors"]
-        ];
-
-        const items = R[team].rosterItems;
-
-        const body = groups.map(([k, l]) => {
-          const list = items.filter(p => p.status === k);
-          if (!list.length) return "";
-          return `
-            <div class="pill" style="display:block;width:fit-content;margin:14px 14px 0;padding:6px 10px;">${l} · ${list.length}</div>
-            ${list.map(p => `
-              <div class="player-row">
-                <span>
-                  <span class="player-name">${esc(names[p.id] || p.id)}</span>
-                  ${teams[p.id] ? ` <span class="team-chip">${esc(teams[p.id])}</span>` : ""}
-                </span>
-                <span class="pill">${esc(p.status)}</span>
-              </div>
-            `).join("")}
-          `;
-        }).join("");
-
-        const missing = items.filter(p => !names[p.id]).length;
-
-        return `
-          <select id="sel" class="card">${sel}</select>
-          <div class="card" style="overflow:hidden;">
-            ${body || '<div style="padding:18px;color:var(--muted);font-weight:700;">No roster entries.</div>'}
-          </div>
-          ${missing ? `<p class="muted" style="margin-top:10px;font-size:0.75rem;">${missing} player names not resolved yet (showing Fantrax IDs).</p>` : ""}
-        `;
-      }
-    };
-
-    V.picks = function () {
-      if (!D.picks || !D.picks.length) return empty("No draft pick data yet.");
-
-      const ids = Object.keys(D.teamNames).sort((a, b) => D.teamNames[a].localeCompare(D.teamNames[b]));
-      if (!team || !D.teamNames[team]) team = ids[0];
-
-      const sel = ids.map(i => `
-        <option value="${i}" ${i === team ? "selected" : ""}>${esc(D.teamNames[i])}</option>
-      `).join("");
-
-      const mine = D.picks
-        .filter(p => p.currentOwnerTeamId === team)
-        .sort((a, b) => a.year - b.year || a.round - b.round);
-
-      const years = [...new Set(mine.map(p => p.year))];
-      const ord = n => n + (["th", "st", "nd", "rd"][(n % 100 > 10 && n % 100 < 14) ? 0 : Math.min(n % 10, 4) % 4] || "th");
-
-      const body = years.map(y => `
-        <div class="pill" style="display:block;width:fit-content;margin:14px 14px 0;padding:6px 10px;">${y}</div>
-        ${mine.filter(p => p.year === y).map(p => {
-          const via = p.originalOwnerTeamId !== team;
-          return `
-            <div class="player-row">
-              <span>${ord(p.round)} round</span>
-              ${via ? `<span class="pill">via ${esc(teamName(p.originalOwnerTeamId))}</span>` : `<span class=\"pill\">held</span>`}
-            </div>
-          `;
-        }).join("")}
-      `).join("");
-
-      const acquired = mine.filter(p => p.originalOwnerTeamId !== team).length;
-      const traded = D.picks.filter(p => p.originalOwnerTeamId === team && p.currentOwnerTeamId !== team).length;
-
-      return `
-        <select id="sel" class="card">${sel}</select>
-        <p class="muted" style="margin:0 0 12px;font-size:0.82rem;">
-          ${mine.length} picks · ${acquired} acquired · ${traded} traded away
-        </p>
-        <div class="card" style="overflow:hidden;">
-          ${body || '<div style="padding:18px;color:var(--muted);font-weight:700;">No picks.</div>'}
-        </div>
-      `;
-    };
-
-    function render() {
-      renderMetrics();
-
-      document.getElementById("tabs").innerHTML = TABS
-        .map(([k, l]) => `<button class="tab ${k === tab ? "on" : ""}" data-k="${k}">${l}</button>`)
-        .join("");
-
-      document.getElementById("view").innerHTML = V[tab]();
-
-      document.querySelectorAll(".tab").forEach(b => {
-        b.onclick = () => {
-          tab = b.dataset.k;
-          location.hash = tab;
-          render();
-        };
-      });
-
-      const s = document.getElementById("sel");
-      if (s) s.onchange = e => {
-        team = e.target.value;
-        render();
-      };
-    }
-
-    (async () => {
-      const [st, mu, ro, li, meta, dp] = await Promise.all([
-        "standings",
-        "matchups",
-        "rosters",
-        "playerIds",
-        "meta",
-        "draftPicks"
-      ].map(load));
-
-      D.picks = dp && dp.futureDraftPicks;
-      D.standings = Array.isArray(st) ? st : (st && st.standings) || null;
-      D.matchups = mu;
-      D.rosters = ro;
-      D.teamNames = {};
-
-      (D.standings || []).forEach(t => D.teamNames[t.teamId] = t.teamName);
-
-      names = buildNames(li);
-
-      document.getElementById("updated").textContent =
-        meta && meta.updatedAt
-          ? new Date(meta.updatedAt).toLocaleString()
-          : "Waiting for first data update";
-
-      const h = location.hash.slice(1);
-      if (TABS.some(t => t[0] === h)) tab = h;
-
-      render();
-    })();
-  </script>
+    ${ms.length ? `<div class="card p-4 mt-4"><div class="flex justify-between items-center"><div class="lbl">This week’s scoreboard</div><span class="stamp">Period ${D.matchups.period}</span></div>${sb}
+      ${close ? `<p class="text-xs mt-3" style="color:var(--muted)">Closest game: ${esc(close.m.away.teamName)} vs ${esc(close.m.home.teamName)}, ${close.d.toFixed(1)} apart.</p>`:""}</div>` : ""}`;
+  },
+  standings(){
+    if(!D.standings) return empty("No standings data yet.");
+    const rows = [...D.standings].sort((a,b)=>a.rank-b.rank).map(t =>
+      `<tr class="row"><td class="mono">${t.rank===1?"★":t.rank}</td><td>${lnk(t.teamId)}</td><td class="mono">${esc(t.points)}</td><td class="mono">${t.winPercentage.toFixed(3).replace(/^0/,"")}</td><td class="mono">${t.gamesBack||"—"}</td><td class="mono">${Math.round(t.totalPointsFor).toLocaleString()}</td></tr>`).join("");
+    return `<div class="card overflow-x-auto"><table class="w-full"><tr class="lbl"><th>#</th><th>Club</th><th>W-L-T</th><th>Pct</th><th>GB</th><th>PF</th></tr>${rows}</table></div>`;
+  },
+  matchups(){
+    const ms = D.matchups && D.matchups.matchups; if(!ms || !ms.length) return empty("No matchup data yet.");
+    return `<p class="lbl mb-2">Scoring period ${D.matchups.period}</p>` + ms.map(m => {
+      const a=m.away, h=m.home, aw=a.score>h.score;
+      const cats = (m.categories||[]).filter(c=>c.away.display||c.home.display).map(c =>
+        `<div class="flex justify-between text-xs py-1 row mono"><span>${esc(c.away.display??"–")}</span><span style="color:var(--muted)">${esc(c.shortName)}</span><span>${esc(c.home.display??"–")}</span></div>`).join("");
+      return `<div class="card p-4 mb-3"><div class="flex justify-between ${aw?"font-bold":""}"><span>${lnk(a.teamId)}</span><span class="mono">${a.score}</span></div>
+        <div class="flex justify-between mt-1 ${!aw?"font-bold":""}"><span>${lnk(h.teamId)}</span><span class="mono">${h.score}</span></div>
+        <details class="mt-2"><summary class="lbl">Box score</summary><div class="mt-2">${cats}</div></details></div>`;
+    }).join("");
+  },
+  teams(){
+    if(!D.standings) return empty("No data yet.");
+    return `<div class="grid grid-cols-2 gap-3">` + [...D.standings].sort((a,b)=>a.teamName.localeCompare(b.teamName)).map(t =>
+      `<a href="#team-${t.teamId}" class="card p-3 block"><div class="lbl">Rank ${t.rank}</div><div class="font-bold text-sm mt-1">${esc(t.teamName)}</div><div class="mono text-xs mt-1">${esc(t.points)}</div></a>`).join("") + `</div>`;
+  },
+  team(id){
+    const t = (D.standings||[]).find(x=>x.teamId===id); if(!t) return empty("Team not found.");
+    const R = D.rosters && D.rosters.rosters && D.rosters.rosters[id];
+    const groups = [["ACTIVE","Active roster"],["RESERVE","Reserve"],["INJURED_RESERVE","Injured list"],["MINORS","Minors / prospects"]];
+    const roster = R ? groups.map(([k,l]) => { const list = R.rosterItems.filter(p=>p.status===k); if(!list.length) return "";
+      return `<div class="lbl px-4 py-2 row">${l} · ${list.length}</div>` + list.map(p =>
+        `<div class="px-4 py-2 flex justify-between items-center row text-sm"><span>${esc(names[p.id]||p.id)}${teams[p.id]?` <span class="mono text-xs" style="color:var(--muted)">${esc(teams[p.id])}</span>`:""}</span><span class="pill">${esc(p.position)}</span></div>`).join(""); }).join("") : `<div class="p-4 text-sm">No roster data.</div>`;
+    const mine = (D.picks||[]).filter(p=>p.currentOwnerTeamId===id).sort((a,b)=>a.year-b.year||a.round-b.round);
+    const years = [...new Set(mine.map(p=>p.year))];
+    const picks = years.map(y => `<div class="lbl px-4 py-2 row">${y}</div>` + mine.filter(p=>p.year===y).map(p =>
+      `<div class="px-4 py-2 flex justify-between row text-sm"><span>${ord(p.round)} round</span>${p.originalOwnerTeamId!==id?`<span class="pill">via ${esc(tn(p.originalOwnerTeamId))}</span>`:`<span class="mono text-xs" style="color:var(--muted)">own</span>`}</div>`).join("")).join("");
+    const m = ((D.matchups&&D.matchups.matchups)||[]).find(x=>x.away.teamId===id||x.home.teamId===id);
+    const opp = m ? (m.away.teamId===id ? m.home : m.away) : null, me = m ? (m.away.teamId===id ? m.away : m.home) : null;
+    return `<a href="#teams" class="lbl">← All clubs</a>
+      <h2 class="slab text-2xl mt-2">${esc(t.teamName)}</h2>
+      <p class="mono text-sm mt-1">Rank ${t.rank} · ${esc(t.points)} · ${Math.round(t.totalPointsFor).toLocaleString()} PF</p>
+      ${m ? `<p class="text-sm mt-2">This week: <b class="mono">${me.score}</b> vs ${lnk(opp.teamId)} <b class="mono">${opp.score}</b></p>`:""}
+      <div class="card mt-4 overflow-hidden"><div class="slab px-4 py-3">Roster</div>${roster}</div>
+      <div class="card mt-4 overflow-hidden"><div class="slab px-4 py-3">Draft picks</div>${picks || `<div class="p-4 text-sm">No picks.</div>`}</div>`;
+  }
+};
+function route(){
+  const h = location.hash.slice(1) || "home", isTeam = h.startsWith("team-");
+  const cur = isTeam ? "teams" : (TABS.some(t=>t[0]===h) ? h : "home");
+  document.getElementById("tabs").innerHTML = TABS.map(([k,l]) => `<a href="#${k}" class="tab ${k===cur?"on":""}">${l}</a>`).join("");
+  document.getElementById("view").innerHTML = isTeam ? V.team(h.slice(5)) : V[cur]();
+  window.scrollTo(0,0);
+}
+(async () => {
+  document.title = CFG.name;
+  document.getElementById("emblem").innerHTML = LOGO;
+  const fav = document.createElement("link"); fav.rel = "icon"; fav.href = "data:image/svg+xml," + encodeURIComponent(LOGO); document.head.appendChild(fav);
+  document.getElementById("lname").textContent = CFG.name;
+  document.getElementById("lsub").textContent = CFG.sub;
+  const [st,mu,ro,pi,meta,dp] = await Promise.all(["standings","matchups","rosters","playerIds","meta","draftPicks"].map(load));
+  D.standings = Array.isArray(st) ? st : (st && st.standings) || null;
+  D.matchups = mu; D.rosters = ro; D.picks = dp && dp.futureDraftPicks;
+  D.tn = {}; (D.standings||[]).forEach(t => D.tn[t.teamId] = t.teamName);
+  names = buildNames(pi);
+  document.getElementById("updated").textContent = meta && meta.updatedAt ? "Updated " + new Date(meta.updatedAt).toLocaleString() : "Waiting for first data update";
+  window.addEventListener("hashchange", route); route();
+})();
+</script>
 </body>
 </html>
