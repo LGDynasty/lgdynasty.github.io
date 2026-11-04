@@ -14,6 +14,8 @@ jobs:
         with:
           node-version: 20
       - run: node fetch-fantrax.mjs
+        env:
+          TRADES_CSV_URL: ${{ vars.TRADES_CSV_URL }}
       - name: Commit changes
         run: |
           git config user.name "dynasty-hub-bot"
