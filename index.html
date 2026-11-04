@@ -43,6 +43,14 @@ summary{cursor:pointer}
 // ---- Customize here ----
 const LOGO = `<svg viewBox="0 0 100 100" width="76" height="76" xmlns="http://www.w3.org/2000/svg" aria-label="League logo"><circle cx="50" cy="50" r="46" fill="#0c2340" stroke="#e8710a" stroke-width="5"/><circle cx="50" cy="50" r="39" fill="none" stroke="#fff" stroke-width="1.5"/><path d="M27 24H57V31H48V65H67V53H75V77H27V70H37V31H27Z" fill="#fff"/></svg>`;
 const CFG = { name: "Dynasty Hub", sub: "Official League Scorebook" };
+// Team logos: put a PNG named after each team's code in the repo's /logos folder (e.g. logos/POR.png).
+// The league logo is logos/league.png. Missing files are skipped, so you can add them a few at a time.
+const TEAM_CODES = {
+  "tmbonzbmmhspuuiy":"POR", "exu2oyc7mhspuuiy":"WSW", "as3cegazmhspuuix":"FEN", "zaz8plfhmhspuuiy":"NPL",
+  "09956kirmhspuuix":"SEL", "agj706lvmhspuuix":"VAL", "oers8dk6mhspuuix":"AZA", "n41h8me0mk8wumhx":"ARS",
+  "beaf9cbomhspuuiy":"STP", "wg86uwvdmhspuuix":"SWK", "fld7b6vqmhspuuiy":"BXB", "409tbv2xmhspuuix":"CHG",
+  "l1dz6rrjmhspuuiy":"JVL", "5x8tg8k4mlfsxfaa":"SSM"
+};
 // Trade tracker seasons: one CSV per season in /data. Add a line each year;
 // the last one is shown first and is the one the Google Sheet refreshes.
 const SEASONS = [
@@ -55,7 +63,8 @@ const D = {}; let names = {}, teams = {}, pos = {}, fSeason = SEASONS[SEASONS.le
 const TABS = [["home","Home"],["standings","Standings"],["power","Power"],["matchups","Matchups"],["teams","Teams"],["trades","Trades"]];
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const tn = id => D.tn[id] || id;
-const lnk = id => `<a class="lnk" href="#team-${id}">${esc(tn(id))}</a>`;
+const logo = (id, px = 20) => TEAM_CODES[id] ? `<img src="logos/${TEAM_CODES[id]}.png" alt="" width="${px}" height="${px}" style="display:inline-block;vertical-align:middle;margin-right:6px;object-fit:contain" onerror="this.remove()">` : "";
+const lnk = id => `${logo(id)}<a class="lnk" href="#team-${id}">${esc(tn(id))}</a>`;
 const ord = n => n + (["th","st","nd","rd"][(n%100>10&&n%100<14)?0:Math.min(n%10,4)%4] || "th");
 const empty = t => `<div class="card p-4 text-sm" style="color:var(--muted)">${t}</div>`;
 const loadText = async n => { try { const r = await fetch(`data/${n}`,{cache:"no-cache"}); if(!r.ok) throw 0; return await r.text(); } catch(e){ return null; } };
@@ -115,7 +124,7 @@ const V = {
   teams(){
     if(!D.standings) return empty("No data yet.");
     return `<div class="grid grid-cols-2 gap-3">` + [...D.standings].sort((a,b)=>a.teamName.localeCompare(b.teamName)).map(t =>
-      `<a href="#team-${t.teamId}" class="card p-3 block"><div class="lbl">Rank ${t.rank}</div><div class="font-bold text-sm mt-1">${esc(t.teamName)}</div><div class="mono text-xs mt-1">${esc(t.points)}</div></a>`).join("") + `</div>`;
+      `<a href="#team-${t.teamId}" class="card p-3 block">${logo(t.teamId,44)}<div class="lbl mt-1">Rank ${t.rank}</div><div class="font-bold text-sm mt-1">${esc(t.teamName)}</div><div class="mono text-xs mt-1">${esc(t.points)}</div></a>`).join("") + `</div>`;
   },
   team(id){
     const t = (D.standings||[]).find(x=>x.teamId===id); if(!t) return empty("Team not found.");
@@ -131,7 +140,7 @@ const V = {
     const m = ((D.matchups&&D.matchups.matchups)||[]).find(x=>x.away.teamId===id||x.home.teamId===id);
     const opp = m ? (m.away.teamId===id ? m.home : m.away) : null, me = m ? (m.away.teamId===id ? m.away : m.home) : null;
     return `<a href="#teams" class="lbl">← All clubs</a>
-      <h2 class="slab text-2xl mt-2">${esc(t.teamName)}</h2>
+      <div class="flex items-center mt-2">${logo(id,56)}<h2 class="slab text-2xl">${esc(t.teamName)}</h2></div>
       <p class="mono text-sm mt-1">Rank ${t.rank} · ${esc(t.points)} · ${Math.round(t.totalPointsFor).toLocaleString()} PF</p>
       ${m ? `<p class="text-sm mt-2">This week: <b class="mono">${me.score}</b> vs ${lnk(opp.teamId)} <b class="mono">${opp.score}</b></p>`:""}
       <div class="card mt-4 overflow-hidden"><div class="slab px-4 py-3">Roster</div>${roster}</div>
@@ -239,8 +248,12 @@ function route(keep){
 }
 (async () => {
   document.title = CFG.name;
-  document.getElementById("emblem").innerHTML = LOGO;
-  const fav = document.createElement("link"); fav.rel = "icon"; fav.href = "data:image/svg+xml," + encodeURIComponent(LOGO); document.head.appendChild(fav);
+  const em = document.getElementById("emblem"), fav = document.createElement("link");
+  fav.rel = "icon"; document.head.appendChild(fav);
+  em.innerHTML = LOGO; fav.href = "data:image/svg+xml," + encodeURIComponent(LOGO);
+  const lg = new Image(); lg.alt = CFG.name; lg.style.cssText = "height:84px;width:auto;max-width:220px;object-fit:contain";
+  lg.onload = () => { em.innerHTML = ""; em.appendChild(lg); fav.href = lg.src; };
+  lg.src = "logos/league.png";
   document.getElementById("lname").textContent = CFG.name;
   document.getElementById("lsub").textContent = CFG.sub;
   const [st,mu,ro,pi,meta,dp,ps,psc,...trs] = await Promise.all(["standings","matchups","rosters","playerIds","meta","draftPicks","power-start","period-scores"].map(load).concat(SEASONS.map(x => loadText(x.file))));
