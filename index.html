@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Lollygaggers Dynasty </title>
+<title>Lollygaggers Dynasty</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Courier+Prime:wght@400;700&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com/3.4.17"></script>
@@ -42,9 +42,10 @@ summary{cursor:pointer}
 <script>
 // ---- Customize here ----
 const LOGO = `<svg viewBox="0 0 100 100" width="76" height="76" xmlns="http://www.w3.org/2000/svg" aria-label="League logo"><circle cx="50" cy="50" r="46" fill="#0c2340" stroke="#e8710a" stroke-width="5"/><circle cx="50" cy="50" r="39" fill="none" stroke="#fff" stroke-width="1.5"/><path d="M27 24H57V31H48V65H67V53H75V77H27V70H37V31H27Z" fill="#fff"/></svg>`;
-const CFG = { name: "Lollygaggers Dynasty", sub: "Official Baseball Hub" };
-// Team logos: put a PNG named after each team's code in the repo's /logos folder (e.g. logos/POR.png).
-// The league logo is logos/league.png. Missing files are skipped, so you can add them a few at a time.
+const CFG = { name: "Lollygaggers Dynasty", sub: "Baseball Hub" };
+// Team logos: put an image named after each team's code in the repo's /logos folder (e.g. logos/POR.jpg).
+// The league logo is logos/league.jpg. Missing files are skipped, so you can add them a few at a time.
+const LOGO_EXT = "jpg"; // change to "png" if you switch file types
 const TEAM_CODES = {
   "tmbonzbmmhspuuiy":"POR", "exu2oyc7mhspuuiy":"WSW", "as3cegazmhspuuix":"FEN", "zaz8plfhmhspuuiy":"NPL",
   "09956kirmhspuuix":"SEL", "agj706lvmhspuuix":"VAL", "oers8dk6mhspuuix":"AZA", "n41h8me0mk8wumhx":"ARS",
@@ -63,7 +64,7 @@ const D = {}; let names = {}, teams = {}, pos = {}, fSeason = SEASONS[SEASONS.le
 const TABS = [["home","Home"],["standings","Standings"],["power","Power"],["matchups","Matchups"],["teams","Teams"],["trades","Trades"]];
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const tn = id => D.tn[id] || id;
-const logo = (id, px = 20) => TEAM_CODES[id] ? `<img src="logos/${TEAM_CODES[id]}.png" alt="" width="${px}" height="${px}" style="display:inline-block;vertical-align:middle;margin-right:6px;object-fit:contain" onerror="this.remove()">` : "";
+const logo = (id, px = 20) => TEAM_CODES[id] ? `<img src="logos/${TEAM_CODES[id]}.${LOGO_EXT}" alt="" width="${px}" height="${px}" style="display:inline-block;vertical-align:middle;margin-right:6px;object-fit:contain;border-radius:4px" onerror="this.remove()">` : "";
 const lnk = id => `${logo(id)}<a class="lnk" href="#team-${id}">${esc(tn(id))}</a>`;
 const ord = n => n + (["th","st","nd","rd"][(n%100>10&&n%100<14)?0:Math.min(n%10,4)%4] || "th");
 const empty = t => `<div class="card p-4 text-sm" style="color:var(--muted)">${t}</div>`;
@@ -251,9 +252,9 @@ function route(keep){
   const em = document.getElementById("emblem"), fav = document.createElement("link");
   fav.rel = "icon"; document.head.appendChild(fav);
   em.innerHTML = LOGO; fav.href = "data:image/svg+xml," + encodeURIComponent(LOGO);
-  const lg = new Image(); lg.alt = CFG.name; lg.style.cssText = "height:84px;width:auto;max-width:220px;object-fit:contain";
+  const lg = new Image(); lg.alt = CFG.name; lg.style.cssText = "height:84px;width:auto;max-width:220px;object-fit:contain;background:#fff;border-radius:10px;padding:5px";
   lg.onload = () => { em.innerHTML = ""; em.appendChild(lg); fav.href = lg.src; };
-  lg.src = "logos/league.png";
+  lg.src = `logos/league.${LOGO_EXT}`;
   document.getElementById("lname").textContent = CFG.name;
   document.getElementById("lsub").textContent = CFG.sub;
   const [st,mu,ro,pi,meta,dp,ps,psc,...trs] = await Promise.all(["standings","matchups","rosters","playerIds","meta","draftPicks","power-start","period-scores"].map(load).concat(SEASONS.map(x => loadText(x.file))));
