@@ -35,6 +35,18 @@ for (const [name, path] of Object.entries(ENDPOINTS)) {
   }
 }
 
+// Optional: pull the trade log from a published Google Sheet (set TRADES_CSV_URL)
+if (process.env.TRADES_CSV_URL) {
+  try {
+    const r = await fetch(process.env.TRADES_CSV_URL, { headers: HEADERS, redirect: "follow" });
+    if (!r.ok) throw new Error(`HTTP ${r.status}`);
+    const txt = await r.text();
+    if (/^\s*</.test(txt)) throw new Error("Got a web page, not CSV (is the sheet published as CSV?)");
+    await writeFile("data/trades.csv", txt);
+    meta.ok.trades = true;
+    console.log("ok   trades");
+  } catch (e) { meta.errors.trades = String(e.message || e); console.error("FAIL trades:", e.message || e); }
+}
 await writeFile("data/meta.json", JSON.stringify(meta, null, 1));
 // Fail the run only if nothing worked, so one flaky endpoint doesn't block updates
 if (!Object.keys(meta.ok).length) process.exit(1);
