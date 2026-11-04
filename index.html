@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,14 +44,22 @@ summary{cursor:pointer}
 // ---- Customize here ----
 const LOGO = `<svg viewBox="0 0 100 100" width="76" height="76" xmlns="http://www.w3.org/2000/svg" aria-label="League logo"><circle cx="50" cy="50" r="46" fill="#0c2340" stroke="#e8710a" stroke-width="5"/><circle cx="50" cy="50" r="39" fill="none" stroke="#fff" stroke-width="1.5"/><path d="M27 24H57V31H48V65H67V53H75V77H27V70H37V31H27Z" fill="#fff"/></svg>`;
 const CFG = { name: "Dynasty Hub", sub: "Official League Scorebook" };
+// Trade tracker seasons: one CSV per season in /data. Add a line each year;
+// the last one is shown first and is the one the Google Sheet refreshes.
+const SEASONS = [
+  { label: "2025", file: "trades-2025.csv" },
+  { label: "2026", file: "trades-2026.csv" },
+  { label: "Current", file: "trades.csv" }
+];
 // ------------------------
-const D = {}; let names = {}, teams = {}, pos = {};
-const TABS = [["home","Home"],["standings","Standings"],["matchups","Matchups"],["teams","Teams"],["draft","Draft"]];
+const D = {}; let names = {}, teams = {}, pos = {}, fSeason = SEASONS[SEASONS.length-1].label, fTeam = "";
+const TABS = [["home","Home"],["standings","Standings"],["matchups","Matchups"],["teams","Teams"],["trades","Trades"]];
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const tn = id => D.tn[id] || id;
 const lnk = id => `<a class="lnk" href="#team-${id}">${esc(tn(id))}</a>`;
 const ord = n => n + (["th","st","nd","rd"][(n%100>10&&n%100<14)?0:Math.min(n%10,4)%4] || "th");
 const empty = t => `<div class="card p-4 text-sm" style="color:var(--muted)">${t}</div>`;
+const loadText = async n => { try { const r = await fetch(`data/${n}`,{cache:"no-cache"}); if(!r.ok) throw 0; return await r.text(); } catch(e){ return null; } };
 const load = async n => { try { const r = await fetch(`data/${n}.json`,{cache:"no-cache"}); if(!r.ok) throw 0; return await r.json(); } catch(e){ return null; } };
 
 function buildNames(src){
@@ -130,24 +139,55 @@ const V = {
       <div class="card mt-4 overflow-hidden"><div class="slab px-4 py-3">Draft picks</div>${picks || `<div class="p-4 text-sm">No picks.</div>`}</div>`;
   }
 };
-V.draft = function(){
-  const dp = D.draft && D.draft.draftPicks;
-  if(!dp || !dp.length) return empty("No draft results yet.");
-  const rounds = [...new Set(dp.map(p=>p.round))].sort((a,b)=>a-b);
-  let date = "";
-  const ds = D.draft.draftDate;
-  if(ds){ const [y,m,d] = ds.slice(0,10).split("-").map(Number); date = new Date(Date.UTC(y,m-1,d)).toLocaleDateString(undefined,{timeZone:"UTC",dateStyle:"long"}); }
-  return `<p class="lbl mb-3">${date ? "Draft held "+date+" · " : ""}${dp.length} picks</p>` + rounds.map(r =>
-    `<details class="card mb-3" ${r===rounds[0]?"open":""}><summary class="slab px-4 py-3">Round ${r}</summary>` +
-    dp.filter(p=>p.round===r).sort((a,b)=>a.pick-b.pick).map(p =>
-      `<div class="px-4 py-2 flex items-center gap-3 row text-sm"><span class="mono w-8" style="color:var(--muted)">${p.pick}</span><span class="flex-1">${esc(names[p.playerId]||p.playerId)}${pos[p.playerId]?` <span class="pill ml-1">${esc(pos[p.playerId])}</span>`:""}${teams[p.playerId]?` <span class="mono text-xs" style="color:var(--muted)">${esc(teams[p.playerId])}</span>`:""}</span><span class="text-xs text-right">${lnk(p.teamId)}</span></div>`).join("") + `</details>`).join("");
+function parseCSV(t){
+  const rows = []; let r = [], c = "", q = false;
+  for(let i=0;i<t.length;i++){ const ch = t[i];
+    if(q){ if(ch==='"'){ if(t[i+1]==='"'){ c+='"'; i++; } else q=false; } else c+=ch; }
+    else if(ch==='"') q = true;
+    else if(ch===','){ r.push(c); c=""; }
+    else if(ch==="\n"||ch==="\r"){ if(ch==="\r"&&t[i+1]==="\n") i++; r.push(c); rows.push(r); r=[]; c=""; }
+    else c+=ch; }
+  if(c||r.length){ r.push(c); rows.push(r); }
+  return rows.filter(x => x.some(v => v.trim()));
+}
+function parseTrades(txt){
+  if(!txt) return null;
+  const rows = parseCSV(txt); if(rows.length<2) return [];
+  const h = rows[0].map(x => x.trim().toLowerCase());
+  const col = (...k) => h.findIndex(x => k.some(y => x.startsWith(y)));
+  const iD = col("date"), iS = col("season"), i1 = h.findIndex(x=>x==="team 1"), r1 = col("team 1 rec"), i2 = h.findIndex(x=>x==="team 2"), r2 = col("team 2 rec"), iN = col("note");
+  const g = (r,i) => i>=0 && r[i] ? r[i].trim() : "";
+  return rows.slice(1).map(r => ({date:g(r,iD), season:g(r,iS), t1:g(r,i1), g1:g(r,r1), t2:g(r,i2), g2:g(r,r2), note:g(r,iN)}));
+}
+const teamLink = n => { const t = (D.standings||[]).find(x => x.teamName.toLowerCase()===n.toLowerCase()); return t ? lnk(t.teamId) : esc(n); };
+const items = x => x.split(";").map(v=>v.trim()).filter(Boolean).map(v => `<li>${esc(v)}</li>`).join("") || `<li style="color:var(--muted)">—</li>`;
+V.trades = function(){
+  const labels = SEASONS.map(x => x.label);
+  if(!labels.includes(fSeason)) fSeason = labels[labels.length-1];
+  const T = D.trades[fSeason];
+  const head = `<div class="flex justify-center mb-3">` + labels.map(l => `<button data-season="${esc(l)}" class="tab ${l===fSeason?"on":""}">${esc(l)}</button>`).join("") + `</div>`;
+  if(!T || !T.length) return head + empty(`No trades logged for ${esc(fSeason)} yet. Add <span class="mono">data/${SEASONS.find(x=>x.label===fSeason).file}</span> to the repo.`);
+  const tms = [...new Set(T.flatMap(t=>[t.t1,t.t2]).filter(Boolean))].sort();
+  if(fTeam && !tms.includes(fTeam)) fTeam = "";
+  const list = T.filter(t => !fTeam || t.t1===fTeam || t.t2===fTeam)
+    .sort((a,b) => (Date.parse(b.date)||0)-(Date.parse(a.date)||0));
+  const opts = `<option value="">All teams</option>` + tms.map(v => `<option ${v===fTeam?"selected":""}>${esc(v)}</option>`).join("");
+  return head + `<select id="fT" class="card w-full p-2 text-sm mb-3" style="color:var(--ink)">${opts}</select>
+  <p class="lbl mb-2">${list.length} trade${list.length===1?"":"s"}</p>` + list.map(t =>
+    `<div class="card p-4 mb-3"><div class="flex justify-between items-center"><span class="mono text-xs" style="color:var(--muted)">${esc(t.date)}</span></div>
+    <div class="grid grid-cols-2 gap-4 mt-3 text-sm"><div><div class="font-bold">${teamLink(t.t1)}</div><div class="lbl mt-1">Receives</div><ul class="list-disc pl-4 mt-1">${items(t.g1)}</ul></div>
+    <div><div class="font-bold">${teamLink(t.t2)}</div><div class="lbl mt-1">Receives</div><ul class="list-disc pl-4 mt-1">${items(t.g2)}</ul></div></div>
+    ${t.note?`<p class="text-xs mt-3 italic" style="color:var(--muted)">${esc(t.note)}</p>`:""}</div>`).join("");
 };
-function route(){
+function route(keep){
   const h = location.hash.slice(1) || "home", isTeam = h.startsWith("team-");
   const cur = isTeam ? "teams" : (TABS.some(t=>t[0]===h) ? h : "home");
   document.getElementById("tabs").innerHTML = TABS.map(([k,l]) => `<a href="#${k}" class="tab ${k===cur?"on":""}">${l}</a>`).join("");
   document.getElementById("view").innerHTML = isTeam ? V.team(h.slice(5)) : V[cur]();
-  window.scrollTo(0,0);
+  if(!keep) window.scrollTo(0,0);
+  document.querySelectorAll("[data-season]").forEach(b => b.onclick = () => { fSeason = b.dataset.season; fTeam = ""; route(true); });
+  const ft = document.getElementById("fT");
+  if(ft) ft.onchange = e => { fTeam = e.target.value; route(true); };
 }
 (async () => {
   document.title = CFG.name;
@@ -155,13 +195,13 @@ function route(){
   const fav = document.createElement("link"); fav.rel = "icon"; fav.href = "data:image/svg+xml," + encodeURIComponent(LOGO); document.head.appendChild(fav);
   document.getElementById("lname").textContent = CFG.name;
   document.getElementById("lsub").textContent = CFG.sub;
-  const [st,mu,ro,pi,meta,dp,dr] = await Promise.all(["standings","matchups","rosters","playerIds","meta","draftPicks","draftResults"].map(load));
+  const [st,mu,ro,pi,meta,dp,...trs] = await Promise.all(["standings","matchups","rosters","playerIds","meta","draftPicks"].map(load).concat(SEASONS.map(x => loadText(x.file))));
   D.standings = Array.isArray(st) ? st : (st && st.standings) || null;
-  D.matchups = mu; D.rosters = ro; D.picks = dp && dp.futureDraftPicks; D.draft = dr;
+  D.matchups = mu; D.rosters = ro; D.picks = dp && dp.futureDraftPicks; D.trades = {}; SEASONS.forEach((x,i) => D.trades[x.label] = parseTrades(trs[i]));
   D.tn = {}; (D.standings||[]).forEach(t => D.tn[t.teamId] = t.teamName);
   names = buildNames(pi);
   document.getElementById("updated").textContent = meta && meta.updatedAt ? "Updated " + new Date(meta.updatedAt).toLocaleString() : "Waiting for first data update";
-  window.addEventListener("hashchange", route); route();
+  window.addEventListener("hashchange", () => route()); route();
 })();
 </script>
 </body>
