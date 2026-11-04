@@ -35,7 +35,7 @@ summary{cursor:pointer}
     <p id="lsub" class="mt-1" style="font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:#f5b77a"></p>
     <p id="updated" class="mono text-xs mt-2" style="color:#aab4c8">Loading…</p>
   </header>
-  <nav id="tabs" class="flex justify-center overflow-x-auto"></nav>
+  <nav id="tabs" class="flex sm:justify-center overflow-x-auto"></nav>
   <div class="rule mb-4"></div>
   <main id="view"></main>
 </div>
@@ -52,7 +52,7 @@ const SEASONS = [
 ];
 // ------------------------
 const D = {}; let names = {}, teams = {}, pos = {}, fSeason = SEASONS[SEASONS.length-1].label, fTeam = "";
-const TABS = [["home","Home"],["standings","Standings"],["matchups","Matchups"],["teams","Teams"],["trades","Trades"]];
+const TABS = [["home","Home"],["standings","Standings"],["power","Power"],["matchups","Matchups"],["teams","Teams"],["trades","Trades"]];
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const tn = id => D.tn[id] || id;
 const lnk = id => `<a class="lnk" href="#team-${id}">${esc(tn(id))}</a>`;
@@ -202,6 +202,31 @@ V.trades = function(){
     <div class="grid ${t.parts.length===2?"grid-cols-2":"grid-cols-1"} gap-4 mt-3 text-sm">${t.parts.map(p =>
       `<div><div class="font-bold">${p.c.id?lnk(p.c.id):esc(p.c.name)}</div><div class="lbl mt-1">Receives</div><ul class="mt-1 space-y-1">${p.items.map(itemHtml).join("") || "<li>—</li>"}</ul></div>`).join("")}</div></div>`).join("");
 };
+V.power = function(){
+  const S = D.standings; if(!S) return empty("No data yet.");
+  const P = (D.pscores && D.pscores.periods) || {};
+  const done = Object.keys(P).map(Number).sort((a,b)=>a-b);
+  const startList = D.pstart && D.pstart.teams ? [...D.pstart.teams].sort((a,b)=>a.rank-b.rank).map(t => ({id:t.teamId, rec:t.record}))
+    : [...S].sort((a,b)=>a.rank-b.rank).map(t => ({id:t.teamId, rec:t.points}));
+  const agg = upto => { const m = {};
+    done.filter(p => p<=upto).forEach(p => P[p].forEach(g => [[g.a,g.as,g.hs],[g.h,g.hs,g.as]].forEach(([id,f,a]) => { const x = m[id] || (m[id] = {pf:0,pa:0}); x.pf += f; x.pa += a; })));
+    return Object.entries(m).map(([id,x]) => ({id, pf:x.pf, pa:x.pa, s: (x.pf*x.pf + x.pa*x.pa) ? x.pf*x.pf/(x.pf*x.pf + x.pa*x.pa) : .5})).sort((a,b)=>b.s-a.s);
+  };
+  const arrow = d => d>0 ? `<span style="color:#2e7d32">▲${d}</span>` : d<0 ? `<span style="color:var(--red)">▼${-d}</span>` : `<span style="color:var(--muted)">—</span>`;
+  const note = t => `<p class="text-xs mt-3 italic" style="color:var(--muted)">${t}</p>`;
+  if(!done.length){
+    const label = D.pstart ? D.pstart.label : "Current Fantrax standings";
+    return `<div class="card overflow-x-auto"><div class="px-4 py-3"><div class="lbl">Starting point</div><div class="slab text-lg">${esc(label)}</div></div><table class="w-full">` +
+      startList.map((t,i) => `<tr class="row"><td class="mono">${i+1}</td><td>${lnk(t.id)}</td><td class="mono text-right text-xs" style="color:var(--muted)">${esc(t.rec||"")}</td></tr>`).join("") + `</table></div>` +
+      note("These rankings switch to the points formula once the 2027 season has a finished scoring period.");
+  }
+  const cur = agg(done[done.length-1]);
+  const prev = {};
+  (done.length>1 ? agg(done[done.length-2]).map(x=>x.id) : startList.map(x=>x.id)).forEach((id,i) => prev[id] = i+1);
+  return `<p class="lbl mb-2">Through scoring period ${done[done.length-1]}</p><div class="card overflow-x-auto"><table class="w-full"><tr class="lbl"><th>#</th><th></th><th>Club</th><th>Score</th></tr>` +
+    cur.map((t,i) => `<tr class="row"><td class="mono">${i+1}</td><td class="mono text-xs">${prev[t.id] ? arrow(prev[t.id]-(i+1)) : ""}</td><td>${lnk(t.id)}<div class="mono text-xs" style="color:var(--muted)">PF ${Math.round(t.pf).toLocaleString()} · PA ${Math.round(t.pa).toLocaleString()}</div></td><td class="mono">${t.s.toFixed(3).replace(/^0/,"")}</td></tr>`).join("") + `</table></div>` +
+    note("Score = PF² ÷ (PF² + PA²) over finished scoring periods. Arrows show movement since the previous period.");
+};
 function route(keep){
   const h = location.hash.slice(1) || "home", isTeam = h.startsWith("team-");
   const cur = isTeam ? "teams" : (TABS.some(t=>t[0]===h) ? h : "home");
@@ -218,9 +243,9 @@ function route(keep){
   const fav = document.createElement("link"); fav.rel = "icon"; fav.href = "data:image/svg+xml," + encodeURIComponent(LOGO); document.head.appendChild(fav);
   document.getElementById("lname").textContent = CFG.name;
   document.getElementById("lsub").textContent = CFG.sub;
-  const [st,mu,ro,pi,meta,dp,...trs] = await Promise.all(["standings","matchups","rosters","playerIds","meta","draftPicks"].map(load).concat(SEASONS.map(x => loadText(x.file))));
+  const [st,mu,ro,pi,meta,dp,ps,psc,...trs] = await Promise.all(["standings","matchups","rosters","playerIds","meta","draftPicks","power-start","period-scores"].map(load).concat(SEASONS.map(x => loadText(x.file))));
   D.standings = Array.isArray(st) ? st : (st && st.standings) || null;
-  D.matchups = mu; D.rosters = ro; D.picks = dp && dp.futureDraftPicks; D.trades = {}; SEASONS.forEach((x,i) => D.trades[x.label] = parseTrades(trs[i]));
+  D.matchups = mu; D.rosters = ro; D.picks = dp && dp.futureDraftPicks; D.pstart = ps; D.pscores = psc; D.trades = {}; SEASONS.forEach((x,i) => D.trades[x.label] = parseTrades(trs[i]));
   D.tn = {}; (D.standings||[]).forEach(t => D.tn[t.teamId] = t.teamName);
   names = buildNames(pi);
   document.getElementById("updated").textContent = meta && meta.updatedAt ? "Updated " + new Date(meta.updatedAt).toLocaleString() : "Waiting for first data update";
