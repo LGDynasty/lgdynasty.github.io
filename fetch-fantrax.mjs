@@ -1,6 +1,7 @@
 // Pulls league data from the Fantrax REST API into ./data/*.json
 // Requires Node 18+ (built-in fetch). No dependencies.
 import { mkdir, writeFile } from "node:fs/promises";
+import { existsSync } from "node:fs";
 
 const LEAGUE_ID = process.env.FANTRAX_LEAGUE_ID || "j3rxu8e0mhspuuim";
 const BASE = "https://www.fantrax.com/fxea/general";
@@ -35,17 +36,28 @@ for (const [name, path] of Object.entries(ENDPOINTS)) {
   }
 }
 
-// Optional: pull the trade log from a published Google Sheet (set TRADES_CSV_URL)
-if (process.env.TRADES_CSV_URL) {
+// Trade log from the Google Sheet (must be shared as "anyone with the link can view").
+const SHEET_ID = process.env.TRADES_SHEET_ID || "1XrUUB7PB9NLVnijQUDHjaG9wZjyPy3ou1yS309MSAEk";
+const TABS = [
+  { tab: "Trades", file: "trades.csv" },                        // live season (2027): refreshed every run
+  { tab: "2026Trades", file: "trades-2026.csv", once: true },   // finished seasons: downloaded once, then left alone
+  { tab: "2025Trades", file: "trades-2025.csv", once: true },
+];
+for (const { tab, file, once } of TABS) {
+  if (once && existsSync(`data/${file}`)) continue;
   try {
-    const r = await fetch(process.env.TRADES_CSV_URL, { headers: HEADERS, redirect: "follow" });
+    const url = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:csv&sheet=${encodeURIComponent(tab)}`;
+    const r = await fetch(url, { headers: HEADERS, redirect: "follow" });
     if (!r.ok) throw new Error(`HTTP ${r.status}`);
     const txt = await r.text();
-    if (/^\s*</.test(txt)) throw new Error("Got a web page, not CSV (is the sheet published as CSV?)");
-    await writeFile("data/trades.csv", txt);
-    meta.ok.trades = true;
-    console.log("ok   trades");
-  } catch (e) { meta.errors.trades = String(e.message || e); console.error("FAIL trades:", e.message || e); }
+    if (/^\s*</.test(txt)) throw new Error("Got a web page, not CSV (is the sheet shared with anyone who has the link?)");
+    await writeFile(`data/${file}`, txt);
+    meta.ok["sheet:" + tab] = true;
+    console.log(`ok   sheet ${tab}`);
+  } catch (e) {
+    meta.errors["sheet:" + tab] = String(e.message || e);
+    console.error(`FAIL sheet ${tab}: ${e.message || e}`);
+  }
 }
 await writeFile("data/meta.json", JSON.stringify(meta, null, 1));
 // Fail the run only if nothing worked, so one flaky endpoint doesn't block updates
