@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -49,7 +48,7 @@ const CFG = { name: "Dynasty Hub", sub: "Official League Scorebook" };
 const SEASONS = [
   { label: "2025", file: "trades-2025.csv" },
   { label: "2026", file: "trades-2026.csv" },
-  { label: "Current", file: "trades.csv" }
+  { label: "2027", file: "trades.csv" }
 ];
 // ------------------------
 const D = {}; let names = {}, teams = {}, pos = {}, fSeason = SEASONS[SEASONS.length-1].label, fTeam = "";
@@ -154,30 +153,54 @@ function parseTrades(txt){
   if(!txt) return null;
   const rows = parseCSV(txt); if(rows.length<2) return [];
   const h = rows[0].map(x => x.trim().toLowerCase());
-  const col = (...k) => h.findIndex(x => k.some(y => x.startsWith(y)));
-  const iD = col("date"), iS = col("season"), i1 = h.findIndex(x=>x==="team 1"), r1 = col("team 1 rec"), i2 = h.findIndex(x=>x==="team 2"), r2 = col("team 2 rec"), iN = col("note");
-  const g = (r,i) => i>=0 && r[i] ? r[i].trim() : "";
-  return rows.slice(1).map(r => ({date:g(r,iD), season:g(r,iS), t1:g(r,i1), g1:g(r,r1), t2:g(r,i2), g2:g(r,r2), note:g(r,iN)}));
+  const iN = h.indexOf("#"), iD = h.indexOf("date");
+  const starts = ["team a","team b","team c"].map(k => h.indexOf(k)).filter(i => i>=0);
+  const split = v => (v||"").split(/,\s*/).map(x=>x.trim()).filter(Boolean);
+  const isPick = x => /\bRD\b/i.test(x), isCash = x => /^\$/.test(x);
+  return rows.slice(1).map((r,ri) => {
+    const parts = starts.map(i => {
+      const team = (r[i]||"").trim(); if(!team) return null;
+      const raw = split(r[i+2]), mlb = split(r[i+1]), pos = split(r[i+3]);
+      const pl = raw.filter(x => !isPick(x) && !isCash(x));
+      // MLB team / position columns line up with players only; skip them if the counts don't match
+      const items = raw.map(x => {
+        if(isPick(x)) return {text:x, type:"pick"};
+        if(isCash(x)) return {text:x, type:"cash"};
+        const k = pl.indexOf(x);
+        return {text:x, type:"player", mlb: mlb.length===pl.length ? mlb[k] : "", pos: pos.length===pl.length ? pos[k] : ""};
+      });
+      return {team, items};
+    }).filter(Boolean);
+    return {n: parseInt(r[iN],10) || ri+1, date: (r[iD]||"").trim(), parts};
+  }).filter(t => t.parts.length >= 2);
 }
-const teamLink = n => { const t = (D.standings||[]).find(x => x.teamName.toLowerCase()===n.toLowerCase()); return t ? lnk(t.teamId) : esc(n); };
-const items = x => x.split(";").map(v=>v.trim()).filter(Boolean).map(v => `<li>${esc(v)}</li>`).join("") || `<li style="color:var(--muted)">—</li>`;
+const cleanName = n => n.replace(/^[A-Z]{2,4}\s+/,"").trim();
+const toks = n => n.toLowerCase().replace(/[^a-z0-9 ]/g," ").split(/\s+/).filter(w => w && w!=="the");
+function canon(raw){
+  const name = cleanName(raw), a = toks(name);
+  let best = null, score = 0;
+  (D.standings||[]).forEach(t => { const b = toks(t.teamName); const sh = a.filter(w => b.includes(w)).length; if(sh>score){ score = sh; best = t; } });
+  return best && score >= Math.min(a.length,2) ? {name:best.teamName, id:best.teamId} : {name, id:null};
+}
+const itemHtml = i => i.type==="pick" ? `<li><span class="pill">PICK</span> ${esc(i.text)}</li>`
+  : i.type==="cash" ? `<li><span class="pill">CASH</span> ${esc(i.text)}</li>`
+  : `<li>${esc(i.text)}${i.mlb?` <span class="mono text-xs" style="color:var(--muted)">${esc(i.mlb)}</span>`:""}${i.pos?` <span class="pill">${esc(i.pos)}</span>`:""}</li>`;
 V.trades = function(){
   const labels = SEASONS.map(x => x.label);
   if(!labels.includes(fSeason)) fSeason = labels[labels.length-1];
   const T = D.trades[fSeason];
   const head = `<div class="flex justify-center mb-3">` + labels.map(l => `<button data-season="${esc(l)}" class="tab ${l===fSeason?"on":""}">${esc(l)}</button>`).join("") + `</div>`;
-  if(!T || !T.length) return head + empty(`No trades logged for ${esc(fSeason)} yet. Add <span class="mono">data/${SEASONS.find(x=>x.label===fSeason).file}</span> to the repo.`);
-  const tms = [...new Set(T.flatMap(t=>[t.t1,t.t2]).filter(Boolean))].sort();
+  if(!T || !T.length) return head + empty(`No trades logged for ${esc(fSeason)} yet. Expected <span class="mono">data/${SEASONS.find(x=>x.label===fSeason).file}</span>.`);
+  const C = T.map(t => ({...t, parts: t.parts.map(p => ({...p, c: canon(p.team)}))}));
+  const tms = [...new Set(C.flatMap(t => t.parts.map(p => p.c.name)))].sort();
   if(fTeam && !tms.includes(fTeam)) fTeam = "";
-  const list = T.filter(t => !fTeam || t.t1===fTeam || t.t2===fTeam)
-    .sort((a,b) => (Date.parse(b.date)||0)-(Date.parse(a.date)||0));
+  const list = C.filter(t => !fTeam || t.parts.some(p => p.c.name===fTeam)).sort((a,b) => b.n-a.n);
   const opts = `<option value="">All teams</option>` + tms.map(v => `<option ${v===fTeam?"selected":""}>${esc(v)}</option>`).join("");
   return head + `<select id="fT" class="card w-full p-2 text-sm mb-3" style="color:var(--ink)">${opts}</select>
   <p class="lbl mb-2">${list.length} trade${list.length===1?"":"s"}</p>` + list.map(t =>
-    `<div class="card p-4 mb-3"><div class="flex justify-between items-center"><span class="mono text-xs" style="color:var(--muted)">${esc(t.date)}</span></div>
-    <div class="grid grid-cols-2 gap-4 mt-3 text-sm"><div><div class="font-bold">${teamLink(t.t1)}</div><div class="lbl mt-1">Receives</div><ul class="list-disc pl-4 mt-1">${items(t.g1)}</ul></div>
-    <div><div class="font-bold">${teamLink(t.t2)}</div><div class="lbl mt-1">Receives</div><ul class="list-disc pl-4 mt-1">${items(t.g2)}</ul></div></div>
-    ${t.note?`<p class="text-xs mt-3 italic" style="color:var(--muted)">${esc(t.note)}</p>`:""}</div>`).join("");
+    `<div class="card p-4 mb-3"><div class="flex justify-between items-center"><span class="lbl">Trade #${t.n}</span><span class="mono text-xs" style="color:var(--muted)">${esc(t.date)}</span></div>
+    <div class="grid ${t.parts.length===2?"grid-cols-2":"grid-cols-1"} gap-4 mt-3 text-sm">${t.parts.map(p =>
+      `<div><div class="font-bold">${p.c.id?lnk(p.c.id):esc(p.c.name)}</div><div class="lbl mt-1">Receives</div><ul class="mt-1 space-y-1">${p.items.map(itemHtml).join("") || "<li>—</li>"}</ul></div>`).join("")}</div></div>`).join("");
 };
 function route(keep){
   const h = location.hash.slice(1) || "home", isTeam = h.startsWith("team-");
