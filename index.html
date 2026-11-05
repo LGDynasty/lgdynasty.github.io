@@ -17,8 +17,14 @@ background-image:repeating-linear-gradient(0deg,transparent 0 31px,rgba(31,42,68
 .card{background:var(--card);border:1.5px solid var(--ink);border-radius:4px;box-shadow:3px 3px 0 var(--line)}
 .rule{border-top:3px double var(--ink)}
 .row{border-top:1px dashed var(--line)}
-.tab{padding:.45rem .8rem;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap;border-bottom:3px solid transparent;color:var(--muted)}
-.tab.on{color:var(--ink);border-bottom-color:var(--red);font-weight:700}
+#tabs{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;padding:10px 0}
+.tab{display:block;text-align:center;padding:.6rem 0;font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap;color:var(--ink);background:var(--card);border:1.5px solid var(--ink);border-radius:3px}
+.tab.on{background:var(--ink);color:#fff;font-weight:700;box-shadow:0 3px 0 var(--red)}
+@media (min-width:640px){
+  #tabs{display:flex;justify-content:center;gap:0;padding:0}
+  .tab{padding:.45rem .8rem;border:0;border-bottom:3px solid transparent;border-radius:0;background:none;color:var(--muted)}
+  .tab.on{background:none;color:var(--ink);border-bottom-color:var(--red);box-shadow:none}
+}
 .lnk{color:var(--ink);text-decoration:underline;text-decoration-color:var(--red);text-underline-offset:3px}
 .pill{font-size:.65rem;padding:.05rem .4rem;border:1px solid var(--ink);border-radius:2px;letter-spacing:.06em}
 .stamp{color:var(--red);border:2px solid var(--red);padding:.05rem .4rem;font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;transform:rotate(-3deg);display:inline-block}
@@ -35,7 +41,7 @@ summary{cursor:pointer}
     <p id="lsub" class="mt-1" style="font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:#f5b77a"></p>
     <p id="updated" class="mono text-xs mt-2" style="color:#aab4c8">Loading…</p>
   </header>
-  <nav id="tabs" class="flex sm:justify-center overflow-x-auto"></nav>
+  <nav id="tabs"></nav>
   <div class="rule mb-4"></div>
   <main id="view"></main>
 </div>
@@ -199,7 +205,7 @@ V.trades = function(){
   const labels = SEASONS.map(x => x.label);
   if(!labels.includes(fSeason)) fSeason = labels[labels.length-1];
   const T = D.trades[fSeason];
-  const head = `<div class="flex justify-center mb-3">` + labels.map(l => `<button data-season="${esc(l)}" class="tab ${l===fSeason?"on":""}">${esc(l)}</button>`).join("") + `</div>`;
+  const head = `<div class="flex justify-center gap-2 mb-3">` + labels.map(l => `<button data-season="${esc(l)}" class="tab ${l===fSeason?"on":""}">${esc(l)}</button>`).join("") + `</div>`;
   if(!T || !T.length) return head + empty(`No trades logged for ${esc(fSeason)} yet. Expected <span class="mono">data/${SEASONS.find(x=>x.label===fSeason).file}</span>.`);
   const C = T.map(t => ({...t, parts: t.parts.map(p => ({...p, c: canon(p.team)}))}));
   const tms = [...new Set(C.flatMap(t => t.parts.map(p => p.c.name)))].sort();
