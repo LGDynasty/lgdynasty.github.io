@@ -31,6 +31,7 @@ background-image:repeating-linear-gradient(0deg,transparent 0 31px,rgba(31,42,68
 th{font-weight:400;text-align:left;padding:.5rem .6rem}
 td{padding:.55rem .6rem;font-size:.88rem}
 summary{cursor:pointer}
+td.mono,th{white-space:nowrap}
 </style>
 </head>
 <body>
@@ -88,6 +89,7 @@ function buildNames(src){
   else Object.entries(pi).forEach(([k,p]) => add((p&&p.fantraxId)||k, p));
   return m;
 }
+const wl = r => String(r||"").split("-").slice(0,2).join("-"); // W-L only, no ties
 const stat = (l,v,s) => `<div class="card p-4"><div class="lbl">${l}</div><div class="slab text-xl mt-1">${v}</div><div class="text-xs mt-1" style="color:var(--muted)">${s||""}</div></div>`;
 
 const V = {
@@ -103,7 +105,7 @@ const V = {
     const sb = ms.map(m => { const aw = m.away.score>m.home.score;
       return `<div class="row py-2 text-sm"><div class="flex justify-between ${aw?"font-bold":""}"><span>${lnk(m.away.teamId)}</span><span class="mono">${m.away.score}</span></div><div class="flex justify-between ${!aw?"font-bold":""}"><span>${lnk(m.home.teamId)}</span><span class="mono">${m.home.score}</span></div></div>`; }).join("");
     return `<div class="grid grid-cols-2 gap-3">
-      ${stat("League leader", esc(lead.teamName), lead.points)}
+      ${stat("League leader", esc(lead.teamName), wl(lead.points))}
       ${stat("Points leader", esc(pf.teamName), Math.round(pf.totalPointsFor).toLocaleString()+" pts")}
       ${hoard ? stat("First-round hoard", esc(tn(hoard[0])), hoard[1]+" first-round picks") : ""}
       ${stat("Picks on the move", moved, "held by a team that didn’t originate them")}
@@ -114,8 +116,8 @@ const V = {
   standings(){
     if(!D.standings) return empty("No standings data yet.");
     const rows = [...D.standings].sort((a,b)=>a.rank-b.rank).map(t =>
-      `<tr class="row"><td class="mono">${t.rank===1?"★":t.rank}</td><td>${lnk(t.teamId)}</td><td class="mono">${esc(t.points)}</td><td class="mono">${t.winPercentage.toFixed(3).replace(/^0/,"")}</td><td class="mono">${t.gamesBack||"—"}</td><td class="mono">${Math.round(t.totalPointsFor).toLocaleString()}</td></tr>`).join("");
-    return `<div class="card overflow-x-auto"><table class="w-full"><tr class="lbl"><th>#</th><th>Club</th><th>W-L-T</th><th>Pct</th><th>GB</th><th>PF</th></tr>${rows}</table></div>`;
+      `<tr class="row"><td class="mono">${t.rank===1?"★":t.rank}</td><td>${lnk(t.teamId)}</td><td class="mono">${esc(wl(t.points))}</td><td class="mono">${t.winPercentage.toFixed(3).replace(/^0/,"")}</td><td class="mono">${t.gamesBack||"—"}</td><td class="mono">${Math.round(t.totalPointsFor).toLocaleString()}</td></tr>`).join("");
+    return `<div class="card overflow-x-auto"><table class="w-full"><tr class="lbl"><th>#</th><th>Club</th><th>W-L</th><th>Pct</th><th>GB</th><th>PF</th></tr>${rows}</table></div>`;
   },
   matchups(){
     const ms = D.matchups && D.matchups.matchups; if(!ms || !ms.length) return empty("No matchup data yet.");
@@ -131,7 +133,7 @@ const V = {
   teams(){
     if(!D.standings) return empty("No data yet.");
     return `<div class="grid grid-cols-2 gap-3">` + [...D.standings].sort((a,b)=>a.teamName.localeCompare(b.teamName)).map(t =>
-      `<a href="#team-${t.teamId}" class="card p-3 block">${logo(t.teamId,44)}<div class="lbl mt-1">Rank ${t.rank}</div><div class="font-bold text-sm mt-1">${esc(t.teamName)}</div><div class="mono text-xs mt-1">${esc(t.points)}</div></a>`).join("") + `</div>`;
+      `<a href="#team-${t.teamId}" class="card p-3 block">${logo(t.teamId,44)}<div class="lbl mt-1">Rank ${t.rank}</div><div class="font-bold text-sm mt-1">${esc(t.teamName)}</div><div class="mono text-xs mt-1">${esc(wl(t.points))}</div></a>`).join("") + `</div>`;
   },
   team(id){
     const t = (D.standings||[]).find(x=>x.teamId===id); if(!t) return empty("Team not found.");
@@ -148,7 +150,7 @@ const V = {
     const opp = m ? (m.away.teamId===id ? m.home : m.away) : null, me = m ? (m.away.teamId===id ? m.away : m.home) : null;
     return `<a href="#teams" class="lbl">← All clubs</a>
       <div class="flex items-center mt-2">${logo(id,56)}<h2 class="slab text-2xl">${esc(t.teamName)}</h2></div>
-      <p class="mono text-sm mt-1">Rank ${t.rank} · ${esc(t.points)} · ${Math.round(t.totalPointsFor).toLocaleString()} PF</p>
+      <p class="mono text-sm mt-1">Rank ${t.rank} · ${esc(wl(t.points))} · ${Math.round(t.totalPointsFor).toLocaleString()} PF</p>
       ${m ? `<p class="text-sm mt-2">This week: <b class="mono">${me.score}</b> vs ${lnk(opp.teamId)} <b class="mono">${opp.score}</b></p>`:""}
       <div class="card mt-4 overflow-hidden"><div class="slab px-4 py-3">Roster</div>${roster}</div>
       <div class="card mt-4 overflow-hidden"><div class="slab px-4 py-3">Draft picks</div>${picks || `<div class="p-4 text-sm">No picks.</div>`}</div>`;
@@ -233,7 +235,7 @@ V.power = function(){
   if(!done.length){
     const label = D.pstart ? D.pstart.label : "Current Fantrax standings";
     return `<div class="card overflow-x-auto"><div class="px-4 py-3"><div class="lbl">Starting point</div><div class="slab text-lg">${esc(label)}</div></div><table class="w-full">` +
-      startList.map((t,i) => `<tr class="row"><td class="mono">${i+1}</td><td>${lnk(t.id)}</td><td class="mono text-right text-xs" style="color:var(--muted)">${esc(t.rec||"")}</td></tr>`).join("") + `</table></div>` +
+      startList.map((t,i) => `<tr class="row"><td class="mono">${i+1}</td><td>${lnk(t.id)}</td><td class="mono text-right text-xs" style="color:var(--muted)">${esc(wl(t.rec))}</td></tr>`).join("") + `</table></div>` +
       note("These rankings switch to the points formula once the 2027 season has a finished scoring period.");
   }
   const cur = agg(done[done.length-1]);
