@@ -907,7 +907,7 @@
   "name": "Sanchez, Carlos",
   "fantraxId": "077ef",
   "team": "BAL",
-  "position": "SS"
+  "position": "C"
  },
  "05uec": {
   "rotowireId": 18279,
@@ -1436,7 +1436,7 @@
   "name": "Tovar, Jose",
   "fantraxId": "077ck",
   "team": "PHI",
-  "position": "C"
+  "position": "3B"
  },
  "077cl": {
   "name": "Ramirez, Edwin",
@@ -1930,7 +1930,7 @@
   "name": "Reyes, Howard",
   "fantraxId": "06y1k",
   "team": "DET",
-  "position": "C"
+  "position": "LF"
  },
  "076gp": {
   "name": "Polanco, Martires",
@@ -2262,7 +2262,7 @@
   "name": "Garcia, Victor",
   "fantraxId": "076sr",
   "team": "CHC",
-  "position": "C"
+  "position": "1B"
  },
  "076ss": {
   "name": "Cana, Hendrick",
@@ -4681,7 +4681,7 @@
   "name": "Cordova, Jose",
   "fantraxId": "052c2",
   "team": "COL",
-  "position": "1B"
+  "position": "C"
  },
  "078gu": {
   "rotowireId": 21133,
@@ -6333,7 +6333,7 @@
   "name": "Montilla, Jose",
   "fantraxId": "06z63",
   "team": "KC",
-  "position": "C"
+  "position": "DH"
  },
  "064n2": {
   "rotowireId": 17483,
@@ -7941,7 +7941,7 @@
   "rotowireId": 19180,
   "name": "Gil, Adrian",
   "fantraxId": "06i07",
-  "team": "CHW",
+  "team": "(N/A)",
   "position": "1B"
  },
  "06i08": {
@@ -10231,7 +10231,7 @@
   "name": "Teran, Gabriel",
   "fantraxId": "0794q",
   "team": "SD",
-  "position": "C"
+  "position": "LF"
  },
  "06z7r": {
   "rotowireId": 20336,
@@ -11075,7 +11075,7 @@
   "name": "Dalmagro, Pedro",
   "fantraxId": "06if2",
   "team": "CLE",
-  "position": "C"
+  "position": "1B"
  },
  "06if0": {
   "name": "Calvo, Jeison",
@@ -16026,7 +16026,7 @@
   "name": "Espinal, Edian",
   "fantraxId": "06yyt",
   "team": "DET",
-  "position": "2B"
+  "position": "C"
  },
  "078vt": {
   "name": "Aceves, Nathan",
@@ -17730,7 +17730,7 @@
   "name": "Gil, Jhon",
   "fantraxId": "06yxf",
   "team": "LAD",
-  "position": "C"
+  "position": "CF"
  },
  "078ub": {
   "name": "Mauro, Dominic",
@@ -18230,7 +18230,7 @@
   "name": "Genther, Eric",
   "fantraxId": "06ywe",
   "team": "NYY",
-  "position": "LF"
+  "position": "C"
  },
  "05xch": {
   "rotowireId": 17704,
@@ -18641,7 +18641,7 @@
   "name": "Capellan, Justin",
   "fantraxId": "06jbi",
   "team": "NYY",
-  "position": "C"
+  "position": "1B"
  },
  "03qyv": {
   "statsIncId": 11265,
@@ -19914,8 +19914,8 @@
  "066pq": {
   "name": "Trujillo, Keduar",
   "fantraxId": "066pq",
-  "team": "HOU",
-  "position": "1B"
+  "team": "(N/A)",
+  "position": "C"
  },
  "05y5t": {
   "name": "Ramirez, Enmanuel",
@@ -20320,7 +20320,7 @@
   "name": "Pena, Ricardo",
   "fantraxId": "066oo",
   "team": "MIN",
-  "position": "C"
+  "position": "1B"
  },
  "05y4p": {
   "rotowireId": 18199,
@@ -21838,7 +21838,7 @@
   "name": "Pena, Daniel",
   "fantraxId": "066ry",
   "team": "MIN",
-  "position": "C"
+  "position": "1B"
  },
  "05y7x": {
   "rotowireId": 17939,
@@ -26738,8 +26738,8 @@
  "06l55": {
   "name": "Parababire, Luis",
   "fantraxId": "06l55",
-  "team": "ATL",
-  "position": "C"
+  "team": "(N/A)",
+  "position": "DH"
  },
  "06l54": {
   "rotowireId": 18375,
@@ -30743,7 +30743,7 @@
   "sportRadarId": "b4426969-bac2-4665-9ed7-c3fba5cfb997",
   "name": "Nunez, Dom",
   "fantraxId": "03125",
-  "team": "CLE",
+  "team": "(N/A)",
   "position": "C"
  },
  "03120": {
@@ -31427,7 +31427,7 @@
   "name": "Rondon, Carlos",
   "fantraxId": "06mi3",
   "team": "NYY",
-  "position": "C"
+  "position": "RP"
  },
  "06mi0": {
   "rotowireId": 19669,
@@ -34482,7 +34482,7 @@
   "name": "Camacho, Santiago",
   "fantraxId": "06nl7",
   "team": "SF",
-  "position": "1B"
+  "position": "C"
  },
  "04yew": {
   "rotowireId": 19198,
@@ -37558,7 +37558,7 @@
   "name": "Davis, Luke",
   "fantraxId": "06ppt",
   "team": "PHI",
-  "position": "1B"
+  "position": "C"
  },
  "06ppu": {
   "name": "Dromboski, Ryan",
@@ -37695,7 +37695,7 @@
   "name": "Fien, Dylan",
   "fantraxId": "06pq8",
   "team": "ATH",
-  "position": "C"
+  "position": "1B"
  },
  "06r38": {
   "name": "Saez, Jhoanjel",
@@ -39459,7 +39459,7 @@
   "name": "Friend, Jacob",
   "fantraxId": "06pgs",
   "team": "CIN",
-  "position": "C"
+  "position": "LF"
  },
  "06pgq": {
   "rotowireId": 19606,
@@ -41477,7 +41477,7 @@
   "name": "Rosado, Gabriel",
   "fantraxId": "06qpk",
   "team": "DET",
-  "position": "C"
+  "position": "DH"
  },
  "06qpl": {
   "name": "Cruz, Yan",
@@ -43184,7 +43184,7 @@
   "name": "Ellis, Matthew",
   "fantraxId": "06qit",
   "team": "SEA",
-  "position": "C"
+  "position": "DH"
  },
  "06qk6": {
   "name": "Dobbins, Hunter",
@@ -43408,8 +43408,8 @@
  "06qlt": {
   "name": "Takayoshi, Tommy",
   "fantraxId": "06qlt",
-  "team": "ATH",
-  "position": "C"
+  "team": "(N/A)",
+  "position": "DH"
  },
  "06qlq": {
   "name": "Sokol, Jack",
@@ -45202,7 +45202,7 @@
   "name": "Barazarte, Aiverson",
   "fantraxId": "06rwa",
   "team": "ATH",
-  "position": "1B"
+  "position": "C"
  },
  "06aw3": {
   "rotowireId": 19500,
@@ -45582,8 +45582,8 @@
  "0730c": {
   "name": "Cristino, John",
   "fantraxId": "0730c",
-  "team": "NYY",
-  "position": "C"
+  "team": "(N/A)",
+  "position": "1B"
  },
  "06c35": {
   "rotowireId": 19181,
@@ -47939,7 +47939,7 @@
  "06rn9": {
   "name": "Tovar, Jose",
   "fantraxId": "06rn9",
-  "team": "TB",
+  "team": "(N/A)",
   "position": "C"
  },
  "06akd": {
@@ -47977,7 +47977,7 @@
   "name": "Pena, Fernando",
   "fantraxId": "06rn7",
   "team": "SF",
-  "position": "1B"
+  "position": "C"
  },
  "06akb": {
   "name": "Garcia, Keiver",
@@ -48501,7 +48501,7 @@
   "name": "Caraballo, Heriberto",
   "fantraxId": "06rp3",
   "team": "STL",
-  "position": "C"
+  "position": "1B"
  },
  "06t23": {
   "name": "Gillis, Tanner",
@@ -48566,7 +48566,7 @@
   "name": "Ponce, Isaac",
   "fantraxId": "06rnh",
   "team": "SD",
-  "position": "C"
+  "position": "1B"
  },
  "06alx": {
   "rotowireId": 20207,
@@ -48998,7 +48998,7 @@
   "name": "Dos Passos, Manuel",
   "fantraxId": "06rj9",
   "team": "ATL",
-  "position": "C"
+  "position": "1B"
  },
  "06agd": {
   "rotowireId": 18036,
@@ -49022,8 +49022,8 @@
  "06rhr": {
   "name": "Seijas, Kegnnalex",
   "fantraxId": "06rhr",
-  "team": "MIL",
-  "position": "1B"
+  "team": "(N/A)",
+  "position": "C"
  },
  "06rhs": {
   "name": "Lugo, Yoneiker",
@@ -50161,7 +50161,7 @@
   "name": "Rodriguez, Alfredo",
   "fantraxId": "06sun",
   "team": "TB",
-  "position": "C"
+  "position": "LF"
  },
  "0744n": {
   "name": "Acosta, Maikel",
@@ -56351,7 +56351,7 @@
   "name": "Gonzalez, Josue",
   "fantraxId": "06cmy",
   "team": "NYY",
-  "position": "1B"
+  "position": "C"
  },
  "060if": {
   "rotowireId": 17980,
@@ -57908,8 +57908,8 @@
  "074vv": {
   "name": "Duarte, Victor",
   "fantraxId": "074vv",
-  "team": "SD",
-  "position": "2B"
+  "team": "(N/A)",
+  "position": "C"
  },
  "04q78": {
   "rotowireId": 18408,
@@ -60280,7 +60280,7 @@
   "name": "Newton, Ben",
   "fantraxId": "06um6",
   "team": "ATH",
-  "position": "3B"
+  "position": "C"
  },
  "05rht": {
   "rotowireId": 17614,
@@ -68343,7 +68343,7 @@
   "name": "Faria, Ray",
   "fantraxId": "07778",
   "team": "BAL",
-  "position": "C"
+  "position": "1B"
  },
  "04pr8": {
   "rotowireId": 15684,
