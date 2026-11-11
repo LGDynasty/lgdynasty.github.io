@@ -1910,7 +1910,7 @@
   "name": "Tanner, Gabe",
   "fantraxId": "076n2",
   "team": "CHW",
-  "position": "RP"
+  "position": "SP"
  },
  "076n0": {
   "name": "Shinn, Nathan",
@@ -6582,7 +6582,7 @@
   "name": "Talt, Easton",
   "fantraxId": "0790v",
   "team": "NYY",
-  "position": "RF"
+  "position": "CF"
  },
  "06z59": {
   "name": "Carpio, Leonardo",
@@ -15638,7 +15638,7 @@
   "rotowireId": 18689,
   "name": "Ugueto, Miguel",
   "fantraxId": "05x06",
-  "team": "STL",
+  "team": "(N/A)",
   "position": "CF"
  },
  "06hne": {
@@ -26704,8 +26704,8 @@
   "rotowireId": 19870,
   "name": "Tirotta, Riley",
   "fantraxId": "05xpn",
-  "team": "PHI",
-  "position": "3B"
+  "team": "(N/A)",
+  "position": "1B"
  },
  "05xpj": {
   "rotowireId": 17569,
@@ -28620,8 +28620,8 @@
   "rotowireId": 18548,
   "name": "Townsend, Blake",
   "fantraxId": "05ilp",
-  "team": "TEX",
-  "position": "RP"
+  "team": "(N/A)",
+  "position": "SP"
  },
  "05ilo": {
   "rotowireId": 20425,
@@ -37601,7 +37601,7 @@
   "name": "Tello, Raider",
   "fantraxId": "06pps",
   "team": "PHI",
-  "position": "1B"
+  "position": "3B"
  },
  "06r2s": {
   "name": "Martinez, Michael",
@@ -39967,7 +39967,7 @@
   "name": "Toole, Marshall",
   "fantraxId": "06qrq",
   "team": "TB",
-  "position": "CF"
+  "position": "LF"
  },
  "06qrr": {
   "name": "Frank, Hayden",
@@ -45241,7 +45241,7 @@
   "name": "Taveras, Bracewell",
   "fantraxId": "06c7k",
   "team": "STL",
-  "position": "2B"
+  "position": "1B"
  },
  "06c7h": {
   "name": "De Leon, Luis",
@@ -59526,7 +59526,7 @@
   "name": "Torres, Erick",
   "fantraxId": "061z2",
   "team": "KC",
-  "position": "LF"
+  "position": "RF"
  },
  "026mq": {
   "statsIncId": 10031,
