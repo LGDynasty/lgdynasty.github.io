@@ -33130,7 +33130,7 @@
   "sportRadarId": "3b981fab-4f08-4a4f-a2b6-6fc37410de3d",
   "name": "Navarreto, Brian",
   "fantraxId": "031bn",
-  "team": "MIA",
+  "team": "PHI",
   "position": "C"
  },
  "06mpb": {
@@ -51858,6 +51858,15 @@
   "name": "Reynoso, Leonardo",
   "fantraxId": "072zh",
   "team": "SEA",
+  "position": "SS"
+ },
+ "02i3g": {
+  "statsIncId": 9581,
+  "rotowireId": 12800,
+  "sportRadarId": "dd1d9fc7-25af-4f36-a30f-3525a2ba4e50",
+  "name": "Mondesi, Adalberto",
+  "fantraxId": "02i3g",
+  "team": "(N/A)",
   "position": "SS"
  },
  "02i45": {
