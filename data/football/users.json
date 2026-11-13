@@ -1,0 +1,189 @@
+[
+ {
+  "avatar": "db7b742f6549b03367eb48ed1e328e5e",
+  "display_name": "TheMikeKoplin",
+  "is_bot": false,
+  "is_owner": false,
+  "league_id": "1344914797510004736",
+  "metadata": {
+   "allow_pn": "on",
+   "avatar": "https://sleepercdn.com/uploads/eb177bc05f389749483b272bc72ffdc9.jpg",
+   "mention_pn": "on",
+   "team_name": "PNW Geoducks"
+  },
+  "settings": null,
+  "user_id": "331292719739576320"
+ },
+ {
+  "avatar": "15bb023e0f7de90b6ab482861657a47b",
+  "display_name": "jmcinsanity",
+  "is_bot": false,
+  "is_owner": false,
+  "league_id": "1344914797510004736",
+  "metadata": {
+   "allow_pn": "on",
+   "archived": "off",
+   "avatar": "https://sleepercdn.com/uploads/223bd7b99e83b266624b2c08172aedeb.jpg",
+   "mention_pn": "on",
+   "team_name": "High Line Hitmen"
+  },
+  "settings": null,
+  "user_id": "655222217306636288"
+ },
+ {
+  "avatar": "0e427d364cb96f2be19950f8bc783ad0",
+  "display_name": "AceGarcia",
+  "is_bot": false,
+  "is_owner": true,
+  "league_id": "1344914797510004736",
+  "metadata": {
+   "allow_pn": "on",
+   "archived": "off",
+   "avatar": "https://sleepercdn.com/uploads/de5c0a234b4c6630f20c0f52d59f8ca5.jpg",
+   "mention_pn": "on",
+   "team_name": "San Diego Spirit "
+  },
+  "settings": null,
+  "user_id": "736001577915109376"
+ },
+ {
+  "avatar": "c30491d3f760a07abeb09ecaa8f75da3",
+  "display_name": "MainManMaiville",
+  "is_bot": false,
+  "is_owner": false,
+  "league_id": "1344914797510004736",
+  "metadata": {
+   "allow_pn": "on",
+   "avatar": "https://sleepercdn.com/uploads/8a90428a680378ca1eab5b1f9bed0fc7.jpg",
+   "mention_pn": "on",
+   "team_name": "SoFL Silver Medalists"
+  },
+  "settings": null,
+  "user_id": "867486787835150336"
+ },
+ {
+  "avatar": "7d05546dd64bdeb3c9ee70bfd9ca110c",
+  "display_name": "Weird0KJLee",
+  "is_bot": false,
+  "is_owner": false,
+  "league_id": "1344914797510004736",
+  "metadata": {
+   "allow_pn": "on",
+   "archived": "off",
+   "avatar": "https://sleepercdn.com/uploads/70a2b3b947d8aa4d35aeb9f65e463c06.jpg",
+   "mention_pn": "on",
+   "team_name": "Charlevoix Shanties"
+  },
+  "settings": null,
+  "user_id": "1135598243007631360"
+ },
+ {
+  "avatar": "d22e52781a5d7a94bcbf2aa70e748382",
+  "display_name": "SamiYanks",
+  "is_bot": false,
+  "is_owner": false,
+  "league_id": "1344914797510004736",
+  "metadata": {
+   "allow_pn": "on",
+   "allow_sms": "on",
+   "avatar": "https://sleepercdn.com/uploads/bc3c6182cc27135e6e86165281e6e1b1.jpg",
+   "mention_pn": "on",
+   "team_name": "MidWes BearTigers"
+  },
+  "settings": null,
+  "user_id": "1248113514187333632"
+ },
+ {
+  "avatar": "b12eb09b32f50eff385a2444b029356a",
+  "display_name": "almartinet",
+  "is_bot": false,
+  "is_owner": false,
+  "league_id": "1344914797510004736",
+  "metadata": {
+   "allow_pn": "on",
+   "allow_sms": "on",
+   "avatar": "https://sleepercdn.com/uploads/227de872cb486d4a8f9fe55497df7419",
+   "mention_pn": "on",
+   "team_name": "The Valley Gridlords"
+  },
+  "settings": null,
+  "user_id": "1249870993153859584"
+ },
+ {
+  "avatar": "877a9d6954daf01c058f841af99297a9",
+  "display_name": "Zangarang",
+  "is_bot": false,
+  "is_owner": false,
+  "league_id": "1344914797510004736",
+  "metadata": {
+   "allow_pn": "on",
+   "avatar": "https://sleepercdn.com/uploads/5fadd8765937a40f9636a392564fdb21",
+   "mention_pn": "on",
+   "team_name": "Alton Owls"
+  },
+  "settings": null,
+  "user_id": "1250547333112807424"
+ },
+ {
+  "avatar": "d55d1f7075eda01948318de4af616075",
+  "display_name": "RangersCowboys",
+  "is_bot": false,
+  "is_owner": false,
+  "league_id": "1344914797510004736",
+  "metadata": {
+   "allow_pn": "on",
+   "allow_sms": "on",
+   "avatar": "https://sleepercdn.com/uploads/52c8dbf928a39974921f46ada04407da.jpg",
+   "mention_pn": "on",
+   "team_name": "Dallas Contenders"
+  },
+  "settings": null,
+  "user_id": "1250567276789252096"
+ },
+ {
+  "avatar": "452df0bb9945ef692cbd05ac2c42e16b",
+  "display_name": "OkieSooner",
+  "is_bot": false,
+  "is_owner": false,
+  "league_id": "1344914797510004736",
+  "metadata": {
+   "allow_pn": "on",
+   "allow_sms": "on",
+   "avatar": "https://sleepercdn.com/uploads/3a6315aeb8ef6a3f0a2c636d96cb3516.jpg",
+   "mention_pn": "on",
+   "team_name": "Podunkville Praire Dogs"
+  },
+  "settings": null,
+  "user_id": "1251645227618291712"
+ },
+ {
+  "avatar": "51385ba57cd089261f6de9ce483b8716",
+  "display_name": "AnnaKendrick",
+  "is_bot": false,
+  "is_owner": false,
+  "league_id": "1344914797510004736",
+  "metadata": {
+   "allow_pn": "on",
+   "allow_sms": "on",
+   "mention_pn": "on",
+   "team_name": "I Miss The Podcast"
+  },
+  "settings": null,
+  "user_id": "1251691086326267904"
+ },
+ {
+  "avatar": "526cc473b7f4683f1fbba7653e79dd62",
+  "display_name": "BohsBrosandOs",
+  "is_bot": false,
+  "is_owner": false,
+  "league_id": "1344914797510004736",
+  "metadata": {
+   "allow_pn": "on",
+   "avatar": "https://sleepercdn.com/uploads/8ff37cb111d6b3beeae74abf96968a81.jpg",
+   "mention_pn": "on",
+   "team_name": "Flower City Flyers"
+  },
+  "settings": null,
+  "user_id": "1262098105143140352"
+ }
+]
