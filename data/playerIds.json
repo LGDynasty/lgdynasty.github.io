@@ -18757,10 +18757,11 @@
  },
  "05xmx": {
   "rotowireId": 19674,
+  "sportRadarId": "3b4a491e-a128-47b5-a350-8f458a249a2a",
   "name": "Gonzalez, Esteban",
   "fantraxId": "05xmx",
   "team": "CLE",
-  "position": "OF"
+  "position": "CF"
  },
  "05xo6": {
   "rotowireId": 17408,
@@ -28581,6 +28582,7 @@
   "position": "2B"
  },
  "056j7": {
+  "rotowireId": 16346,
   "sportRadarId": "461251f4-7b0b-4eda-b35f-112aea360d0e",
   "name": "Gutierrez, Luis",
   "fantraxId": "056j7",
@@ -40276,6 +40278,7 @@
  },
  "06s3j": {
   "rotowireId": 20544,
+  "sportRadarId": "c4fd32cf-ff5f-4411-bb5e-a05e8f3ffa09",
   "name": "Perez, Steven",
   "fantraxId": "06s3j",
   "team": "CLE",
@@ -45378,6 +45381,7 @@
   "position": "SP"
  },
  "06c6s": {
+  "sportRadarId": "f10780b0-711e-4c91-b64f-b44404aeefc5",
   "name": "Rosario, Ronald",
   "fantraxId": "06c6s",
   "team": "(N/A)",
