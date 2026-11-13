@@ -255,7 +255,7 @@ const drawTabs = (list, prefix, cur) => { document.getElementById("tabs").innerH
 async function routeFB(h, keep){
   setSport("fb");
   const r = h.replace(/^fb-?/, "") || "home", isTeam = r.startsWith("team-");
-  const cur = isTeam ? "teams" : (FB.tabs.some(t=>t[0]===r) ? r : "home");
+  const cur = isTeam ? "teams" : (FB.tabs.some(t=>t[0]===r) || r==="logos" ? r : "home");
   drawTabs(FB.tabs, "fb-", cur);
   const view = document.getElementById("view");
   if(!FB.ready) view.innerHTML = empty("Loading football data…");
