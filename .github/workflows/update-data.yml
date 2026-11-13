@@ -1,4 +1,4 @@
-name: Update Fantrax data
+name: Update league data
 on:
   schedule:
     - cron: "0 */3 * * *"   # every 3 hours
@@ -13,7 +13,11 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-      - run: node fetch-fantrax.mjs
+      - name: Baseball (Fantrax)
+        run: node fetch-fantrax.mjs
+      - name: Football (Sleeper)
+        run: node fetch-sleeper.mjs
+        continue-on-error: true   # a football hiccup never blocks the baseball update
       - name: Commit changes
         run: |
           git config user.name "dynasty-hub-bot"
