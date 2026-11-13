@@ -11,7 +11,10 @@
   const tn = rid => D.tm[rid] ? D.tm[rid].name : "Team " + rid;
   // Logos live in /logos/football/<roster number>.<ext>; the file type matches the baseball LOGO_EXT setting
   const EXT = () => (typeof LOGO_EXT !== "undefined" ? LOGO_EXT : "jpg");
-  const logo = (rid, px = 20) => `<img src="logos/football/${rid}.${EXT()}" alt="" width="${px}" height="${px}" style="display:inline-block;vertical-align:middle;margin-right:6px;object-fit:contain;border-radius:4px" onerror="this.remove()">`;
+  // Circular logos. If the preferred file type isn't found, try the other one (jpg <-> png) before giving up.
+  const ALT = () => (EXT() === "jpg" ? "png" : "jpg");
+  const FAIL = `if(!this.dataset.t){this.dataset.t=1;this.src=this.src.replace(/\.[a-z]+$/,'.'+this.dataset.alt)}else{this.remove()}`;
+  const logo = (rid, px = 20) => `<img src="logos/football/${rid}.${EXT()}" data-alt="${ALT()}" alt="" width="${px}" height="${px}" style="display:inline-block;vertical-align:middle;margin-right:6px;object-fit:cover;border-radius:50%" onerror="${FAIL}">`;
   const lnk = rid => `${logo(rid)}<a class="lnk" href="#fb-team-${rid}">${esc(tn(rid))}</a>`;
   const rec = t => `${t.w}-${t.l}${t.t ? "-" + t.t : ""}`;
   const fmt = n => Math.round(n).toLocaleString();
@@ -101,7 +104,7 @@
       const ext = EXT();
       return `<p class="text-sm mb-3">Name each team’s logo after its number and upload it to <span class="mono">logos/football/</span>.</p><div class="card overflow-hidden">` +
         [...D.teams].sort((a, b) => a.roster_id - b.roster_id).map(t =>
-          `<div class="px-4 py-3 flex items-center gap-3 row text-sm"><span class="mono" style="min-width:5.5rem">${t.roster_id}.${ext}</span><span class="flex-1">${esc(t.name)}</span><img src="logos/football/${t.roster_id}.${ext}" width="40" height="40" style="object-fit:contain;border-radius:4px" onerror="this.replaceWith(Object.assign(document.createElement('span'),{textContent:'missing',className:'lbl'}))"></div>`).join("") + `</div>`;
+          `<div class="px-4 py-3 flex items-center gap-3 row text-sm"><span class="mono" style="min-width:5.5rem">${t.roster_id}.${ext}</span><span class="flex-1">${esc(t.name)}</span><img src="logos/football/${t.roster_id}.${ext}" data-alt="${ALT()}" width="40" height="40" style="object-fit:cover;border-radius:50%" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.src.replace(/\.[a-z]+$/,'.'+this.dataset.alt)}else{this.replaceWith(Object.assign(document.createElement('span'),{textContent:'missing',className:'lbl'}))}"></div>`).join("") + `</div>`;
     },
     trades() {
       const yrs = Object.keys(D.seasons).sort();
