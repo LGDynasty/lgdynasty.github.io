@@ -9,7 +9,10 @@
 
   const stat = (l, v, s) => `<div class="card p-4"><div class="lbl">${l}</div><div class="slab text-xl mt-1">${v}</div><div class="text-xs mt-1" style="color:var(--muted)">${s || ""}</div></div>`;
   const tn = rid => D.tm[rid] ? D.tm[rid].name : "Team " + rid;
-  const lnk = rid => `<a class="lnk" href="#fb-team-${rid}">${esc(tn(rid))}</a>`;
+  // Logos live in /logos/football/<roster number>.<ext>; the file type matches the baseball LOGO_EXT setting
+  const EXT = () => (typeof LOGO_EXT !== "undefined" ? LOGO_EXT : "jpg");
+  const logo = (rid, px = 20) => `<img src="logos/football/${rid}.${EXT()}" alt="" width="${px}" height="${px}" style="display:inline-block;vertical-align:middle;margin-right:6px;object-fit:contain;border-radius:4px" onerror="this.remove()">`;
+  const lnk = rid => `${logo(rid)}<a class="lnk" href="#fb-team-${rid}">${esc(tn(rid))}</a>`;
   const rec = t => `${t.w}-${t.l}${t.t ? "-" + t.t : ""}`;
   const fmt = n => Math.round(n).toLocaleString();
   const standings = () => [...D.teams].sort((a, b) => b.w - a.w || b.pf - a.pf);
@@ -78,7 +81,7 @@
     teams() {
       if (!D.teams.length) return empty("No data yet.");
       return `<div class="grid grid-cols-2 gap-3">` + [...D.teams].sort((a, b) => a.name.localeCompare(b.name)).map(t =>
-        `<a href="#fb-team-${t.roster_id}" class="card p-3 block"><div class="font-bold text-sm">${esc(t.name)}</div><div class="lbl mt-1">${esc(t.manager || "")}</div><div class="mono text-xs mt-1">${rec(t)}</div></a>`).join("") + `</div>`;
+        `<a href="#fb-team-${t.roster_id}" class="card p-3 block">${logo(t.roster_id, 44)}<div class="font-bold text-sm mt-1">${esc(t.name)}</div><div class="lbl mt-1">${esc(t.manager || "")}</div><div class="mono text-xs mt-1">${rec(t)}</div></a>`).join("") + `</div>`;
     },
     team(id) {
       const R = D.tm[Number(id)]; if (!R) return empty("Team not found.");
@@ -88,10 +91,17 @@
       const pk = p => `<div class="px-4 py-2 flex justify-between row text-sm"><span>${esc(p.season)} round ${p.round}</span><span class="pill">${p.owner_id === R.roster_id ? "via " + esc(tn(p.roster_id)) : "to " + esc(tn(p.owner_id))}</span></div>`;
       const got = D.tp.filter(p => p.owner_id === R.roster_id && p.roster_id !== R.roster_id), away = D.tp.filter(p => p.roster_id === R.roster_id && p.owner_id !== R.roster_id);
       const picks = (got.length ? `<div class="lbl px-4 py-2 row">Acquired</div>` + got.map(pk).join("") : "") + (away.length ? `<div class="lbl px-4 py-2 row">Traded away</div>` + away.map(pk).join("") : "");
-      return `<a href="#fb-teams" class="lbl">← All clubs</a><h2 class="slab text-2xl mt-2">${esc(R.name)}</h2>
+      return `<a href="#fb-teams" class="lbl">← All clubs</a><div class="flex items-center mt-2">${logo(R.roster_id, 56)}<h2 class="slab text-2xl">${esc(R.name)}</h2></div>
         <p class="mono text-sm mt-1">${esc(R.manager || "")} · ${rec(R)} · ${fmt(R.pf)} PF</p>
         <div class="card mt-4 overflow-hidden"><div class="slab px-4 py-3">Roster</div>${roster}</div>
         <div class="card mt-4 overflow-hidden"><div class="slab px-4 py-3">Draft picks</div>${picks || `<div class="p-4 text-sm">No traded picks.</div>`}</div>`;
+    },
+    logos() {
+      if (!D.teams.length) return empty("No football data yet.");
+      const ext = EXT();
+      return `<p class="text-sm mb-3">Name each team’s logo after its number and upload it to <span class="mono">logos/football/</span>.</p><div class="card overflow-hidden">` +
+        [...D.teams].sort((a, b) => a.roster_id - b.roster_id).map(t =>
+          `<div class="px-4 py-3 flex items-center gap-3 row text-sm"><span class="mono" style="min-width:5.5rem">${t.roster_id}.${ext}</span><span class="flex-1">${esc(t.name)}</span><img src="logos/football/${t.roster_id}.${ext}" width="40" height="40" style="object-fit:contain;border-radius:4px" onerror="this.replaceWith(Object.assign(document.createElement('span'),{textContent:'missing',className:'lbl'}))"></div>`).join("") + `</div>`;
     },
     trades() {
       const yrs = Object.keys(D.seasons).sort();
