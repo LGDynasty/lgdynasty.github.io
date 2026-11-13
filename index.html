@@ -32,6 +32,8 @@ th{font-weight:400;text-align:left;padding:.5rem .6rem}
 td{padding:.55rem .6rem;font-size:.88rem}
 summary{cursor:pointer}
 td.mono,th{white-space:nowrap}
+#sport a{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;padding:.35rem .85rem;border:1.5px solid #f5b77a;border-radius:999px;color:#f5b77a}
+#sport a.on{background:#f5b77a;color:var(--ink);font-weight:700}
 </style>
 </head>
 <body>
@@ -40,16 +42,18 @@ td.mono,th{white-space:nowrap}
     <div id="emblem" class="flex justify-center"></div>
     <h1 id="lname" class="slab text-3xl mt-2"></h1>
     <p id="lsub" class="mt-1" style="font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:#f5b77a"></p>
-    <p id="updated" class="mono text-xs mt-2" style="color:#aab4c8">Loading…</p>
+    <div id="sport" class="mt-3 flex justify-center gap-2"><a data-s="bb" href="#home">⚾ Baseball</a><a data-s="fb" href="#fb-home">🏈 Football</a></div>
+    <p id="updated" class="mono text-xs mt-3" style="color:#aab4c8">Loading…</p>
   </header>
   <nav id="tabs"></nav>
   <div class="rule mb-4"></div>
   <main id="view"></main>
 </div>
+<script src="football.js"></script>
 <script>
 // ---- Customize here ----
 const LOGO = `<svg viewBox="0 0 100 100" width="76" height="76" xmlns="http://www.w3.org/2000/svg" aria-label="League logo"><circle cx="50" cy="50" r="46" fill="#0c2340" stroke="#e8710a" stroke-width="5"/><circle cx="50" cy="50" r="39" fill="none" stroke="#fff" stroke-width="1.5"/><path d="M27 24H57V31H48V65H67V53H75V77H27V70H37V31H27Z" fill="#fff"/></svg>`;
-const CFG = { name: "Lollygaggers Dynasty", sub: "Baseball Hub" };
+const CFG = { name: "Lollygaggers Dynasty", sub: "Baseball Hub", subFB: "Football Hub" };
 // Team logos: put an image named after each team's code in the repo's /logos folder (e.g. logos/POR.jpg).
 // The league logo is logos/league.jpg. Missing files are skipped, so you can add them a few at a time.
 const LOGO_EXT = "jpg"; // change to "png" if you switch file types
@@ -245,10 +249,29 @@ V.power = function(){
     cur.map((t,i) => `<tr class="row"><td class="mono">${i+1}</td><td class="mono text-xs">${prev[t.id] ? arrow(prev[t.id]-(i+1)) : ""}</td><td>${lnk(t.id)}<div class="mono text-xs" style="color:var(--muted)">PF ${Math.round(t.pf).toLocaleString()} · PA ${Math.round(t.pa).toLocaleString()}</div></td><td class="mono">${t.s.toFixed(3).replace(/^0/,"")}</td></tr>`).join("") + `</table></div>` +
     note("Score = PF² ÷ (PF² + PA²) over finished scoring periods. Arrows show movement since the previous period.");
 };
+let bbUpdated = "";
+const setSport = s => { document.querySelectorAll("#sport a").forEach(a => a.classList.toggle("on", a.dataset.s===s)); document.getElementById("lsub").textContent = s==="fb" ? (CFG.subFB||"Football Hub") : CFG.sub; };
+const drawTabs = (list, prefix, cur) => { document.getElementById("tabs").innerHTML = list.map(([k,l]) => `<a href="#${prefix}${k}" class="tab ${k===cur?"on":""}">${l}</a>`).join(""); };
+async function routeFB(h, keep){
+  setSport("fb");
+  const r = h.replace(/^fb-?/, "") || "home", isTeam = r.startsWith("team-");
+  const cur = isTeam ? "teams" : (FB.tabs.some(t=>t[0]===r) ? r : "home");
+  drawTabs(FB.tabs, "fb-", cur);
+  const view = document.getElementById("view");
+  if(!FB.ready) view.innerHTML = empty("Loading football data…");
+  await FB.ensure();
+  if(location.hash.slice(1) !== h) return; // you tapped elsewhere while it loaded
+  document.getElementById("updated").textContent = FB.updated();
+  view.innerHTML = isTeam ? FB.views.team(r.slice(5)) : FB.views[cur]();
+  if(!keep) window.scrollTo(0,0);
+  FB.bind(() => routeFB(h, true));
+}
 function route(keep){
+  if(location.hash.startsWith("#fb")) return routeFB(location.hash.slice(1), keep);
+  setSport("bb"); document.getElementById("updated").textContent = bbUpdated;
   const h = location.hash.slice(1) || "home", isTeam = h.startsWith("team-");
   const cur = isTeam ? "teams" : (TABS.some(t=>t[0]===h) ? h : "home");
-  document.getElementById("tabs").innerHTML = TABS.map(([k,l]) => `<a href="#${k}" class="tab ${k===cur?"on":""}">${l}</a>`).join("");
+  drawTabs(TABS, "", cur);
   document.getElementById("view").innerHTML = isTeam ? V.team(h.slice(5)) : V[cur]();
   if(!keep) window.scrollTo(0,0);
   document.querySelectorAll("[data-season]").forEach(b => b.onclick = () => { fSeason = b.dataset.season; fTeam = ""; route(true); });
@@ -270,7 +293,7 @@ function route(keep){
   D.matchups = mu; D.rosters = ro; D.picks = dp && dp.futureDraftPicks; D.pstart = ps; D.pscores = psc; D.trades = {}; SEASONS.forEach((x,i) => D.trades[x.label] = parseTrades(trs[i]));
   D.tn = {}; (D.standings||[]).forEach(t => D.tn[t.teamId] = t.teamName);
   names = buildNames(pi);
-  document.getElementById("updated").textContent = meta && meta.updatedAt ? "Updated " + new Date(meta.updatedAt).toLocaleString() : "Waiting for first data update";
+  bbUpdated = meta && meta.updatedAt ? "Updated " + new Date(meta.updatedAt).toLocaleString() : "Waiting for first data update";
   window.addEventListener("hashchange", () => route()); route();
 })();
 </script>
