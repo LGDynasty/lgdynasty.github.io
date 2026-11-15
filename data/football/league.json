@@ -64,7 +64,6 @@
  "avatar": null,
  "company_id": null,
  "league_id": "1344914797510004736",
- "last_message_id": "1427074437814980608",
  "shard": 748,
  "season": "2026",
  "season_type": "regular",
@@ -114,19 +113,23 @@
   "pts_allow_7_13": 4,
   "st_ff": 1
  },
- "draft_id": "1344914797522591745",
+ "last_message_id": "1427532056421761024",
  "last_author_avatar": null,
  "last_author_display_name": "sys",
  "last_author_id": "166666666666666666",
  "last_author_is_bot": true,
  "last_message_attachment": null,
  "last_message_text_map": null,
- "last_message_time": 1794603569037,
+ "last_message_time": 1794712673816,
  "last_pinned_message_id": null,
+ "draft_id": "1344914797522591745",
  "last_read_id": null,
  "previous_league_id": "1243443639133159424",
  "bracket_id": null,
  "bracket_overrides_id": null,
+ "group_id": null,
+ "loser_bracket_id": null,
+ "loser_bracket_overrides_id": null,
  "roster_positions": [
   "QB",
   "RB",
@@ -145,8 +148,5 @@
   "BN",
   "BN"
  ],
- "group_id": null,
- "loser_bracket_id": null,
- "loser_bracket_overrides_id": null,
  "total_rosters": 12
 }
