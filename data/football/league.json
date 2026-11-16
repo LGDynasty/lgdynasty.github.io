@@ -64,7 +64,6 @@
  "avatar": null,
  "company_id": null,
  "league_id": "1344914797510004736",
- "last_message_id": "1427863252422901760",
  "scoring_settings": {
   "sack": 1,
   "fgm_40_49": 4,
@@ -112,8 +111,9 @@
  },
  "season": "2026",
  "season_type": "regular",
- "sport": "nfl",
  "shard": 748,
+ "sport": "nfl",
+ "last_message_id": "1427863252422901760",
  "draft_id": "1344914797522591745",
  "last_author_avatar": "b12eb09b32f50eff385a2444b029356a",
  "last_author_display_name": "almartinet",
@@ -143,9 +143,9 @@
   "BN",
   "BN"
  ],
+ "group_id": null,
  "bracket_id": null,
  "bracket_overrides_id": null,
- "group_id": null,
  "loser_bracket_id": null,
  "loser_bracket_overrides_id": null,
  "total_rosters": 12

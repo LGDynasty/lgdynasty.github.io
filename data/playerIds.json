@@ -14446,6 +14446,7 @@
   "position": "2B"
  },
  "078qn": {
+  "rotowireId": 21310,
   "name": "Perry, Gavin",
   "fantraxId": "078qn",
   "team": "SF",
@@ -29142,6 +29143,7 @@
   "position": "RP"
  },
  "05j8m": {
+  "sportRadarId": "142a8d91-a942-43df-a694-da470286a9c0",
   "name": "Pena, Carlos",
   "fantraxId": "05j8m",
   "team": "DET",
