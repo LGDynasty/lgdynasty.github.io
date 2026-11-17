@@ -120,6 +120,31 @@ if (league) {
   });
 }
 
+// Champions: the winner of each season's championship game (playoff bracket). Finished seasons are cached.
+if (league) await step("champions", async () => {
+  const file = `${OUT}/champions.json`;
+  const champs = (await readJSON(file)) || {};
+  let id = LEAGUE_ID, l = league, n = 0;
+  while (id && id !== "0" && n++ <= MAX_SEASONS_BACK) {
+    if (!champs[l.season]) {
+      const bracket = await get(`/league/${id}/winners_bracket`);
+      const final = (bracket || []).find(m => m.p === 1) || [...(bracket || [])].sort((a, b) => b.r - a.r)[0];
+      if (final && final.w != null) { // no winner yet means the season is still being played
+        const [r, u] = id === LEAGUE_ID && rosters && users ? [rosters, users] : await Promise.all([get(`/league/${id}/rosters`), get(`/league/${id}/users`)]);
+        const ro = r.find(x => x.roster_id === final.w) || {}, us = u.find(x => x.user_id === ro.owner_id) || {}, s = ro.settings || {};
+        champs[l.season] = {
+          season: l.season, roster_id: final.w, owner_id: ro.owner_id || null,
+          team: (us.metadata && us.metadata.team_name) || us.display_name || `Team ${final.w}`, manager: us.display_name || null,
+          w: s.wins ?? 0, l: s.losses ?? 0, t: s.ties ?? 0, pf: (s.fpts ?? 0) + (s.fpts_decimal ?? 0) / 100,
+        };
+      }
+    }
+    if (!l.previous_league_id || l.previous_league_id === "0") break;
+    id = l.previous_league_id; l = await get(`/league/${id}`);
+  }
+  await save("champions.json", champs);
+});
+
 // --- player names (large file, so at most once a day, and trimmed down) --
 await step("players", async () => {
   const fresh = meta.playersFetchedAt && Date.now() - Date.parse(meta.playersFetchedAt) < DAY;
