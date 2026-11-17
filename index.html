@@ -42,7 +42,7 @@ td.mono,th{white-space:nowrap}
     <div id="emblem" class="flex justify-center"></div>
     <h1 id="lname" class="slab text-3xl mt-2"></h1>
     <p id="lsub" class="mt-1" style="font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:#f5b77a"></p>
-    <div id="sport" class="mt-3 flex justify-center gap-2"><a data-s="bb" href="#home">⚾ Baseball</a><a data-s="fb" href="#fb-home">🏈 Football</a></div>
+    <div id="sport" class="mt-3 flex justify-center gap-2"><a data-s="hall" href="#hall">🏆 Hall</a><a data-s="bb" href="#home">⚾ Baseball</a><a data-s="fb" href="#fb-home">🏈 Football</a></div>
     <p id="updated" class="mono text-xs mt-3" style="color:#aab4c8">Loading…</p>
   </header>
   <nav id="tabs"></nav>
@@ -53,7 +53,7 @@ td.mono,th{white-space:nowrap}
 <script>
 // ---- Customize here ----
 const LOGO = `<svg viewBox="0 0 100 100" width="76" height="76" xmlns="http://www.w3.org/2000/svg" aria-label="League logo"><circle cx="50" cy="50" r="46" fill="#0c2340" stroke="#e8710a" stroke-width="5"/><circle cx="50" cy="50" r="39" fill="none" stroke="#fff" stroke-width="1.5"/><path d="M27 24H57V31H48V65H67V53H75V77H27V70H37V31H27Z" fill="#fff"/></svg>`;
-const CFG = { name: "Lollygaggers Dynasty", sub: "Baseball Hub", subFB: "Football Hub" };
+const CFG = { name: "Lollygaggers Dynasty", sub: "Baseball Hub", subFB: "Football Hub", subHall: "Hall of Fame" };
 // Team logos: put an image named after each team's code in the repo's /logos folder (e.g. logos/POR.jpg).
 // The league logo is logos/league.jpg. Missing files are skipped, so you can add them a few at a time.
 const LOGO_EXT = "jpg"; // change to "png" if you switch file types
@@ -196,6 +196,14 @@ function parseTrades(txt){
     return {n: parseInt(r[iN],10) || ri+1, date: (r[iD]||"").trim(), parts};
   }).filter(t => t.parts.length >= 2);
 }
+function parseChamps(txt){
+  if(!txt) return [];
+  const rows = parseCSV(txt); if(rows.length < 2) return [];
+  const h = rows[0].map(x => x.trim().toLowerCase()), iS = h.indexOf("season"), iT = h.indexOf("team");
+  if(iS < 0 || iT < 0) return []; // not a Champions tab
+  const iR = h.indexOf("record"), iP = h.indexOf("points"), g = (r,i) => i >= 0 && r[i] ? r[i].trim() : "";
+  return rows.slice(1).map(r => ({season:g(r,iS), team:g(r,iT), record:g(r,iR), points:g(r,iP)})).filter(c => c.season && c.team);
+}
 const cleanName = n => n.replace(/^[A-Z]{2,4}\s+/,"").trim();
 const toks = n => n.toLowerCase().replace(/[^a-z0-9 ]/g," ").split(/\s+/).filter(w => w && w!=="the");
 function canon(raw){
@@ -250,7 +258,7 @@ V.power = function(){
     note("Score = PF² ÷ (PF² + PA²) over finished scoring periods. Arrows show movement since the previous period.");
 };
 let bbUpdated = "";
-const setSport = s => { document.querySelectorAll("#sport a").forEach(a => a.classList.toggle("on", a.dataset.s===s)); document.getElementById("lsub").textContent = s==="fb" ? (CFG.subFB||"Football Hub") : CFG.sub; };
+const setSport = s => { document.querySelectorAll("#sport a").forEach(a => a.classList.toggle("on", a.dataset.s===s)); document.getElementById("lsub").textContent = s==="fb" ? (CFG.subFB||"Football Hub") : s==="hall" ? (CFG.subHall||"Hall of Fame") : CFG.sub; };
 const drawTabs = (list, prefix, cur) => { document.getElementById("tabs").innerHTML = list.map(([k,l]) => `<a href="#${prefix}${k}" class="tab ${k===cur?"on":""}">${l}</a>`).join(""); };
 async function routeFB(h, keep){
   setSport("fb");
@@ -266,8 +274,24 @@ async function routeFB(h, keep){
   if(!keep) window.scrollTo(0,0);
   FB.bind(() => routeFB(h, true));
 }
+const hallRow = r => `<div class="row px-4 py-3 flex items-center gap-3"><span class="stamp">${esc(r.season)}</span><span class="flex-1">${r.logo||""}${r.href ? `<a class="lnk" href="${r.href}">${esc(r.name)}</a>` : esc(r.name)}${r.sub ? `<div class="mono text-xs" style="color:var(--muted)">${esc(r.sub)}</div>` : ""}</span><span>🏆</span></div>`;
+async function routeHall(){
+  setSport("hall"); document.getElementById("tabs").innerHTML = ""; document.getElementById("updated").textContent = bbUpdated;
+  await FB.ensure();
+  const now = location.hash.slice(1); if(now && now !== "hall") return;
+  const card = (title, rows, note) => `<div class="card mb-4 overflow-hidden"><div class="slab px-4 py-3">${title}</div>${rows.length ? rows.map(hallRow).join("") : `<div class="row px-4 py-3 text-sm" style="color:var(--muted)">${note}</div>`}</div>`;
+  const bb = (D.champBB||[]).slice().sort((a,b) => String(b.season).localeCompare(String(a.season))).map(c => { const k = canon(c.team);
+    return {season:c.season, name:k.name, href:k.id ? `#team-${k.id}` : null, logo:k.id ? logo(k.id,28) : "", sub:[c.record, c.points && c.points+" pts"].filter(Boolean).join(" · ")}; });
+  document.getElementById("view").innerHTML = `<p class="text-sm mb-4" style="color:var(--muted)">Every champion, by sport. Tap a team to see its roster.</p>` +
+    card("⚾ Baseball", bb, "Add a “Champions” tab to the Google Sheet with Season and Team columns.") +
+    card("🏈 Football", FB.hallRows(), "Champions appear here once a season’s playoffs are finished.") +
+    card("🏀 Basketball", [], "Coming soon.");
+  window.scrollTo(0,0);
+}
 function route(keep){
-  if(location.hash.startsWith("#fb")) return routeFB(location.hash.slice(1), keep);
+  const raw = location.hash.slice(1);
+  if(raw.startsWith("fb")) return routeFB(raw, keep);
+  if(raw === "" || raw === "hall") return routeHall();
   setSport("bb"); document.getElementById("updated").textContent = bbUpdated;
   const h = location.hash.slice(1) || "home", isTeam = h.startsWith("team-");
   const cur = isTeam ? "teams" : (TABS.some(t=>t[0]===h) ? h : "home");
@@ -288,9 +312,9 @@ function route(keep){
   lg.src = `logos/league.${LOGO_EXT}`;
   document.getElementById("lname").textContent = CFG.name;
   document.getElementById("lsub").textContent = CFG.sub;
-  const [st,mu,ro,pi,meta,dp,ps,psc,...trs] = await Promise.all(["standings","matchups","rosters","playerIds","meta","draftPicks","power-start","period-scores"].map(load).concat(SEASONS.map(x => loadText(x.file))));
+  const [st,mu,ro,pi,meta,dp,ps,psc,chc,...trs] = await Promise.all(["standings","matchups","rosters","playerIds","meta","draftPicks","power-start","period-scores"].map(load).concat([loadText("champions-baseball.csv")], SEASONS.map(x => loadText(x.file))));
   D.standings = Array.isArray(st) ? st : (st && st.standings) || null;
-  D.matchups = mu; D.rosters = ro; D.picks = dp && dp.futureDraftPicks; D.pstart = ps; D.pscores = psc; D.trades = {}; SEASONS.forEach((x,i) => D.trades[x.label] = parseTrades(trs[i]));
+  D.matchups = mu; D.rosters = ro; D.picks = dp && dp.futureDraftPicks; D.pstart = ps; D.pscores = psc; D.champBB = parseChamps(chc); D.trades = {}; SEASONS.forEach((x,i) => D.trades[x.label] = parseTrades(trs[i]));
   D.tn = {}; (D.standings||[]).forEach(t => D.tn[t.teamId] = t.teamName);
   names = buildNames(pi);
   bbUpdated = meta && meta.updatedAt ? "Updated " + new Date(meta.updatedAt).toLocaleString() : "Waiting for first data update";
