@@ -1142,7 +1142,7 @@
   "name": "Olsavsky, Joe",
   "fantraxId": "06gj1",
   "team": "ATL",
-  "position": "1B"
+  "position": "2B"
  },
  "064da": {
   "rotowireId": 18143,
@@ -3271,7 +3271,7 @@
   "name": "Neunborn, Mitch",
   "fantraxId": "06fsk",
   "team": "PHI",
-  "position": "SP"
+  "position": "RP"
  },
  "076s8": {
   "name": "Cubilla, Efrain",
@@ -6136,7 +6136,7 @@
   "rotowireId": 19995,
   "name": "Navigato, Andrew",
   "fantraxId": "051fb",
-  "team": "DET",
+  "team": "(N/A)",
   "position": "SS"
  },
  "04ai4": {
@@ -6638,7 +6638,7 @@
   "name": "Peterson, Tyce",
   "fantraxId": "0790t",
   "team": "NYY",
-  "position": "2B"
+  "position": "3B"
  },
  "051hq": {
   "rotowireId": 20524,
@@ -8246,8 +8246,8 @@
   "rotowireId": 20557,
   "name": "Mendoza, Carlos",
   "fantraxId": "05w7q",
-  "team": "TOR",
-  "position": "3B"
+  "team": "(N/A)",
+  "position": "2B"
  },
  "04aqc": {
   "statsIncId": 11645,
@@ -13937,7 +13937,7 @@
   "sportRadarId": "916739e3-f5ee-498c-a25a-2477c3bd6d14",
   "name": "Newman, Kevin",
   "fantraxId": "03pj2",
-  "team": "KC",
+  "team": "(N/A)",
   "position": "SS"
  },
  "078p5": {
@@ -17634,7 +17634,7 @@
   "name": "Ogando, Joan",
   "fantraxId": "06hwb",
   "team": "HOU",
-  "position": "SP"
+  "position": "RP"
  },
  "03pok": {
   "statsIncId": 10874,
@@ -22067,7 +22067,7 @@
   "name": "Polanco, Narciso",
   "fantraxId": "066s7",
   "team": "TB",
-  "position": "2B"
+  "position": "SS"
  },
  "066qu": {
   "name": "Myers, Mitch",
@@ -22720,7 +22720,7 @@
   "name": "Pacheco, Alberto",
   "fantraxId": "05yen",
   "team": "COL",
-  "position": "SP"
+  "position": "RP"
  },
  "05yek": {
   "rotowireId": 18981,
@@ -23637,7 +23637,7 @@
   "name": "Meyers, Chris",
   "fantraxId": "05yd8",
   "team": "DET",
-  "position": "1B"
+  "position": "LF"
  },
  "05ybw": {
   "rotowireId": 17996,
@@ -26430,7 +26430,7 @@
   "name": "Oliver, Connor",
   "fantraxId": "06l2t",
   "team": "PIT",
-  "position": "RP"
+  "position": "SP"
  },
  "06l46": {
   "name": "Rives, Luis",
@@ -28765,7 +28765,7 @@
   "name": "Portes, Ovis",
   "fantraxId": "06m9q",
   "team": "CIN",
-  "position": "RP"
+  "position": "SP"
  },
  "04eql": {
   "name": "Willis, Marlin",
@@ -29146,7 +29146,7 @@
   "sportRadarId": "142a8d91-a942-43df-a694-da470286a9c0",
   "name": "Pena, Carlos",
   "fantraxId": "05j8m",
-  "team": "DET",
+  "team": "(N/A)",
   "position": "RP"
  },
  "04esk": {
@@ -33617,8 +33617,8 @@
   "rotowireId": 16582,
   "name": "Mercedes, Manuel",
   "fantraxId": "05itd",
-  "team": "SF",
-  "position": "SP"
+  "team": "(N/A)",
+  "position": "RP"
  },
  "06lwe": {
   "name": "Leal, Victor",
@@ -33805,7 +33805,7 @@
   "name": "Ortiz, JeanPierre",
   "fantraxId": "06mdk",
   "team": "CIN",
-  "position": "RP"
+  "position": "SP"
  },
  "06mdl": {
   "name": "Ortiz, Nicolas",
@@ -35562,7 +35562,7 @@
   "rotowireId": 16800,
   "name": "Nwogu, Jordan",
   "fantraxId": "05jrm",
-  "team": "CHC",
+  "team": "(N/A)",
   "position": "LF"
  },
  "06mw1": {
@@ -39099,7 +39099,7 @@
   "name": "Nunez, Daniel",
   "fantraxId": "06r8i",
   "team": "ARI",
-  "position": "SP"
+  "position": "RP"
  },
  "06r8f": {
   "rotowireId": 20140,
@@ -46075,8 +46075,8 @@
  "06c3p": {
   "name": "Mijares, Yaikel",
   "fantraxId": "06c3p",
-  "team": "CLE",
-  "position": "3B"
+  "team": "(N/A)",
+  "position": "2B"
  },
  "06rsb": {
   "name": "Mombetsu, Keito",
@@ -48163,7 +48163,7 @@
   "name": "Patino, Orlando",
   "fantraxId": "06rku",
   "team": "CHW",
-  "position": "CF"
+  "position": "RF"
  },
  "06rkv": {
   "name": "Feliz, Wandi",
@@ -54102,7 +54102,7 @@
   "sportRadarId": "6030ab44-a183-46df-90c8-25f56e7734f4",
   "name": "Pichardo, Kervin",
   "fantraxId": "060qn",
-  "team": "WSH",
+  "team": "(N/A)",
   "position": "3B"
  },
  "060qh": {
@@ -56404,7 +56404,7 @@
   "name": "Nunez, Starlyn",
   "fantraxId": "06cqq",
   "team": "BOS",
-  "position": "SS"
+  "position": "CF"
  },
  "06cqn": {
   "name": "Hernandez, Roynier",
@@ -57473,7 +57473,7 @@
   "name": "Pacheco, Carlos",
   "fantraxId": "060gh",
   "team": "ATH",
-  "position": "RF"
+  "position": "CF"
  },
  "060gg": {
   "rotowireId": 17969,
@@ -59533,7 +59533,7 @@
   "name": "Osorio, Oswaldo",
   "fantraxId": "061z0",
   "team": "LAD",
-  "position": "2B"
+  "position": "1B"
  },
  "0507o": {
   "rotowireId": 20058,
@@ -62934,7 +62934,7 @@
   "name": "Netz, Dawson",
   "fantraxId": "06uq2",
   "team": "CHC",
-  "position": "RP"
+  "position": "SP"
  },
  "04ok3": {
   "statsIncId": 11759,
