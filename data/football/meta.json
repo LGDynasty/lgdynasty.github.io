@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-17T18:56:23.150Z",
+ "updatedAt": "2026-11-17T20:56:07.779Z",
  "leagueId": "1344914797510004736",
  "playersFetchedAt": "2026-11-16T21:46:19.732Z",
  "ok": {
@@ -12,6 +12,7 @@
   "matchups": true,
   "trades": true,
   "history": true,
+  "champions": true,
   "players": true
  },
  "errors": {}
