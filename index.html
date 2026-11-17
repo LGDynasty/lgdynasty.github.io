@@ -201,8 +201,8 @@ function parseChamps(txt){
   const rows = parseCSV(txt); if(rows.length < 2) return [];
   const h = rows[0].map(x => x.trim().toLowerCase()), iS = h.indexOf("season"), iT = h.indexOf("team");
   if(iS < 0 || iT < 0) return []; // not a Champions tab
-  const iR = h.indexOf("record"), iP = h.indexOf("points"), g = (r,i) => i >= 0 && r[i] ? r[i].trim() : "";
-  return rows.slice(1).map(r => ({season:g(r,iS), team:g(r,iT), record:g(r,iR), points:g(r,iP)})).filter(c => c.season && c.team);
+  const iR = h.indexOf("record"), iP = h.indexOf("points"), iN = h.indexOf("current team"), g = (r,i) => i >= 0 && r[i] ? r[i].trim() : "";
+  return rows.slice(1).map(r => ({season:g(r,iS), team:g(r,iT), record:g(r,iR), points:g(r,iP), now:g(r,iN)})).filter(c => c.season && c.team);
 }
 const cleanName = n => n.replace(/^[A-Z]{2,4}\s+/,"").trim();
 const toks = n => n.toLowerCase().replace(/[^a-z0-9 ]/g," ").split(/\s+/).filter(w => w && w!=="the");
@@ -274,14 +274,19 @@ async function routeFB(h, keep){
   if(!keep) window.scrollTo(0,0);
   FB.bind(() => routeFB(h, true));
 }
+// A champion's name can change over the years, so the optional "Current Team" column says who they are today (used for the link)
+const bbHallRows = () => (D.champBB||[]).slice().sort((a,b) => String(b.season).localeCompare(String(a.season))).map(c => {
+  const k = canon(c.now || c.team), name = c.now ? cleanName(c.team) : k.name;
+  return {season:c.season, name, href:k.id ? `#team-${k.id}` : null, logo:k.id ? logo(k.id,28) : "",
+    sub:[c.now && k.name !== name ? "now " + k.name : "", c.record, c.points && Number(c.points) ? Number(c.points).toLocaleString() + " pts" : c.points].filter(Boolean).join(" · ")};
+});
 const hallRow = r => `<div class="row px-4 py-3 flex items-center gap-3"><span class="stamp">${esc(r.season)}</span><span class="flex-1">${r.logo||""}${r.href ? `<a class="lnk" href="${r.href}">${esc(r.name)}</a>` : esc(r.name)}${r.sub ? `<div class="mono text-xs" style="color:var(--muted)">${esc(r.sub)}</div>` : ""}</span><span>🏆</span></div>`;
 async function routeHall(){
   setSport("hall"); document.getElementById("tabs").innerHTML = ""; document.getElementById("updated").textContent = bbUpdated;
   await FB.ensure();
   const now = location.hash.slice(1); if(now && now !== "hall") return;
   const card = (title, rows, note) => `<div class="card mb-4 overflow-hidden"><div class="slab px-4 py-3">${title}</div>${rows.length ? rows.map(hallRow).join("") : `<div class="row px-4 py-3 text-sm" style="color:var(--muted)">${note}</div>`}</div>`;
-  const bb = (D.champBB||[]).slice().sort((a,b) => String(b.season).localeCompare(String(a.season))).map(c => { const k = canon(c.team);
-    return {season:c.season, name:k.name, href:k.id ? `#team-${k.id}` : null, logo:k.id ? logo(k.id,28) : "", sub:[c.record, c.points && c.points+" pts"].filter(Boolean).join(" · ")}; });
+  const bb = bbHallRows();
   document.getElementById("view").innerHTML = `<p class="text-sm mb-4" style="color:var(--muted)">Every champion, by sport. Tap a team to see its roster.</p>` +
     card("⚾ Baseball", bb, "Add a “Champions” tab to the Google Sheet with Season and Team columns.") +
     card("🏈 Football", FB.hallRows(), "Champions appear here once a season’s playoffs are finished.") +
