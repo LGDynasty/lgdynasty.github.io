@@ -64,6 +64,7 @@ if (Date.now() >= SEASON_START && curPeriod > 1) {
 // Trade log from the Google Sheet (must be shared as "anyone with the link can view").
 const SHEET_ID = process.env.TRADES_SHEET_ID || "1XrUUB7PB9NLVnijQUDHjaG9wZjyPy3ou1yS309MSAEk";
 const TABS = [
+  { tab: "Champions", file: "champions-baseball.csv" },          // hall of fame: one row per season (Season, Team)
   { tab: "Trades", file: "trades.csv" },                        // live season (2027): refreshed every run
   { tab: "2026Trades", file: "trades-2026.csv", once: true },   // finished seasons: downloaded once, then left alone
   { tab: "2025Trades", file: "trades-2025.csv", once: true },
