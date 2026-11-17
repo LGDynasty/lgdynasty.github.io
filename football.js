@@ -30,8 +30,8 @@
 
   FB.ensure = async () => {
     if (FB.ready) return;
-    const [teams, mu, pl, tp, lg, meta] = await Promise.all(["teams.json","matchups.json","players.json","traded_picks.json","league.json","meta.json"].map(get));
-    D = { teams: (teams || []).map(t => ({ ...t, name: (t.name || "").trim() })), mu: mu || { weeks: {}, currentWeek: 0 }, pl: pl || {}, tp: tp || [], lg: lg || {}, meta: meta || {}, seasons: {} };
+    const [teams, mu, pl, tp, lg, meta, champs] = await Promise.all(["teams.json","matchups.json","players.json","traded_picks.json","league.json","meta.json","champions.json"].map(get));
+    D = { teams: (teams || []).map(t => ({ ...t, name: (t.name || "").trim() })), mu: mu || { weeks: {}, currentWeek: 0 }, pl: pl || {}, tp: tp || [], lg: lg || {}, meta: meta || {}, champs: champs || {}, seasons: {} };
     D.tm = Object.fromEntries(D.teams.map(t => [t.roster_id, t]));
     const y = Number(D.lg.season) || new Date().getFullYear();
     (await Promise.all(Array.from({ length: 7 }, (_, i) => get(`season-${y - i}.json`)))).forEach(s => { if (s) D.seasons[s.season] = s; });
@@ -40,6 +40,11 @@
     selWeek = cur() || null;
     FB.ready = true;
   };
+  // Champion rows for the hall of fame; a champion links to the team's page when the same manager still owns a team
+  FB.hallRows = () => Object.values(D.champs || {}).sort((a, b) => String(b.season).localeCompare(String(a.season))).map(c => {
+    const now = (D.teams || []).find(t => t.owner_id && t.owner_id === c.owner_id);
+    return { season: c.season, name: (c.team || "").trim(), href: now ? `#fb-team-${now.roster_id}` : null, logo: now ? logo(now.roster_id, 28) : "", sub: `${c.w}-${c.l}${c.t ? "-" + c.t : ""} · ${fmt(c.pf)} pts` };
+  });
   FB.updated = () => D.meta && D.meta.updatedAt ? "Updated " + new Date(D.meta.updatedAt).toLocaleString() : "Waiting for first football update";
   FB.bind = rerender => {
     document.querySelectorAll("[data-fbs]").forEach(b => b.onclick = () => { selSeason = b.dataset.fbs; selTeam = ""; rerender(); });
