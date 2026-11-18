@@ -42,7 +42,7 @@ td.mono,th{white-space:nowrap}
     <div id="emblem" class="flex justify-center"></div>
     <h1 id="lname" class="slab text-3xl mt-2"></h1>
     <p id="lsub" class="mt-1" style="font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:#f5b77a"></p>
-    <div id="sport" class="mt-3 flex justify-center gap-2"><a data-s="hall" href="#hall">🏆 Hall</a><a data-s="bb" href="#home">⚾ Baseball</a><a data-s="fb" href="#fb-home">🏈 Football</a></div>
+    <div id="sport" class="mt-3 flex flex-wrap justify-center gap-2"><a data-s="hall" href="#hall">🏆 Hall</a><a data-s="bb" href="#home">⚾ Baseball</a><a data-s="fb" href="#fb-home">🏈 Football</a><a data-s="nb" href="#nb-home">🏀 Basketball</a></div>
     <p id="updated" class="mono text-xs mt-3" style="color:#aab4c8">Loading…</p>
   </header>
   <nav id="tabs"></nav>
@@ -53,7 +53,7 @@ td.mono,th{white-space:nowrap}
 <script>
 // ---- Customize here ----
 const LOGO = `<svg viewBox="0 0 100 100" width="76" height="76" xmlns="http://www.w3.org/2000/svg" aria-label="League logo"><circle cx="50" cy="50" r="46" fill="#0c2340" stroke="#e8710a" stroke-width="5"/><circle cx="50" cy="50" r="39" fill="none" stroke="#fff" stroke-width="1.5"/><path d="M27 24H57V31H48V65H67V53H75V77H27V70H37V31H27Z" fill="#fff"/></svg>`;
-const CFG = { name: "Lollygaggers Dynasty", sub: "Baseball Hub", subFB: "Football Hub", subHall: "Hall of Fame" };
+const CFG = { name: "Lollygaggers Dynasty", sub: "Baseball Hub", subFB: "Football Hub", subHall: "Hall of Fame", subNB: "Basketball Hub" };
 // Team logos: put an image named after each team's code in the repo's /logos folder (e.g. logos/POR.jpg).
 // The league logo is logos/league.jpg. Missing files are skipped, so you can add them a few at a time.
 const LOGO_EXT = "jpg"; // change to "png" if you switch file types
@@ -71,16 +71,17 @@ const SEASONS = [
   { label: "2027", file: "trades.csv" }
 ];
 // ------------------------
-const D = {}; let names = {}, teams = {}, pos = {}, fSeason = SEASONS[SEASONS.length-1].label, fTeam = "";
+let D = {}, names = {}, teams = {}, pos = {}, SPORT = "bb"; let fSeason = SEASONS[SEASONS.length-1].label, fTeam = "";
 const TABS = [["home","Home"],["standings","Standings"],["power","Power"],["matchups","Matchups"],["teams","Teams"],["trades","Trades"]];
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const tn = id => D.tn[id] || id;
-const logo = (id, px = 20) => TEAM_CODES[id] ? `<img src="logos/${TEAM_CODES[id]}.${LOGO_EXT}" alt="" width="${px}" height="${px}" style="display:inline-block;vertical-align:middle;margin-right:6px;object-fit:contain;border-radius:4px" onerror="this.remove()">` : "";
+const logoFile = id => SPORT === "nb" ? `basketball/${id}` : TEAM_CODES[id];
+const logo = (id, px = 20) => logoFile(id) ? `<img src="logos/${logoFile(id)}.${LOGO_EXT}" alt="" width="${px}" height="${px}" style="display:inline-block;vertical-align:middle;margin-right:6px;object-fit:contain;border-radius:4px" onerror="this.remove()">` : "";
 const lnk = id => `${logo(id)}<a class="lnk" href="#team-${id}">${esc(tn(id))}</a>`;
 const ord = n => n + (["th","st","nd","rd"][(n%100>10&&n%100<14)?0:Math.min(n%10,4)%4] || "th");
 const empty = t => `<div class="card p-4 text-sm" style="color:var(--muted)">${t}</div>`;
 const loadText = async n => { try { const r = await fetch(`data/${n}`,{cache:"no-cache"}); if(!r.ok) throw 0; return await r.text(); } catch(e){ return null; } };
-const load = async n => { try { const r = await fetch(`data/${n}.json`,{cache:"no-cache"}); if(!r.ok) throw 0; return await r.json(); } catch(e){ return null; } };
+const load = async (n, dir = "data") => { try { const r = await fetch(`${dir}/${n}.json`,{cache:"no-cache"}); if(!r.ok) throw 0; return await r.json(); } catch(e){ return null; } };
 
 function buildNames(src){
   const m = {}; if(!src) return m;
@@ -94,6 +95,8 @@ function buildNames(src){
   return m;
 }
 const wl = r => String(r||"").split("-").slice(0,2).join("-"); // W-L only, no ties
+const sc = t => t.score != null ? t.score : (t.categoryWins != null ? `${t.categoryWins}-${t.categoryLosses}-${t.categoryTies}` : "–");
+const won = (a,b) => a.score != null ? a.score > b.score : (a.categoryWins||0) > (b.categoryWins||0);
 const stat = (l,v,s) => `<div class="card p-4"><div class="lbl">${l}</div><div class="slab text-xl mt-1">${v}</div><div class="text-xs mt-1" style="color:var(--muted)">${s||""}</div></div>`;
 
 const V = {
@@ -102,12 +105,12 @@ const V = {
     const lead = [...S].sort((a,b)=>a.rank-b.rank)[0];
     const pf = [...S].sort((a,b)=>b.totalPointsFor-a.totalPointsFor)[0];
     const ms = (D.matchups && D.matchups.matchups) || [];
-    let close = null; ms.forEach(m => { const d = Math.abs(m.away.score-m.home.score); if(!close || d<close.d) close = {m,d}; });
+    let close = null; ms.forEach(m => { const d = Math.abs(m.away.score-m.home.score); if(!isNaN(d) && (!close || d<close.d)) close = {m,d}; });
     const firsts = {}; (D.picks||[]).filter(p=>p.round===1).forEach(p => firsts[p.currentOwnerTeamId] = (firsts[p.currentOwnerTeamId]||0)+1);
     const hoard = Object.entries(firsts).sort((a,b)=>b[1]-a[1])[0];
     const moved = (D.picks||[]).filter(p=>p.currentOwnerTeamId!==p.originalOwnerTeamId).length;
-    const sb = ms.map(m => { const aw = m.away.score>m.home.score;
-      return `<div class="row py-2 text-sm"><div class="flex justify-between ${aw?"font-bold":""}"><span>${lnk(m.away.teamId)}</span><span class="mono">${m.away.score}</span></div><div class="flex justify-between ${!aw?"font-bold":""}"><span>${lnk(m.home.teamId)}</span><span class="mono">${m.home.score}</span></div></div>`; }).join("");
+    const sb = ms.map(m => { const aw = won(m.away, m.home);
+      return `<div class="row py-2 text-sm"><div class="flex justify-between ${aw?"font-bold":""}"><span>${lnk(m.away.teamId)}</span><span class="mono">${sc(m.away)}</span></div><div class="flex justify-between ${!aw?"font-bold":""}"><span>${lnk(m.home.teamId)}</span><span class="mono">${sc(m.home)}</span></div></div>`; }).join("");
     return `<div class="grid grid-cols-2 gap-3">
       ${stat("League leader", esc(lead.teamName), wl(lead.points))}
       ${stat("Points leader", esc(pf.teamName), Math.round(pf.totalPointsFor).toLocaleString()+" pts")}
@@ -126,11 +129,11 @@ const V = {
   matchups(){
     const ms = D.matchups && D.matchups.matchups; if(!ms || !ms.length) return empty("No matchup data yet.");
     return `<p class="lbl mb-2">Scoring period ${D.matchups.period}</p>` + ms.map(m => {
-      const a=m.away, h=m.home, aw=a.score>h.score;
+      const a=m.away, h=m.home, aw=won(a,h);
       const cats = (m.categories||[]).filter(c=>c.away.display||c.home.display).map(c =>
         `<div class="flex justify-between text-xs py-1 row mono"><span>${esc(c.away.display??"–")}</span><span style="color:var(--muted)">${esc(c.shortName)}</span><span>${esc(c.home.display??"–")}</span></div>`).join("");
-      return `<div class="card p-4 mb-3"><div class="flex justify-between ${aw?"font-bold":""}"><span>${lnk(a.teamId)}</span><span class="mono">${a.score}</span></div>
-        <div class="flex justify-between mt-1 ${!aw?"font-bold":""}"><span>${lnk(h.teamId)}</span><span class="mono">${h.score}</span></div>
+      return `<div class="card p-4 mb-3"><div class="flex justify-between ${aw?"font-bold":""}"><span>${lnk(a.teamId)}</span><span class="mono">${sc(a)}</span></div>
+        <div class="flex justify-between mt-1 ${!aw?"font-bold":""}"><span>${lnk(h.teamId)}</span><span class="mono">${sc(h)}</span></div>
         <details class="mt-2"><summary class="lbl">Box score</summary><div class="mt-2">${cats}</div></details></div>`;
     }).join("");
   },
@@ -143,6 +146,7 @@ const V = {
     const t = (D.standings||[]).find(x=>x.teamId===id); if(!t) return empty("Team not found.");
     const R = D.rosters && D.rosters.rosters && D.rosters.rosters[id];
     const groups = [["ACTIVE","Active roster"],["RESERVE","Reserve"],["INJURED_RESERVE","Injured list"],["MINORS","Minors / prospects"]];
+    if(R) R.rosterItems.forEach(p => { if(!groups.some(g => g[0]===p.status)) groups.push([p.status, String(p.status).replace(/_/g," ").toLowerCase()]); });
     const roster = R ? groups.map(([k,l]) => { const list = R.rosterItems.filter(p=>p.status===k); if(!list.length) return "";
       return `<div class="lbl px-4 py-2 row">${l} · ${list.length}</div>` + list.map(p =>
         `<div class="px-4 py-2 flex justify-between items-center row text-sm"><span>${esc(names[p.id]||p.id)}${teams[p.id]?` <span class="mono text-xs" style="color:var(--muted)">${esc(teams[p.id])}</span>`:""}</span><span class="pill">${esc(p.position)}</span></div>`).join(""); }).join("") : `<div class="p-4 text-sm">No roster data.</div>`;
@@ -155,7 +159,7 @@ const V = {
     return `<a href="#teams" class="lbl">← All clubs</a>
       <div class="flex items-center mt-2">${logo(id,56)}<h2 class="slab text-2xl">${esc(t.teamName)}</h2></div>
       <p class="mono text-sm mt-1">Rank ${t.rank} · ${esc(wl(t.points))} · ${Math.round(t.totalPointsFor).toLocaleString()} PF</p>
-      ${m ? `<p class="text-sm mt-2">This week: <b class="mono">${me.score}</b> vs ${lnk(opp.teamId)} <b class="mono">${opp.score}</b></p>`:""}
+      ${m ? `<p class="text-sm mt-2">This week: <b class="mono">${sc(me)}</b> vs ${lnk(opp.teamId)} <b class="mono">${sc(opp)}</b></p>`:""}
       <div class="card mt-4 overflow-hidden"><div class="slab px-4 py-3">Roster</div>${roster}</div>
       <div class="card mt-4 overflow-hidden"><div class="slab px-4 py-3">Draft picks</div>${picks || `<div class="p-4 text-sm">No picks.</div>`}</div>`;
   }
@@ -248,7 +252,7 @@ V.power = function(){
     const label = D.pstart ? D.pstart.label : "Current Fantrax standings";
     return `<div class="card overflow-x-auto"><div class="px-4 py-3"><div class="lbl">Starting point</div><div class="slab text-lg">${esc(label)}</div></div><table class="w-full">` +
       startList.map((t,i) => `<tr class="row"><td class="mono">${i+1}</td><td>${lnk(t.id)}</td><td class="mono text-right text-xs" style="color:var(--muted)">${esc(wl(t.rec))}</td></tr>`).join("") + `</table></div>` +
-      note("These rankings switch to the points formula once the 2027 season has a finished scoring period.");
+      note("These rankings switch to the points formula once the season has a finished scoring period.");
   }
   const cur = agg(done[done.length-1]);
   const prev = {};
@@ -257,8 +261,45 @@ V.power = function(){
     cur.map((t,i) => `<tr class="row"><td class="mono">${i+1}</td><td class="mono text-xs">${prev[t.id] ? arrow(prev[t.id]-(i+1)) : ""}</td><td>${lnk(t.id)}<div class="mono text-xs" style="color:var(--muted)">PF ${Math.round(t.pf).toLocaleString()} · PA ${Math.round(t.pa).toLocaleString()}</div></td><td class="mono">${t.s.toFixed(3).replace(/^0/,"")}</td></tr>`).join("") + `</table></div>` +
     note("Score = PF² ÷ (PF² + PA²) over finished scoring periods. Arrows show movement since the previous period.");
 };
+const CTX = {};
+const use = c => { ({D, names, teams, pos} = c.state); SPORT = c.sport; };
+// Loads one sport's data files. Network first, then a quick synchronous swap so a half-built context is never visible.
+async function buildCtx(dir, full){
+  const files = ["standings","matchups","rosters","playerIds","meta","draftPicks","power-start","period-scores"];
+  const extra = full ? [loadText("champions-baseball.csv"), loadText("champions-football.csv"), ...SEASONS.map(x => loadText(x.file))] : [];
+  const [st,mu,ro,pi,meta,dp,ps,psc,...rest] = await Promise.all([...files.map(n => load(n, dir)), ...extra]);
+  const saved = {D, names, teams, pos};
+  D = {}; names = {}; teams = {}; pos = {};
+  D.standings = Array.isArray(st) ? st : (st && st.standings) || null;
+  D.matchups = mu; D.rosters = ro; D.picks = dp && dp.futureDraftPicks; D.pstart = ps; D.pscores = psc;
+  if(full){ D.champBB = parseChamps(rest[0]); D.champFB = parseChamps(rest[1]); D.trades = {}; SEASONS.forEach((x,i) => D.trades[x.label] = parseTrades(rest[2+i])); }
+  D.tn = {}; (D.standings||[]).forEach(t => D.tn[t.teamId] = t.teamName);
+  names = buildNames(pi);
+  const ctx = { state: {D, names, teams, pos}, sport: full ? "bb" : "nb",
+    updated: meta && meta.updatedAt ? "Updated " + new Date(meta.updatedAt).toLocaleString() : "Waiting for first data update" };
+  ({D, names, teams, pos} = saved);
+  return ctx;
+}
+const nbLogos = () => !(D.standings||[]).length ? empty("No basketball data yet.") :
+  `<p class="text-sm mb-3">Name each team’s logo exactly as shown and upload it to <span class="mono">logos/basketball/</span>.</p><div class="card overflow-hidden">` +
+  [...D.standings].sort((a,b) => a.teamName.localeCompare(b.teamName)).map(t =>
+    `<div class="px-4 py-3 flex items-center gap-3 row text-sm"><div class="flex-1"><div>${esc(t.teamName)}</div><div class="mono text-xs" style="color:var(--muted)">${esc(t.teamId)}.${LOGO_EXT}</div></div><img src="logos/basketball/${t.teamId}.${LOGO_EXT}" width="40" height="40" style="object-fit:contain;border-radius:4px" onerror="this.replaceWith(Object.assign(document.createElement('span'),{textContent:'missing',className:'lbl'}))"></div>`).join("") + `</div>`;
+async function routeNB(h, keep){
+  setSport("nb");
+  const r = h.replace(/^nb-?/, "") || "home", isTeam = r.startsWith("team-");
+  const cur = isTeam ? "teams" : (TABS.some(t=>t[0]===r) || r==="logos" ? r : "home");
+  drawTabs(TABS, "nb-", cur);
+  const view = document.getElementById("view");
+  if(!CTX.nb){ view.innerHTML = empty("Loading basketball data…"); CTX.nb = await buildCtx("data/basketball", false); }
+  if(location.hash.slice(1) !== h) return; // you tapped elsewhere while it loaded
+  use(CTX.nb);
+  document.getElementById("updated").textContent = CTX.nb.updated;
+  const html = cur === "trades" ? empty("Trades are coming soon for basketball.") : cur === "logos" ? nbLogos() : isTeam ? V.team(r.slice(5)) : V[cur]();
+  view.innerHTML = html.replace(/href="#(?!nb-)/g, 'href="#nb-'); // keep links inside the basketball section
+  if(!keep) window.scrollTo(0,0);
+}
 let bbUpdated = "";
-const setSport = s => { document.querySelectorAll("#sport a").forEach(a => a.classList.toggle("on", a.dataset.s===s)); document.getElementById("lsub").textContent = s==="fb" ? (CFG.subFB||"Football Hub") : s==="hall" ? (CFG.subHall||"Hall of Fame") : CFG.sub; };
+const setSport = s => { document.querySelectorAll("#sport a").forEach(a => a.classList.toggle("on", a.dataset.s===s)); document.getElementById("lsub").textContent = s==="fb" ? (CFG.subFB||"Football Hub") : s==="nb" ? (CFG.subNB||"Basketball Hub") : s==="hall" ? (CFG.subHall||"Hall of Fame") : CFG.sub; };
 const drawTabs = (list, prefix, cur) => { document.getElementById("tabs").innerHTML = list.map(([k,l]) => `<a href="#${prefix}${k}" class="tab ${k===cur?"on":""}">${l}</a>`).join(""); };
 async function routeFB(h, keep){
   setSport("fb");
@@ -282,6 +323,7 @@ const bbHallRows = () => (D.champBB||[]).slice().sort((a,b) => String(b.season).
 });
 const hallRow = r => `<div class="row px-4 py-3 flex items-center gap-3"><span class="stamp">${esc(r.season)}</span><span class="flex-1">${r.logo||""}${r.href ? `<a class="lnk" href="${r.href}">${esc(r.name)}</a>` : esc(r.name)}${r.sub ? `<div class="mono text-xs" style="color:var(--muted)">${esc(r.sub)}</div>` : ""}</span><span>🏆</span></div>`;
 async function routeHall(){
+  use(CTX.bb);
   setSport("hall"); document.getElementById("tabs").innerHTML = ""; document.getElementById("updated").textContent = bbUpdated;
   await FB.ensure();
   const now = location.hash.slice(1); if(now && now !== "hall") return;
@@ -289,14 +331,16 @@ async function routeHall(){
   const bb = bbHallRows();
   document.getElementById("view").innerHTML = `<p class="text-sm mb-4" style="color:var(--muted)">Every champion, by sport. Tap a team to see its roster.</p>` +
     card("⚾ Baseball", bb, "Add a “Champions” tab to the Google Sheet with Season and Team columns.") +
-    card("🏈 Football", FB.hallRows(), "Champions appear here once a season’s playoffs are finished.") +
+    card("🏈 Football", FB.hallRows(D.champFB), "Champions appear here once a season’s playoffs are finished.") +
     card("🏀 Basketball", [], "Coming soon.");
   window.scrollTo(0,0);
 }
 function route(keep){
   const raw = location.hash.slice(1);
+  if(raw.startsWith("nb")) return routeNB(raw, keep);
   if(raw.startsWith("fb")) return routeFB(raw, keep);
   if(raw === "" || raw === "hall") return routeHall();
+  use(CTX.bb);
   setSport("bb"); document.getElementById("updated").textContent = bbUpdated;
   const h = location.hash.slice(1) || "home", isTeam = h.startsWith("team-");
   const cur = isTeam ? "teams" : (TABS.some(t=>t[0]===h) ? h : "home");
@@ -317,12 +361,7 @@ function route(keep){
   lg.src = `logos/league.${LOGO_EXT}`;
   document.getElementById("lname").textContent = CFG.name;
   document.getElementById("lsub").textContent = CFG.sub;
-  const [st,mu,ro,pi,meta,dp,ps,psc,chc,...trs] = await Promise.all(["standings","matchups","rosters","playerIds","meta","draftPicks","power-start","period-scores"].map(load).concat([loadText("champions-baseball.csv")], SEASONS.map(x => loadText(x.file))));
-  D.standings = Array.isArray(st) ? st : (st && st.standings) || null;
-  D.matchups = mu; D.rosters = ro; D.picks = dp && dp.futureDraftPicks; D.pstart = ps; D.pscores = psc; D.champBB = parseChamps(chc); D.trades = {}; SEASONS.forEach((x,i) => D.trades[x.label] = parseTrades(trs[i]));
-  D.tn = {}; (D.standings||[]).forEach(t => D.tn[t.teamId] = t.teamName);
-  names = buildNames(pi);
-  bbUpdated = meta && meta.updatedAt ? "Updated " + new Date(meta.updatedAt).toLocaleString() : "Waiting for first data update";
+  CTX.bb = await buildCtx("data", true); use(CTX.bb); bbUpdated = CTX.bb.updated;
   window.addEventListener("hashchange", () => route()); route();
 })();
 </script>
