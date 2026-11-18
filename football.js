@@ -41,10 +41,24 @@
     FB.ready = true;
   };
   // Champion rows for the hall of fame; a champion links to the team's page when the same manager still owns a team
-  FB.hallRows = () => Object.values(D.champs || {}).sort((a, b) => String(b.season).localeCompare(String(a.season))).map(c => {
-    const now = (D.teams || []).find(t => t.owner_id && t.owner_id === c.owner_id);
-    return { season: c.season, name: (c.team || "").trim(), href: now ? `#fb-team-${now.roster_id}` : null, logo: now ? logo(now.roster_id, 28) : "", sub: `${c.w}-${c.l}${c.t ? "-" + c.t : ""} · ${fmt(c.pf)} pts` };
-  });
+  // Champion rows for the hall of fame. Sleeper's playoff results come first; rows typed into the sheet's
+  // FootballChampions tab win for the same season. A champion links to a team page when the manager (or the
+  // "Current Team" name you typed) matches a team in the league today.
+  FB.hallRows = (manual = []) => {
+    const auto = Object.values(D.champs || {}).map(c => {
+      const now = (D.teams || []).find(t => t.owner_id && t.owner_id === c.owner_id);
+      return { season: String(c.season), name: (c.team || "").trim(), href: now ? `#fb-team-${now.roster_id}` : null, logo: now ? logo(now.roster_id, 28) : "", sub: `${c.w}-${c.l}${c.t ? "-" + c.t : ""} · ${fmt(c.pf)} pts` };
+    });
+    const norm = x => String(x || "").toLowerCase().replace(/\s+/g, " ").trim();
+    const hand = manual.map(c => {
+      const now = (D.teams || []).find(t => norm(t.name) === norm(c.now || c.team));
+      const pts = c.points && Number(c.points) ? Number(c.points).toLocaleString() + " pts" : c.points;
+      return { season: String(c.season), name: c.team, href: now ? `#fb-team-${now.roster_id}` : null, logo: now ? logo(now.roster_id, 28) : "",
+        sub: [c.now && now && now.name !== c.team ? "now " + now.name : "", c.record, pts].filter(Boolean).join(" · ") };
+    });
+    const have = new Set(hand.map(r => r.season));
+    return [...hand, ...auto.filter(r => !have.has(r.season))].sort((a, b) => b.season.localeCompare(a.season));
+  };
   FB.updated = () => D.meta && D.meta.updatedAt ? "Updated " + new Date(D.meta.updatedAt).toLocaleString() : "Waiting for first football update";
   FB.bind = rerender => {
     document.querySelectorAll("[data-fbs]").forEach(b => b.onclick = () => { selSeason = b.dataset.fbs; selTeam = ""; rerender(); });
