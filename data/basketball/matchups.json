@@ -1,0 +1,2909 @@
+{
+ "matchups": [
+  {
+   "away": {
+    "teamName": "MidWes BearTigers",
+    "score": 353.7,
+    "gamesPlayed": 16,
+    "teamId": "98x5yrsdmpoj14hk"
+   },
+   "categories": [
+    {
+     "away": {
+      "display": "88",
+      "value": 88,
+      "points": 26.4
+     },
+     "name": "Field Goals Made",
+     "shortName": "FGM",
+     "group": "Player",
+     "home": {
+      "display": "83",
+      "value": 83,
+      "points": 24.9
+     }
+    },
+    {
+     "away": {
+      "display": "100.0",
+      "value": 100,
+      "points": -30
+     },
+     "name": "Field Goals Missed",
+     "shortName": "FG-",
+     "group": "Player",
+     "home": {
+      "display": "128.0",
+      "value": 128,
+      "points": -38.4
+     }
+    },
+    {
+     "away": {
+      "display": "31",
+      "value": 31,
+      "points": 40.3
+     },
+     "name": "Three Pointers Made",
+     "shortName": "3PTM",
+     "group": "Player",
+     "home": {
+      "display": "25",
+      "value": 25,
+      "points": 32.5
+     }
+    },
+    {
+     "away": {
+      "display": "51",
+      "value": 51,
+      "points": -35.7
+     },
+     "name": "Three Pointers Missed",
+     "shortName": "3PT-",
+     "group": "Player",
+     "home": {
+      "display": "57",
+      "value": 57,
+      "points": -39.9
+     }
+    },
+    {
+     "away": {
+      "display": "53",
+      "value": 53,
+      "points": 26.5
+     },
+     "name": "Free Throws Made",
+     "shortName": "FTM",
+     "group": "Player",
+     "home": {
+      "display": "40",
+      "value": 40,
+      "points": 20
+     }
+    },
+    {
+     "away": {
+      "display": "14",
+      "value": 14,
+      "points": -7
+     },
+     "name": "Free Throws Missed",
+     "shortName": "FT-",
+     "group": "Player",
+     "home": {
+      "display": "18",
+      "value": 18,
+      "points": -9
+     }
+    },
+    {
+     "away": {
+      "display": "260",
+      "value": 260,
+      "points": 182
+     },
+     "name": "Points",
+     "shortName": "PTS",
+     "group": "Player",
+     "home": {
+      "display": "231",
+      "value": 231,
+      "points": 161.7
+     }
+    },
+    {
+     "away": {
+      "display": "29",
+      "value": 29,
+      "points": 29
+     },
+     "name": "Offensive Rebounds",
+     "shortName": "OREB",
+     "group": "Player",
+     "home": {
+      "display": "30",
+      "value": 30,
+      "points": 30
+     }
+    },
+    {
+     "away": {
+      "display": "60",
+      "value": 60,
+      "points": 42
+     },
+     "name": "Defensive Rebounds",
+     "shortName": "DREB",
+     "group": "Player",
+     "home": {
+      "display": "63",
+      "value": 63,
+      "points": 44.1
+     }
+    },
+    {
+     "away": {
+      "display": "45",
+      "value": 45,
+      "points": 31.5
+     },
+     "name": "Assists",
+     "shortName": "AST",
+     "group": "Player",
+     "home": {
+      "display": "66",
+      "value": 66,
+      "points": 46.2
+     }
+    },
+    {
+     "away": {
+      "display": "13",
+      "value": 13,
+      "points": 26
+     },
+     "name": "Steals",
+     "shortName": "ST",
+     "group": "Player",
+     "home": {
+      "display": "17",
+      "value": 17,
+      "points": 34
+     }
+    },
+    {
+     "away": {
+      "display": "15",
+      "value": 15,
+      "points": 40.5
+     },
+     "name": "Blocks",
+     "shortName": "BLK",
+     "group": "Player",
+     "home": {
+      "display": "12",
+      "value": 12,
+      "points": 32.4
+     }
+    },
+    {
+     "away": {
+      "display": "42",
+      "value": 42,
+      "points": -29.4
+     },
+     "name": "Turnovers",
+     "shortName": "TO",
+     "group": "Player",
+     "home": {
+      "display": "28",
+      "value": 28,
+      "points": -19.6
+     }
+    },
+    {
+     "away": {
+      "points": 0
+     },
+     "name": "Technical Fouls",
+     "shortName": "TF",
+     "group": "Player",
+     "home": {
+      "display": "1",
+      "value": 1,
+      "points": -1.3
+     }
+    },
+    {
+     "away": {
+      "points": 0
+     },
+     "name": "Flagrant Fouls",
+     "shortName": "FF",
+     "group": "Player",
+     "home": {
+      "points": 0
+     }
+    },
+    {
+     "away": {
+      "points": 0
+     },
+     "name": "Ejections",
+     "shortName": "EJ",
+     "group": "Player",
+     "home": {
+      "points": 0
+     }
+    },
+    {
+     "away": {
+      "points": 0
+     },
+     "name": "Triple Doubles",
+     "shortName": "3D",
+     "group": "Player",
+     "home": {
+      "points": 0
+     }
+    },
+    {
+     "away": {
+      "display": "1",
+      "value": 1,
+      "points": 6.7
+     },
+     "name": "Double Doubles",
+     "shortName": "2D",
+     "group": "Player",
+     "home": {
+      "display": "4",
+      "value": 4,
+      "points": 26.8
+     }
+    },
+    {
+     "away": {
+      "display": "7",
+      "value": 7,
+      "points": 4.9
+     },
+     "name": "Wins",
+     "shortName": "W",
+     "group": "Player",
+     "home": {
+      "display": "4",
+      "value": 4,
+      "points": 2.8
+     }
+    }
+   ],
+   "home": {
+    "teamName": "Maryland Raccoons",
+    "score": 347.2,
+    "gamesPlayed": 16,
+    "teamId": "84erhx5gmpddhfnw"
+   }
+  },
+  {
+   "away": {
+    "teamName": "Hanoi Haramball",
+    "score": 330.3,
+    "gamesPlayed": 15,
+    "teamId": "xoho393wmpebjlgp"
+   },
+   "categories": [
+    {
+     "away": {
+      "display": "97",
+      "value": 97,
+      "points": 29.1
+     },
+     "name": "Field Goals Made",
+     "shortName": "FGM",
+     "group": "Player",
+     "home": {
+      "display": "109",
+      "value": 109,
+      "points": 32.7
+     }
+    },
+    {
+     "away": {
+      "display": "114.0",
+      "value": 114,
+      "points": -34.2
+     },
+     "name": "Field Goals Missed",
+     "shortName": "FG-",
+     "group": "Player",
+     "home": {
+      "display": "110.0",
+      "value": 110,
+      "points": -33
+     }
+    },
+    {
+     "away": {
+      "display": "31",
+      "value": 31,
+      "points": 40.3
+     },
+     "name": "Three Pointers Made",
+     "shortName": "3PTM",
+     "group": "Player",
+     "home": {
+      "display": "37",
+      "value": 37,
+      "points": 48.1
+     }
+    },
+    {
+     "away": {
+      "display": "54",
+      "value": 54,
+      "points": -37.8
+     },
+     "name": "Three Pointers Missed",
+     "shortName": "3PT-",
+     "group": "Player",
+     "home": {
+      "display": "62",
+      "value": 62,
+      "points": -43.4
+     }
+    },
+    {
+     "away": {
+      "display": "44",
+      "value": 44,
+      "points": 22
+     },
+     "name": "Free Throws Made",
+     "shortName": "FTM",
+     "group": "Player",
+     "home": {
+      "display": "48",
+      "value": 48,
+      "points": 24
+     }
+    },
+    {
+     "away": {
+      "display": "16",
+      "value": 16,
+      "points": -8
+     },
+     "name": "Free Throws Missed",
+     "shortName": "FT-",
+     "group": "Player",
+     "home": {
+      "display": "14",
+      "value": 14,
+      "points": -7
+     }
+    },
+    {
+     "away": {
+      "display": "269",
+      "value": 269,
+      "points": 188.3
+     },
+     "name": "Points",
+     "shortName": "PTS",
+     "group": "Player",
+     "home": {
+      "display": "303",
+      "value": 303,
+      "points": 212.1
+     }
+    },
+    {
+     "away": {
+      "display": "12",
+      "value": 12,
+      "points": 12
+     },
+     "name": "Offensive Rebounds",
+     "shortName": "OREB",
+     "group": "Player",
+     "home": {
+      "display": "34",
+      "value": 34,
+      "points": 34
+     }
+    },
+    {
+     "away": {
+      "display": "61",
+      "value": 61,
+      "points": 42.7
+     },
+     "name": "Defensive Rebounds",
+     "shortName": "DREB",
+     "group": "Player",
+     "home": {
+      "display": "93",
+      "value": 93,
+      "points": 65.1
+     }
+    },
+    {
+     "away": {
+      "display": "55",
+      "value": 55,
+      "points": 38.5
+     },
+     "name": "Assists",
+     "shortName": "AST",
+     "group": "Player",
+     "home": {
+      "display": "65",
+      "value": 65,
+      "points": 45.5
+     }
+    },
+    {
+     "away": {
+      "display": "12",
+      "value": 12,
+      "points": 24
+     },
+     "name": "Steals",
+     "shortName": "ST",
+     "group": "Player",
+     "home": {
+      "display": "19",
+      "value": 19,
+      "points": 38
+     }
+    },
+    {
+     "away": {
+      "display": "10",
+      "value": 10,
+      "points": 27
+     },
+     "name": "Blocks",
+     "shortName": "BLK",
+     "group": "Player",
+     "home": {
+      "display": "10",
+      "value": 10,
+      "points": 27
+     }
+    },
+    {
+     "away": {
+      "display": "33",
+      "value": 33,
+      "points": -23.1
+     },
+     "name": "Turnovers",
+     "shortName": "TO",
+     "group": "Player",
+     "home": {
+      "display": "38",
+      "value": 38,
+      "points": -26.6
+     }
+    },
+    {
+     "away": {
+      "points": 0
+     },
+     "name": "Technical Fouls",
+     "shortName": "TF",
+     "group": "Player",
+     "home": {
+      "display": "2",
+      "value": 2,
+      "points": -2.6
+     }
+    },
+    {
+     "away": {
+      "points": 0
+     },
+     "name": "Flagrant Fouls",
+     "shortName": "FF",
+     "group": "Player",
+     "home": {
+      "display": "1",
+      "value": 1,
+      "points": -2
+     }
+    },
+    {
+     "away": {
+      "points": 0
+     },
+     "name": "Ejections",
+     "shortName": "EJ",
+     "group": "Player",
+     "home": {
+      "points": 0
+     }
+    },
+    {
+     "away": {
+      "points": 0
+     },
+     "name": "Triple Doubles",
+     "shortName": "3D",
+     "group": "Player",
+     "home": {
+      "points": 0
+     }
+    },
+    {
+     "away": {
+      "display": "1",
+      "value": 1,
+      "points": 6.7
+     },
+     "name": "Double Doubles",
+     "shortName": "2D",
+     "group": "Player",
+     "home": {
+      "display": "5",
+      "value": 5,
+      "points": 33.5
+     }
+    },
+    {
+     "away": {
+      "display": "4",
+      "value": 4,
+      "points": 2.8
+     },
+     "name": "Wins",
+     "shortName": "W",
+     "group": "Player",
+     "home": {
+      "display": "10",
+      "value": 10,
+      "points": 7
+     }
+    }
+   ],
+   "home": {
+    "teamName": "West Hills Action",
+    "score": 452.4,
+    "gamesPlayed": 19,
+    "teamId": "xzwygdtfmq35l0a3"
+   }
+  },
+  {
+   "away": {
+    "teamName": "Milwaukee Brats",
+    "score": 364.5,
+    "gamesPlayed": 17,
+    "teamId": "yvhv3mpqmphanev0"
+   },
+   "categories": [
+    {
+     "away": {
+      "display": "78",
+      "value": 78,
+      "points": 23.4
+     },
+     "name": "Field Goals Made",
+     "shortName": "FGM",
+     "group": "Player",
+     "home": {
+      "display": "105",
+      "value": 105,
+      "points": 31.5
+     }
+    },
+    {
+     "away": {
+      "display": "84.0",
+      "value": 84,
+      "points": -25.2
+     },
+     "name": "Field Goals Missed",
+     "shortName": "FG-",
+     "group": "Player",
+     "home": {
+      "display": "93.0",
+      "value": 93,
+      "points": -27.9
+     }
+    },
+    {
+     "away": {
+      "display": "20",
+      "value": 20,
+      "points": 26
+     },
+     "name": "Three Pointers Made",
+     "shortName": "3PTM",
+     "group": "Player",
+     "home": {
+      "display": "30",
+      "value": 30,
+      "points": 39
+     }
+    },
+    {
+     "away": {
+      "display": "40",
+      "value": 40,
+      "points": -28
+     },
+     "name": "Three Pointers Missed",
+     "shortName": "3PT-",
+     "group": "Player",
+     "home": {
+      "display": "42",
+      "value": 42,
+      "points": -29.4
+     }
+    },
+    {
+     "away": {
+      "display": "46",
+      "value": 46,
+      "points": 23
+     },
+     "name": "Free Throws Made",
+     "shortName": "FTM",
+     "group": "Player",
+     "home": {
+      "display": "24",
+      "value": 24,
+      "points": 12
+     }
+    },
+    {
+     "away": {
+      "display": "24",
+      "value": 24,
+      "points": -12
+     },
+     "name": "Free Throws Missed",
+     "shortName": "FT-",
+     "group": "Player",
+     "home": {
+      "display": "8",
+      "value": 8,
+      "points": -4
+     }
+    },
+    {
+     "away": {
+      "display": "222",
+      "value": 222,
+      "points": 155.4
+     },
+     "name": "Points",
+     "shortName": "PTS",
+     "group": "Player",
+     "home": {
+      "display": "264",
+      "value": 264,
+      "points": 184.8
+     }
+    },
+    {
+     "away": {
+      "display": "22",
+      "value": 22,
+      "points": 22
+     },
+     "name": "Offensive Rebounds",
+     "shortName": "OREB",
+     "group": "Player",
+     "home": {
+      "display": "24",
+      "value": 24,
+      "points": 24
+     }
+    },
+    {
+     "away": {
+      "display": "63",
+      "value": 63,
+      "points": 44.1
+     },
+     "name": "Defensive Rebounds",
+     "shortName": "DREB",
+     "group": "Player",
+     "home": {
+      "display": "72",
+      "value": 72,
+      "points": 50.4
+     }
+    },
+    {
+     "away": {
+      "display": "80",
+      "value": 80,
+      "points": 56
+     },
+     "name": "Assists",
+     "shortName": "AST",
+     "group": "Player",
+     "home": {
+      "display": "55",
+      "value": 55,
+      "points": 38.5
+     }
+    },
+    {
+     "away": {
+      "display": "19",
+      "value": 19,
+      "points": 38
+     },
+     "name": "Steals",
+     "shortName": "ST",
+     "group": "Player",
+     "home": {
+      "display": "17",
+      "value": 17,
+      "points": 34
+     }
+    },
+    {
+     "away": {
+      "display": "9",
+      "value": 9,
+      "points": 24.3
+     },
+     "name": "Blocks",
+     "shortName": "BLK",
+     "group": "Player",
+     "home": {
+      "display": "13",
+      "value": 13,
+      "points": 35.1
+     }
+    },
+    {
+     "away": {
+      "display": "25",
+      "value": 25,
+      "points": -17.5
+     },
+     "name": "Turnovers",
+     "shortName": "TO",
+     "group": "Player",
+     "home": {
+      "display": "23",
+      "value": 23,
+      "points": -16.1
+     }
+    },
+    {
+     "away": {
+      "display": "1",
+      "value": 1,
+      "points": -1.3
+     },
+     "name": "Technical Fouls",
+     "shortName": "TF",
+     "group": "Player",
+     "home": {
+      "points": 0
+     }
+    },
+    {
+     "away": {
+      "display": "1",
+      "value": 1,
+      "points": -2
+     },
+     "name": "Flagrant Fouls",
+     "shortName": "FF",
+     "group": "Player",
+     "home": {
+      "display": "1",
+      "value": 1,
+      "points": -2
+     }
+    },
+    {
+     "away": {
+      "points": 0
+     },
+     "name": "Ejections",
+     "shortName": "EJ",
+     "group": "Player",
+     "home": {
+      "points": 0
+     }
+    },
+    {
+     "away": {
+      "display": "1",
+      "value": 1,
+      "points": 13.3
+     },
+     "name": "Triple Doubles",
+     "shortName": "3D",
+     "group": "Player",
+     "home": {
+      "points": 0
+     }
+    },
+    {
+     "away": {
+      "display": "3",
+      "value": 3,
+      "points": 20.1
+     },
+     "name": "Double Doubles",
+     "shortName": "2D",
+     "group": "Player",
+     "home": {
+      "display": "2",
+      "value": 2,
+      "points": 13.4
+     }
+    },
+    {
+     "away": {
+      "display": "7",
+      "value": 7,
+      "points": 4.9
+     },
+     "name": "Wins",
+     "shortName": "W",
+     "group": "Player",
+     "home": {
+      "display": "11",
+      "value": 11,
+      "points": 7.7
+     }
+    }
+   ],
+   "home": {
+    "teamName": "Cleveland Heights",
+    "score": 391,
+    "gamesPlayed": 16,
+    "teamId": "aygevjhvmpeez8dj"
+   }
+  },
+  {
+   "away": {
+    "teamName": "Olympia Hippies",
+    "score": 352.3,
+    "gamesPlayed": 18,
+    "teamId": "r860p8dvmpejphif"
+   },
+   "categories": [
+    {
+     "away": {
+      "display": "95",
+      "value": 95,
+      "points": 28.5
+     },
+     "name": "Field Goals Made",
+     "shortName": "FGM",
+     "group": "Player",
+     "home": {
+      "display": "101",
+      "value": 101,
+      "points": 30.3
+     }
+    },
+    {
+     "away": {
+      "display": "112.0",
+      "value": 112,
+      "points": -33.6
+     },
+     "name": "Field Goals Missed",
+     "shortName": "FG-",
+     "group": "Player",
+     "home": {
+      "display": "96.0",
+      "value": 96,
+      "points": -28.8
+     }
+    },
+    {
+     "away": {
+      "display": "26",
+      "value": 26,
+      "points": 33.8
+     },
+     "name": "Three Pointers Made",
+     "shortName": "3PTM",
+     "group": "Player",
+     "home": {
+      "display": "26",
+      "value": 26,
+      "points": 33.8
+     }
+    },
+    {
+     "away": {
+      "display": "51",
+      "value": 51,
+      "points": -35.7
+     },
+     "name": "Three Pointers Missed",
+     "shortName": "3PT-",
+     "group": "Player",
+     "home": {
+      "display": "48",
+      "value": 48,
+      "points": -33.6
+     }
+    },
+    {
+     "away": {
+      "display": "46",
+      "value": 46,
+      "points": 23
+     },
+     "name": "Free Throws Made",
+     "shortName": "FTM",
+     "group": "Player",
+     "home": {
+      "display": "38",
+      "value": 38,
+      "points": 19
+     }
+    },
+    {
+     "away": {
+      "display": "10",
+      "value": 10,
+      "points": -5
+     },
+     "name": "Free Throws Missed",
+     "shortName": "FT-",
+     "group": "Player",
+     "home": {
+      "display": "11",
+      "value": 11,
+      "points": -5.5
+     }
+    },
+    {
+     "away": {
+      "display": "262",
+      "value": 262,
+      "points": 183.4
+     },
+     "name": "Points",
+     "shortName": "PTS",
+     "group": "Player",
+     "home": {
+      "display": "266",
+      "value": 266,
+      "points": 186.2
+     }
+    },
+    {
+     "away": {
+      "display": "25",
+      "value": 25,
+      "points": 25
+     },
+     "name": "Offensive Rebounds",
+     "shortName": "OREB",
+     "group": "Player",
+     "home": {
+      "display": "27",
+      "value": 27,
+      "points": 27
+     }
+    },
+    {
+     "away": {
+      "display": "61",
+      "value": 61,
+      "points": 42.7
+     },
+     "name": "Defensive Rebounds",
+     "shortName": "DREB",
+     "group": "Player",
+     "home": {
+      "display": "77",
+      "value": 77,
+      "points": 53.9
+     }
+    },
+    {
+     "away": {
+      "display": "53",
+      "value": 53,
+      "points": 37.1
+     },
+     "name": "Assists",
+     "shortName": "AST",
+     "group": "Player",
+     "home": {
+      "display": "41",
+      "value": 41,
+      "points": 28.7
+     }
+    },
+    {
+     "away": {
+      "display": "20",
+      "value": 20,
+      "points": 40
+     },
+     "name": "Steals",
+     "shortName": "ST",
+     "group": "Player",
+     "home": {
+      "display": "19",
+      "value": 19,
+      "points": 38
+     }
+    },
+    {
+     "away": {
+      "display": "9",
+      "value": 9,
+      "points": 24.3
+     },
+     "name": "Blocks",
+     "shortName": "BLK",
+     "group": "Player",
+     "home": {
+      "display": "13",
+      "value": 13,
+      "points": 35.1
+     }
+    },
+    {
+     "away": {
+      "display": "30",
+      "value": 30,
+      "points": -21
+     },
+     "name": "Turnovers",
+     "shortName": "TO",
+     "group": "Player",
+     "home": {
+      "display": "31",
+      "value": 31,
+      "points": -21.7
+     }
+    },
+    {
+     "away": {
+      "display": "3",
+      "value": 3,
+      "points": -3.9
+     },
+     "name": "Technical Fouls",
+     "shortName": "TF",
+     "group": "Player",
+     "home": {
+      "display": "0",
+      "value": 0,
+      "points": 0
+     }
+    },
+    {
+     "away": {
+      "points": 0
+     },
+     "name": "Flagrant Fouls",
+     "shortName": "FF",
+     "group": "Player",
+     "home": {
+      "points": 0
+     }
+    },
+    {
+     "away": {
+      "points": 0
+     },
+     "name": "Ejections",
+     "shortName": "EJ",
+     "group": "Player",
+     "home": {
+      "points": 0
+     }
+    },
+    {
+     "away": {
+      "points": 0
+     },
+     "name": "Triple Doubles",
+     "shortName": "3D",
+     "group": "Player",
+     "home": {
+      "points": 0
+     }
+    },
+    {
+     "away": {
+      "display": "1",
+      "value": 1,
+      "points": 6.7
+     },
+     "name": "Double Doubles",
+     "shortName": "2D",
+     "group": "Player",
+     "home": {
+      "display": "3",
+      "value": 3,
+      "points": 20.1
+     }
+    },
+    {
+     "away": {
+      "display": "10",
+      "value": 10,
+      "points": 7
+     },
+     "name": "Wins",
+     "shortName": "W",
+     "group": "Player",
+     "home": {
+      "display": "11",
+      "value": 11,
+      "points": 7.7
+     }
+    }
+   ],
+   "home": {
+    "teamName": "Joinville Flying Capybaras",
+    "score": 390.2,
+    "gamesPlayed": 20,
+    "teamId": "3dcj85vrmpeclie8"
+   }
+  },
+  {
+   "away": {
+    "teamName": "Olympia Hippies",
+    "score": 352.3,
+    "gamesPlayed": 18,
+    "teamId": "r860p8dvmpejphif"
+   },
+   "categories": [
+    {
+     "away": {
+      "display": "95",
+      "value": 95,
+      "points": 28.5
+     },
+     "name": "Field Goals Made",
+     "shortName": "FGM",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "112.0",
+      "value": 112,
+      "points": -33.6
+     },
+     "name": "Field Goals Missed",
+     "shortName": "FG-",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "26",
+      "value": 26,
+      "points": 33.8
+     },
+     "name": "Three Pointers Made",
+     "shortName": "3PTM",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "51",
+      "value": 51,
+      "points": -35.7
+     },
+     "name": "Three Pointers Missed",
+     "shortName": "3PT-",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "46",
+      "value": 46,
+      "points": 23
+     },
+     "name": "Free Throws Made",
+     "shortName": "FTM",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "10",
+      "value": 10,
+      "points": -5
+     },
+     "name": "Free Throws Missed",
+     "shortName": "FT-",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "262",
+      "value": 262,
+      "points": 183.4
+     },
+     "name": "Points",
+     "shortName": "PTS",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "25",
+      "value": 25,
+      "points": 25
+     },
+     "name": "Offensive Rebounds",
+     "shortName": "OREB",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "61",
+      "value": 61,
+      "points": 42.7
+     },
+     "name": "Defensive Rebounds",
+     "shortName": "DREB",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "53",
+      "value": 53,
+      "points": 37.1
+     },
+     "name": "Assists",
+     "shortName": "AST",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "20",
+      "value": 20,
+      "points": 40
+     },
+     "name": "Steals",
+     "shortName": "ST",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "9",
+      "value": 9,
+      "points": 24.3
+     },
+     "name": "Blocks",
+     "shortName": "BLK",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "30",
+      "value": 30,
+      "points": -21
+     },
+     "name": "Turnovers",
+     "shortName": "TO",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "3",
+      "value": 3,
+      "points": -3.9
+     },
+     "name": "Technical Fouls",
+     "shortName": "TF",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "points": 0
+     },
+     "name": "Flagrant Fouls",
+     "shortName": "FF",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "points": 0
+     },
+     "name": "Ejections",
+     "shortName": "EJ",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "points": 0
+     },
+     "name": "Triple Doubles",
+     "shortName": "3D",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "1",
+      "value": 1,
+      "points": 6.7
+     },
+     "name": "Double Doubles",
+     "shortName": "2D",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "10",
+      "value": 10,
+      "points": 7
+     },
+     "name": "Wins",
+     "shortName": "W",
+     "group": "Player",
+     "home": {}
+    }
+   ],
+   "home": {
+    "teamName": "League Average",
+    "score": 372.7,
+    "teamId": "-3"
+   }
+  },
+  {
+   "away": {
+    "teamName": "MidWes BearTigers",
+    "score": 353.7,
+    "gamesPlayed": 16,
+    "teamId": "98x5yrsdmpoj14hk"
+   },
+   "categories": [
+    {
+     "away": {
+      "display": "88",
+      "value": 88,
+      "points": 26.4
+     },
+     "name": "Field Goals Made",
+     "shortName": "FGM",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "100.0",
+      "value": 100,
+      "points": -30
+     },
+     "name": "Field Goals Missed",
+     "shortName": "FG-",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "31",
+      "value": 31,
+      "points": 40.3
+     },
+     "name": "Three Pointers Made",
+     "shortName": "3PTM",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "51",
+      "value": 51,
+      "points": -35.7
+     },
+     "name": "Three Pointers Missed",
+     "shortName": "3PT-",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "53",
+      "value": 53,
+      "points": 26.5
+     },
+     "name": "Free Throws Made",
+     "shortName": "FTM",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "14",
+      "value": 14,
+      "points": -7
+     },
+     "name": "Free Throws Missed",
+     "shortName": "FT-",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "260",
+      "value": 260,
+      "points": 182
+     },
+     "name": "Points",
+     "shortName": "PTS",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "29",
+      "value": 29,
+      "points": 29
+     },
+     "name": "Offensive Rebounds",
+     "shortName": "OREB",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "60",
+      "value": 60,
+      "points": 42
+     },
+     "name": "Defensive Rebounds",
+     "shortName": "DREB",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "45",
+      "value": 45,
+      "points": 31.5
+     },
+     "name": "Assists",
+     "shortName": "AST",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "13",
+      "value": 13,
+      "points": 26
+     },
+     "name": "Steals",
+     "shortName": "ST",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "15",
+      "value": 15,
+      "points": 40.5
+     },
+     "name": "Blocks",
+     "shortName": "BLK",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "42",
+      "value": 42,
+      "points": -29.4
+     },
+     "name": "Turnovers",
+     "shortName": "TO",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "points": 0
+     },
+     "name": "Technical Fouls",
+     "shortName": "TF",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "points": 0
+     },
+     "name": "Flagrant Fouls",
+     "shortName": "FF",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "points": 0
+     },
+     "name": "Ejections",
+     "shortName": "EJ",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "points": 0
+     },
+     "name": "Triple Doubles",
+     "shortName": "3D",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "1",
+      "value": 1,
+      "points": 6.7
+     },
+     "name": "Double Doubles",
+     "shortName": "2D",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "7",
+      "value": 7,
+      "points": 4.9
+     },
+     "name": "Wins",
+     "shortName": "W",
+     "group": "Player",
+     "home": {}
+    }
+   ],
+   "home": {
+    "teamName": "League Average",
+    "score": 372.7,
+    "teamId": "-3"
+   }
+  },
+  {
+   "away": {
+    "teamName": "Hanoi Haramball",
+    "score": 330.3,
+    "gamesPlayed": 15,
+    "teamId": "xoho393wmpebjlgp"
+   },
+   "categories": [
+    {
+     "away": {
+      "display": "97",
+      "value": 97,
+      "points": 29.1
+     },
+     "name": "Field Goals Made",
+     "shortName": "FGM",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "114.0",
+      "value": 114,
+      "points": -34.2
+     },
+     "name": "Field Goals Missed",
+     "shortName": "FG-",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "31",
+      "value": 31,
+      "points": 40.3
+     },
+     "name": "Three Pointers Made",
+     "shortName": "3PTM",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "54",
+      "value": 54,
+      "points": -37.8
+     },
+     "name": "Three Pointers Missed",
+     "shortName": "3PT-",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "44",
+      "value": 44,
+      "points": 22
+     },
+     "name": "Free Throws Made",
+     "shortName": "FTM",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "16",
+      "value": 16,
+      "points": -8
+     },
+     "name": "Free Throws Missed",
+     "shortName": "FT-",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "269",
+      "value": 269,
+      "points": 188.3
+     },
+     "name": "Points",
+     "shortName": "PTS",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "12",
+      "value": 12,
+      "points": 12
+     },
+     "name": "Offensive Rebounds",
+     "shortName": "OREB",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "61",
+      "value": 61,
+      "points": 42.7
+     },
+     "name": "Defensive Rebounds",
+     "shortName": "DREB",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "55",
+      "value": 55,
+      "points": 38.5
+     },
+     "name": "Assists",
+     "shortName": "AST",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "12",
+      "value": 12,
+      "points": 24
+     },
+     "name": "Steals",
+     "shortName": "ST",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "10",
+      "value": 10,
+      "points": 27
+     },
+     "name": "Blocks",
+     "shortName": "BLK",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "33",
+      "value": 33,
+      "points": -23.1
+     },
+     "name": "Turnovers",
+     "shortName": "TO",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "points": 0
+     },
+     "name": "Technical Fouls",
+     "shortName": "TF",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "points": 0
+     },
+     "name": "Flagrant Fouls",
+     "shortName": "FF",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "points": 0
+     },
+     "name": "Ejections",
+     "shortName": "EJ",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "points": 0
+     },
+     "name": "Triple Doubles",
+     "shortName": "3D",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "1",
+      "value": 1,
+      "points": 6.7
+     },
+     "name": "Double Doubles",
+     "shortName": "2D",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "4",
+      "value": 4,
+      "points": 2.8
+     },
+     "name": "Wins",
+     "shortName": "W",
+     "group": "Player",
+     "home": {}
+    }
+   ],
+   "home": {
+    "teamName": "League Average",
+    "score": 372.7,
+    "teamId": "-3"
+   }
+  },
+  {
+   "away": {
+    "teamName": "Maryland Raccoons",
+    "score": 347.2,
+    "gamesPlayed": 16,
+    "teamId": "84erhx5gmpddhfnw"
+   },
+   "categories": [
+    {
+     "away": {
+      "display": "83",
+      "value": 83,
+      "points": 24.9
+     },
+     "name": "Field Goals Made",
+     "shortName": "FGM",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "128.0",
+      "value": 128,
+      "points": -38.4
+     },
+     "name": "Field Goals Missed",
+     "shortName": "FG-",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "25",
+      "value": 25,
+      "points": 32.5
+     },
+     "name": "Three Pointers Made",
+     "shortName": "3PTM",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "57",
+      "value": 57,
+      "points": -39.9
+     },
+     "name": "Three Pointers Missed",
+     "shortName": "3PT-",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "40",
+      "value": 40,
+      "points": 20
+     },
+     "name": "Free Throws Made",
+     "shortName": "FTM",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "18",
+      "value": 18,
+      "points": -9
+     },
+     "name": "Free Throws Missed",
+     "shortName": "FT-",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "231",
+      "value": 231,
+      "points": 161.7
+     },
+     "name": "Points",
+     "shortName": "PTS",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "30",
+      "value": 30,
+      "points": 30
+     },
+     "name": "Offensive Rebounds",
+     "shortName": "OREB",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "63",
+      "value": 63,
+      "points": 44.1
+     },
+     "name": "Defensive Rebounds",
+     "shortName": "DREB",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "66",
+      "value": 66,
+      "points": 46.2
+     },
+     "name": "Assists",
+     "shortName": "AST",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "17",
+      "value": 17,
+      "points": 34
+     },
+     "name": "Steals",
+     "shortName": "ST",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "12",
+      "value": 12,
+      "points": 32.4
+     },
+     "name": "Blocks",
+     "shortName": "BLK",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "28",
+      "value": 28,
+      "points": -19.6
+     },
+     "name": "Turnovers",
+     "shortName": "TO",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "1",
+      "value": 1,
+      "points": -1.3
+     },
+     "name": "Technical Fouls",
+     "shortName": "TF",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "points": 0
+     },
+     "name": "Flagrant Fouls",
+     "shortName": "FF",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "points": 0
+     },
+     "name": "Ejections",
+     "shortName": "EJ",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "points": 0
+     },
+     "name": "Triple Doubles",
+     "shortName": "3D",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "4",
+      "value": 4,
+      "points": 26.8
+     },
+     "name": "Double Doubles",
+     "shortName": "2D",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "4",
+      "value": 4,
+      "points": 2.8
+     },
+     "name": "Wins",
+     "shortName": "W",
+     "group": "Player",
+     "home": {}
+    }
+   ],
+   "home": {
+    "teamName": "League Average",
+    "score": 372.7,
+    "teamId": "-3"
+   }
+  },
+  {
+   "away": {
+    "teamName": "Cleveland Heights",
+    "score": 391,
+    "gamesPlayed": 16,
+    "teamId": "aygevjhvmpeez8dj"
+   },
+   "categories": [
+    {
+     "away": {
+      "display": "105",
+      "value": 105,
+      "points": 31.5
+     },
+     "name": "Field Goals Made",
+     "shortName": "FGM",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "93.0",
+      "value": 93,
+      "points": -27.9
+     },
+     "name": "Field Goals Missed",
+     "shortName": "FG-",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "30",
+      "value": 30,
+      "points": 39
+     },
+     "name": "Three Pointers Made",
+     "shortName": "3PTM",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "42",
+      "value": 42,
+      "points": -29.4
+     },
+     "name": "Three Pointers Missed",
+     "shortName": "3PT-",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "24",
+      "value": 24,
+      "points": 12
+     },
+     "name": "Free Throws Made",
+     "shortName": "FTM",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "8",
+      "value": 8,
+      "points": -4
+     },
+     "name": "Free Throws Missed",
+     "shortName": "FT-",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "264",
+      "value": 264,
+      "points": 184.8
+     },
+     "name": "Points",
+     "shortName": "PTS",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "24",
+      "value": 24,
+      "points": 24
+     },
+     "name": "Offensive Rebounds",
+     "shortName": "OREB",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "72",
+      "value": 72,
+      "points": 50.4
+     },
+     "name": "Defensive Rebounds",
+     "shortName": "DREB",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "55",
+      "value": 55,
+      "points": 38.5
+     },
+     "name": "Assists",
+     "shortName": "AST",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "17",
+      "value": 17,
+      "points": 34
+     },
+     "name": "Steals",
+     "shortName": "ST",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "13",
+      "value": 13,
+      "points": 35.1
+     },
+     "name": "Blocks",
+     "shortName": "BLK",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "23",
+      "value": 23,
+      "points": -16.1
+     },
+     "name": "Turnovers",
+     "shortName": "TO",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "points": 0
+     },
+     "name": "Technical Fouls",
+     "shortName": "TF",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "1",
+      "value": 1,
+      "points": -2
+     },
+     "name": "Flagrant Fouls",
+     "shortName": "FF",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "points": 0
+     },
+     "name": "Ejections",
+     "shortName": "EJ",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "points": 0
+     },
+     "name": "Triple Doubles",
+     "shortName": "3D",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "2",
+      "value": 2,
+      "points": 13.4
+     },
+     "name": "Double Doubles",
+     "shortName": "2D",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "11",
+      "value": 11,
+      "points": 7.7
+     },
+     "name": "Wins",
+     "shortName": "W",
+     "group": "Player",
+     "home": {}
+    }
+   ],
+   "home": {
+    "teamName": "League Average",
+    "score": 372.7,
+    "teamId": "-3"
+   }
+  },
+  {
+   "away": {
+    "teamName": "Milwaukee Brats",
+    "score": 364.5,
+    "gamesPlayed": 17,
+    "teamId": "yvhv3mpqmphanev0"
+   },
+   "categories": [
+    {
+     "away": {
+      "display": "78",
+      "value": 78,
+      "points": 23.4
+     },
+     "name": "Field Goals Made",
+     "shortName": "FGM",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "84.0",
+      "value": 84,
+      "points": -25.2
+     },
+     "name": "Field Goals Missed",
+     "shortName": "FG-",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "20",
+      "value": 20,
+      "points": 26
+     },
+     "name": "Three Pointers Made",
+     "shortName": "3PTM",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "40",
+      "value": 40,
+      "points": -28
+     },
+     "name": "Three Pointers Missed",
+     "shortName": "3PT-",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "46",
+      "value": 46,
+      "points": 23
+     },
+     "name": "Free Throws Made",
+     "shortName": "FTM",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "24",
+      "value": 24,
+      "points": -12
+     },
+     "name": "Free Throws Missed",
+     "shortName": "FT-",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "222",
+      "value": 222,
+      "points": 155.4
+     },
+     "name": "Points",
+     "shortName": "PTS",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "22",
+      "value": 22,
+      "points": 22
+     },
+     "name": "Offensive Rebounds",
+     "shortName": "OREB",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "63",
+      "value": 63,
+      "points": 44.1
+     },
+     "name": "Defensive Rebounds",
+     "shortName": "DREB",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "80",
+      "value": 80,
+      "points": 56
+     },
+     "name": "Assists",
+     "shortName": "AST",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "19",
+      "value": 19,
+      "points": 38
+     },
+     "name": "Steals",
+     "shortName": "ST",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "9",
+      "value": 9,
+      "points": 24.3
+     },
+     "name": "Blocks",
+     "shortName": "BLK",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "25",
+      "value": 25,
+      "points": -17.5
+     },
+     "name": "Turnovers",
+     "shortName": "TO",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "1",
+      "value": 1,
+      "points": -1.3
+     },
+     "name": "Technical Fouls",
+     "shortName": "TF",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "1",
+      "value": 1,
+      "points": -2
+     },
+     "name": "Flagrant Fouls",
+     "shortName": "FF",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "points": 0
+     },
+     "name": "Ejections",
+     "shortName": "EJ",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "1",
+      "value": 1,
+      "points": 13.3
+     },
+     "name": "Triple Doubles",
+     "shortName": "3D",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "3",
+      "value": 3,
+      "points": 20.1
+     },
+     "name": "Double Doubles",
+     "shortName": "2D",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "7",
+      "value": 7,
+      "points": 4.9
+     },
+     "name": "Wins",
+     "shortName": "W",
+     "group": "Player",
+     "home": {}
+    }
+   ],
+   "home": {
+    "teamName": "League Average",
+    "score": 372.7,
+    "teamId": "-3"
+   }
+  },
+  {
+   "away": {
+    "teamName": "West Hills Action",
+    "score": 452.4,
+    "gamesPlayed": 19,
+    "teamId": "xzwygdtfmq35l0a3"
+   },
+   "categories": [
+    {
+     "away": {
+      "display": "109",
+      "value": 109,
+      "points": 32.7
+     },
+     "name": "Field Goals Made",
+     "shortName": "FGM",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "110.0",
+      "value": 110,
+      "points": -33
+     },
+     "name": "Field Goals Missed",
+     "shortName": "FG-",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "37",
+      "value": 37,
+      "points": 48.1
+     },
+     "name": "Three Pointers Made",
+     "shortName": "3PTM",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "62",
+      "value": 62,
+      "points": -43.4
+     },
+     "name": "Three Pointers Missed",
+     "shortName": "3PT-",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "48",
+      "value": 48,
+      "points": 24
+     },
+     "name": "Free Throws Made",
+     "shortName": "FTM",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "14",
+      "value": 14,
+      "points": -7
+     },
+     "name": "Free Throws Missed",
+     "shortName": "FT-",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "303",
+      "value": 303,
+      "points": 212.1
+     },
+     "name": "Points",
+     "shortName": "PTS",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "34",
+      "value": 34,
+      "points": 34
+     },
+     "name": "Offensive Rebounds",
+     "shortName": "OREB",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "93",
+      "value": 93,
+      "points": 65.1
+     },
+     "name": "Defensive Rebounds",
+     "shortName": "DREB",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "65",
+      "value": 65,
+      "points": 45.5
+     },
+     "name": "Assists",
+     "shortName": "AST",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "19",
+      "value": 19,
+      "points": 38
+     },
+     "name": "Steals",
+     "shortName": "ST",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "10",
+      "value": 10,
+      "points": 27
+     },
+     "name": "Blocks",
+     "shortName": "BLK",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "38",
+      "value": 38,
+      "points": -26.6
+     },
+     "name": "Turnovers",
+     "shortName": "TO",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "2",
+      "value": 2,
+      "points": -2.6
+     },
+     "name": "Technical Fouls",
+     "shortName": "TF",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "1",
+      "value": 1,
+      "points": -2
+     },
+     "name": "Flagrant Fouls",
+     "shortName": "FF",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "points": 0
+     },
+     "name": "Ejections",
+     "shortName": "EJ",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "points": 0
+     },
+     "name": "Triple Doubles",
+     "shortName": "3D",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "5",
+      "value": 5,
+      "points": 33.5
+     },
+     "name": "Double Doubles",
+     "shortName": "2D",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "10",
+      "value": 10,
+      "points": 7
+     },
+     "name": "Wins",
+     "shortName": "W",
+     "group": "Player",
+     "home": {}
+    }
+   ],
+   "home": {
+    "teamName": "League Average",
+    "score": 372.7,
+    "teamId": "-3"
+   }
+  },
+  {
+   "away": {
+    "teamName": "Joinville Flying Capybaras",
+    "score": 390.2,
+    "gamesPlayed": 20,
+    "teamId": "3dcj85vrmpeclie8"
+   },
+   "categories": [
+    {
+     "away": {
+      "display": "101",
+      "value": 101,
+      "points": 30.3
+     },
+     "name": "Field Goals Made",
+     "shortName": "FGM",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "96.0",
+      "value": 96,
+      "points": -28.8
+     },
+     "name": "Field Goals Missed",
+     "shortName": "FG-",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "26",
+      "value": 26,
+      "points": 33.8
+     },
+     "name": "Three Pointers Made",
+     "shortName": "3PTM",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "48",
+      "value": 48,
+      "points": -33.6
+     },
+     "name": "Three Pointers Missed",
+     "shortName": "3PT-",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "38",
+      "value": 38,
+      "points": 19
+     },
+     "name": "Free Throws Made",
+     "shortName": "FTM",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "11",
+      "value": 11,
+      "points": -5.5
+     },
+     "name": "Free Throws Missed",
+     "shortName": "FT-",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "266",
+      "value": 266,
+      "points": 186.2
+     },
+     "name": "Points",
+     "shortName": "PTS",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "27",
+      "value": 27,
+      "points": 27
+     },
+     "name": "Offensive Rebounds",
+     "shortName": "OREB",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "77",
+      "value": 77,
+      "points": 53.9
+     },
+     "name": "Defensive Rebounds",
+     "shortName": "DREB",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "41",
+      "value": 41,
+      "points": 28.7
+     },
+     "name": "Assists",
+     "shortName": "AST",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "19",
+      "value": 19,
+      "points": 38
+     },
+     "name": "Steals",
+     "shortName": "ST",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "13",
+      "value": 13,
+      "points": 35.1
+     },
+     "name": "Blocks",
+     "shortName": "BLK",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "31",
+      "value": 31,
+      "points": -21.7
+     },
+     "name": "Turnovers",
+     "shortName": "TO",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "0",
+      "value": 0,
+      "points": 0
+     },
+     "name": "Technical Fouls",
+     "shortName": "TF",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "points": 0
+     },
+     "name": "Flagrant Fouls",
+     "shortName": "FF",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "points": 0
+     },
+     "name": "Ejections",
+     "shortName": "EJ",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "points": 0
+     },
+     "name": "Triple Doubles",
+     "shortName": "3D",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "3",
+      "value": 3,
+      "points": 20.1
+     },
+     "name": "Double Doubles",
+     "shortName": "2D",
+     "group": "Player",
+     "home": {}
+    },
+    {
+     "away": {
+      "display": "11",
+      "value": 11,
+      "points": 7.7
+     },
+     "name": "Wins",
+     "shortName": "W",
+     "group": "Player",
+     "home": {}
+    }
+   ],
+   "home": {
+    "teamName": "League Average",
+    "score": 372.7,
+    "teamId": "-3"
+   }
+  }
+ ],
+ "period": 5
+}

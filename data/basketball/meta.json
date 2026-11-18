@@ -1,0 +1,14 @@
+{
+ "updatedAt": "2026-11-18T13:05:39.258Z",
+ "leagueId": "c1o9nwzimpddhf9z",
+ "ok": {
+  "standings": true,
+  "leagueInfo": true,
+  "matchups": true,
+  "rosters": true,
+  "draftPicks": true,
+  "playerIds": true,
+  "periodScores": true
+ },
+ "errors": {}
+}

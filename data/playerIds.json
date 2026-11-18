@@ -3591,6 +3591,7 @@
   "position": "RP"
  },
  "06fqr": {
+  "rotowireId": 21313,
   "name": "Kuehner, Tate",
   "fantraxId": "06fqr",
   "team": "MIL",
@@ -5756,6 +5757,7 @@
  },
  "051gy": {
   "rotowireId": 21201,
+  "sportRadarId": "f96d463e-31a9-4f1c-9f51-1b909176b0f4",
   "name": "Beck, Jace",
   "fantraxId": "051gy",
   "team": "MIA",
@@ -13480,6 +13482,7 @@
  },
  "066bw": {
   "rotowireId": 21203,
+  "sportRadarId": "7c83b4ee-bab1-4f8b-ae0a-cfb4cace582d",
   "name": "De Grandpre, Cedric",
   "fantraxId": "066bw",
   "team": "ATL",
@@ -15298,6 +15301,7 @@
  },
  "06hoc": {
   "rotowireId": 20124,
+  "sportRadarId": "d2b88600-0aa1-4b20-8654-948e6df9b754",
   "name": "Rodriguez, Raudi",
   "fantraxId": "06hoc",
   "team": "LAA",
@@ -21812,6 +21816,7 @@
  },
  "066t9": {
   "rotowireId": 20594,
+  "sportRadarId": "aef8816d-9b22-4074-ad4f-cd75b91412a3",
   "name": "Matheus, Juan",
   "fantraxId": "066t9",
   "team": "MIA",
@@ -24872,6 +24877,7 @@
  },
  "05yib": {
   "rotowireId": 17868,
+  "sportRadarId": "8712ad7e-37af-40f1-9558-4be033258e57",
   "name": "Rada, Nelson",
   "fantraxId": "05yib",
   "team": "LAA",
@@ -25716,6 +25722,7 @@
  },
  "05yix": {
   "rotowireId": 18155,
+  "sportRadarId": "6b70626f-242f-4257-83ce-bd15090220b6",
   "name": "Chourio, Jaison",
   "fantraxId": "05yix",
   "team": "CLE",
@@ -29653,6 +29660,7 @@
  },
  "06krw": {
   "rotowireId": 19681,
+  "sportRadarId": "7bd99795-8990-4556-866f-6244fe14f98e",
   "name": "Dishmey, Eliazar",
   "fantraxId": "06krw",
   "team": "MIA",
@@ -37122,6 +37130,7 @@
  },
  "06nyu": {
   "rotowireId": 20015,
+  "sportRadarId": "b2ab0188-184f-4e69-985b-6fb609c2c52e",
   "name": "Polo, Davis",
   "fantraxId": "06nyu",
   "team": "ATL",
@@ -54243,6 +54252,7 @@
   "position": "SP"
  },
  "0626r": {
+  "rotowireId": 21314,
   "name": "Betancourt, Bryant",
   "fantraxId": "0626r",
   "team": "COL",
@@ -58073,6 +58083,7 @@
  },
  "061wh": {
   "rotowireId": 19060,
+  "sportRadarId": "82e998a4-40a1-41f9-8663-95f542278be7",
   "name": "Rojas, Jefferson",
   "fantraxId": "061wh",
   "team": "NYM",
@@ -67730,6 +67741,7 @@
  },
  "062e4": {
   "rotowireId": 21230,
+  "sportRadarId": "18956644-f6cb-4f8f-b406-72f229a5d0b3",
   "name": "Graham, Carter",
   "fantraxId": "062e4",
   "team": "CIN",

@@ -1,0 +1,1360 @@
+{
+ "period": 30,
+ "rosters": {
+  "r860p8dvmpejphif": {
+   "teamName": "Olympia Hippies",
+   "rosterItems": [
+    {
+     "id": "05qu0",
+     "position": "SF",
+     "status": "RESERVE"
+    },
+    {
+     "id": "06v5n",
+     "position": "SF",
+     "status": "INJURED_RESERVE"
+    },
+    {
+     "id": "04ewf",
+     "position": "G/F",
+     "status": "ACTIVE"
+    },
+    {
+     "id": "051or",
+     "position": "PF",
+     "status": "RESERVE"
+    },
+    {
+     "id": "02nf1",
+     "position": "C",
+     "status": "ACTIVE"
+    },
+    {
+     "id": "04qry",
+     "position": "SG",
+     "status": "RESERVE"
+    },
+    {
+     "id": "051ol",
+     "position": "PG",
+     "status": "RESERVE"
+    },
+    {
+     "id": "04qs4",
+     "position": "C",
+     "status": "RESERVE"
+    },
+    {
+     "id": "06213",
+     "position": "SF",
+     "status": "RESERVE"
+    },
+    {
+     "id": "03e6n",
+     "position": "C",
+     "status": "INJURED_RESERVE"
+    },
+    {
+     "id": "076uo",
+     "position": "PF",
+     "status": "MINORS"
+    },
+    {
+     "id": "06mll",
+     "position": "SG",
+     "status": "RESERVE"
+    },
+    {
+     "id": "05uiq",
+     "position": "F",
+     "status": "ACTIVE"
+    },
+    {
+     "id": "05qto",
+     "position": "PG",
+     "status": "RESERVE"
+    },
+    {
+     "id": "04ex8",
+     "position": "SG",
+     "status": "ACTIVE"
+    },
+    {
+     "id": "05uie",
+     "position": "SF",
+     "status": "ACTIVE"
+    },
+    {
+     "id": "02nfz",
+     "position": "PF",
+     "status": "RESERVE"
+    },
+    {
+     "id": "02ym0",
+     "position": "SF",
+     "status": "RESERVE"
+    },
+    {
+     "id": "051p9",
+     "position": "SF",
+     "status": "RESERVE"
+    },
+    {
+     "id": "031lx",
+     "position": "SG",
+     "status": "INJURED_RESERVE"
+    },
+    {
+     "id": "051ok",
+     "position": "SF",
+     "status": "RESERVE"
+    },
+    {
+     "id": "076tq",
+     "position": "SG",
+     "status": "MINORS"
+    },
+    {
+     "id": "03el5",
+     "position": "PF",
+     "status": "INJURED_RESERVE"
+    },
+    {
+     "id": "01uyj",
+     "position": "PF",
+     "status": "ACTIVE"
+    },
+    {
+     "id": "03ad2",
+     "position": "PF/C",
+     "status": "ACTIVE"
+    },
+    {
+     "id": "076sw",
+     "position": "PG",
+     "status": "MINORS"
+    },
+    {
+     "id": "05uij",
+     "position": "G",
+     "status": "ACTIVE"
+    },
+    {
+     "id": "06216",
+     "position": "SG",
+     "status": "INJURED_RESERVE"
+    },
+    {
+     "id": "076t2",
+     "position": "SG",
+     "status": "MINORS"
+    },
+    {
+     "id": "027oj",
+     "position": "PG",
+     "status": "ACTIVE"
+    },
+    {
+     "id": "04qsa",
+     "position": "PG",
+     "status": "RESERVE"
+    },
+    {
+     "id": "02nf9",
+     "position": "C",
+     "status": "RESERVE"
+    },
+    {
+     "id": "076tl",
+     "position": "SG/SF",
+     "status": "ACTIVE"
+    },
+    {
+     "id": "076sz",
+     "position": "PG",
+     "status": "INJURED_RESERVE"
+    }
+   ]
+  },
+  "98x5yrsdmpoj14hk": {
+   "teamName": "MidWes BearTigers",
+   "rosterItems": [
+    {
+     "id": "051on",
+     "position": "PG",
+     "status": "RESERVE"
+    },
+    {
+     "id": "06v5v",
+     "position": "G/F",
+     "status": "ACTIVE"
+    },
+    {
+     "id": "076tc",
+     "position": "SG",
+     "status": "RESERVE"
+    },
+    {
+     "id": "05qtv",
+     "position": "G/F",
+     "status": "INJURED_RESERVE"
+    },
+    {
+     "id": "05uir",
+     "position": "SF",
+     "status": "INJURED_RESERVE"
+    },
+    {
+     "id": "04ewn",
+     "position": "PF",
+     "status": "RESERVE"
+    },
+    {
+     "id": "04ex6",
+     "position": "PF/C",
+     "status": "ACTIVE"
+    },
+    {
+     "id": "076t9",
+     "position": "SG",
+     "status": "ACTIVE"
+    },
+    {
+     "id": "06v5m",
+     "position": "PF",
+     "status": "RESERVE"
+    },
+    {
+     "id": "076t0",
+     "position": "PF",
+     "status": "INJURED_RESERVE"
+    },
+    {
+     "id": "03lg1",
+     "position": "PG",
+     "status": "INJURED_RESERVE"
+    },
+    {
+     "id": "06mk8",
+     "position": "SG",
+     "status": "RESERVE"
+    },
+    {
+     "id": "06v5f",
+     "position": "C",
+     "status": "RESERVE"
+    },
+    {
+     "id": "06mk3",
+     "position": "SF",
+     "status": "ACTIVE"
+    },
+    {
+     "id": "005ki",
+     "position": "PF/C",
+     "status": "RESERVE"
+    },
+    {
+     "id": "06v5i",
+     "position": "C",
+     "status": "MINORS"
+    },
+    {
+     "id": "05uio",
+     "position": "SG",
+     "status": "INJURED_RESERVE"
+    },
+    {
+     "id": "076th",
+     "position": "PG",
+     "status": "MINORS"
+    },
+    {
+     "id": "04qsm",
+     "position": "G",
+     "status": "ACTIVE"
+    },
+    {
+     "id": "06v5w",
+     "position": "SF",
+     "status": "RESERVE"
+    },
+    {
+     "id": "076sy",
+     "position": "PF",
+     "status": "MINORS"
+    },
+    {
+     "id": "01enh",
+     "position": "PG",
+     "status": "INJURED_RESERVE"
+    },
+    {
+     "id": "031m4",
+     "position": "SG/SF",
+     "status": "INJURED_RESERVE"
+    },
+    {
+     "id": "03nwm",
+     "position": "PG",
+     "status": "ACTIVE"
+    },
+    {
+     "id": "076sx",
+     "position": "SG/SF",
+     "status": "ACTIVE"
+    },
+    {
+     "id": "03e75",
+     "position": "C",
+     "status": "ACTIVE"
+    },
+    {
+     "id": "06v5r",
+     "position": "PG",
+     "status": "RESERVE"
+    },
+    {
+     "id": "05ujd",
+     "position": "C",
+     "status": "RESERVE"
+    },
+    {
+     "id": "076te",
+     "position": "G",
+     "status": "MINORS"
+    },
+    {
+     "id": "06v7y",
+     "position": "SF",
+     "status": "INJURED_RESERVE"
+    },
+    {
+     "id": "076vc",
+     "position": "F",
+     "status": "ACTIVE"
+    },
+    {
+     "id": "06mlr",
+     "position": "PG",
+     "status": "RESERVE"
+    },
+    {
+     "id": "051pb",
+     "position": "C",
+     "status": "RESERVE"
+    },
+    {
+     "id": "04ewr",
+     "position": "PF",
+     "status": "ACTIVE"
+    }
+   ]
+  },
+  "xoho393wmpebjlgp": {
+   "teamName": "Hanoi Haramball",
+   "rosterItems": [
+    {
+     "id": "07ag3",
+     "position": "PF",
+     "status": "MINORS"
+    },
+    {
+     "id": "051oo",
+     "position": "C",
+     "status": "INJURED_RESERVE"
+    },
+    {
+     "id": "04qrp",
+     "position": "PF",
+     "status": "ACTIVE"
+    },
+    {
+     "id": "05qtj",
+     "position": "SF",
+     "status": "INJURED_RESERVE"
+    },
+    {
+     "id": "042nq",
+     "position": "PG",
+     "status": "INJURED_RESERVE"
+    },
+    {
+     "id": "06mlz",
+     "position": "PG",
+     "status": "RESERVE"
+    },
+    {
+     "id": "03ajv",
+     "position": "F",
+     "status": "ACTIVE"
+    },
+    {
+     "id": "05uid",
+     "position": "PF",
+     "status": "INJURED_RESERVE"
+    },
+    {
+     "id": "03r7z",
+     "position": "SG",
+     "status": "ACTIVE"
+    },
+    {
+     "id": "05ujt",
+     "position": "SG",
+     "status": "RESERVE"
+    },
+    {
+     "id": "05qt4",
+     "position": "SF",
+     "status": "RESERVE"
+    },
+    {
+     "id": "076t7",
+     "position": "C",
+     "status": "MINORS"
+    },
+    {
+     "id": "02nf3",
+     "position": "SG",
+     "status": "INJURED_RESERVE"
+    },
+    {
+     "id": "0621l",
+     "position": "C",
+     "status": "ACTIVE"
+    },
+    {
+     "id": "03al2",
+     "position": "PF/C",
+     "status": "ACTIVE"
+    },
+    {
+     "id": "051os",
+     "position": "SF",
+     "status": "RESERVE"
+    },
+    {
+     "id": "04qru",
+     "position": "PG",
+     "status": "INJURED_RESERVE"
+    },
+    {
+     "id": "05uif",
+     "position": "PG",
+     "status": "RESERVE"
+    },
+    {
+     "id": "0496e",
+     "position": "PG",
+     "status": "RESERVE"
+    },
+    {
+     "id": "03al0",
+     "position": "C",
+     "status": "RESERVE"
+    },
+    {
+     "id": "051pi",
+     "position": "C",
+     "status": "RESERVE"
+    },
+    {
+     "id": "076tb",
+     "position": "G/F",
+     "status": "MINORS"
+    },
+    {
+     "id": "0621u",
+     "position": "SG/SF",
+     "status": "ACTIVE"
+    },
+    {
+     "id": "02nf6",
+     "position": "G",
+     "status": "RESERVE"
+    },
+    {
+     "id": "042n6",
+     "position": "C",
+     "status": "RESERVE"
+    },
+    {
+     "id": "05uig",
+     "position": "G/F",
+     "status": "ACTIVE"
+    },
+    {
+     "id": "0527h",
+     "position": "F",
+     "status": "RESERVE"
+    },
+    {
+     "id": "0621e",
+     "position": "C",
+     "status": "INJURED_RESERVE"
+    },
+    {
+     "id": "0623e",
+     "position": "PG",
+     "status": "RESERVE"
+    },
+    {
+     "id": "05uus",
+     "position": "G",
+     "status": "ACTIVE"
+    },
+    {
+     "id": "051p4",
+     "position": "SF",
+     "status": "INJURED_RESERVE"
+    },
+    {
+     "id": "076tz",
+     "position": "PF",
+     "status": "MINORS"
+    },
+    {
+     "id": "04kj6",
+     "position": "PG",
+     "status": "ACTIVE"
+    },
+    {
+     "id": "06v5q",
+     "position": "PF",
+     "status": "RESERVE"
+    },
+    {
+     "id": "027p4",
+     "position": "PF",
+     "status": "INJURED_RESERVE"
+    },
+    {
+     "id": "0011e",
+     "position": "SF",
+     "status": "ACTIVE"
+    }
+   ]
+  },
+  "84erhx5gmpddhfnw": {
+   "teamName": "Maryland Raccoons",
+   "rosterItems": [
+    {
+     "id": "0621b",
+     "position": "SF",
+     "status": "INJURED_RESERVE"
+    },
+    {
+     "id": "04ewt",
+     "position": "SG",
+     "status": "RESERVE"
+    },
+    {
+     "id": "06v5a",
+     "position": "G/F",
+     "status": "ACTIVE"
+    },
+    {
+     "id": "076u3",
+     "position": "G",
+     "status": "MINORS"
+    },
+    {
+     "id": "05qty",
+     "position": "G/F",
+     "status": "RESERVE"
+    },
+    {
+     "id": "06mlk",
+     "position": "PG",
+     "status": "RESERVE"
+    },
+    {
+     "id": "051oi",
+     "position": "PG",
+     "status": "INJURED_RESERVE"
+    },
+    {
+     "id": "01eon",
+     "position": "PF",
+     "status": "RESERVE"
+    },
+    {
+     "id": "05qzh",
+     "position": "SF",
+     "status": "RESERVE"
+    },
+    {
+     "id": "01eo9",
+     "position": "SG",
+     "status": "ACTIVE"
+    },
+    {
+     "id": "06v5p",
+     "position": "PG",
+     "status": "RESERVE"
+    },
+    {
+     "id": "06v5d",
+     "position": "SG/SF",
+     "status": "ACTIVE"
+    },
+    {
+     "id": "05qsx",
+     "position": "PF",
+     "status": "RESERVE"
+    },
+    {
+     "id": "076sv",
+     "position": "G",
+     "status": "MINORS"
+    },
+    {
+     "id": "0621g",
+     "position": "F",
+     "status": "RESERVE"
+    },
+    {
+     "id": "05qt1",
+     "position": "PG",
+     "status": "RESERVE"
+    },
+    {
+     "id": "05qtm",
+     "position": "C",
+     "status": "INJURED_RESERVE"
+    },
+    {
+     "id": "076ta",
+     "position": "SG/SF",
+     "status": "MINORS"
+    },
+    {
+     "id": "06ccf",
+     "position": "SF",
+     "status": "ACTIVE"
+    },
+    {
+     "id": "076tf",
+     "position": "PF",
+     "status": "MINORS"
+    },
+    {
+     "id": "042nt",
+     "position": "C",
+     "status": "RESERVE"
+    },
+    {
+     "id": "076t4",
+     "position": "G",
+     "status": "ACTIVE"
+    },
+    {
+     "id": "06cd4",
+     "position": "F",
+     "status": "ACTIVE"
+    },
+    {
+     "id": "06mjw",
+     "position": "PG",
+     "status": "ACTIVE"
+    },
+    {
+     "id": "02xg9",
+     "position": "C",
+     "status": "ACTIVE"
+    },
+    {
+     "id": "027ou",
+     "position": "SF",
+     "status": "RESERVE"
+    },
+    {
+     "id": "05uii",
+     "position": "SF",
+     "status": "RESERVE"
+    },
+    {
+     "id": "001aw",
+     "position": "PF",
+     "status": "ACTIVE"
+    },
+    {
+     "id": "06v5l",
+     "position": "SF",
+     "status": "RESERVE"
+    },
+    {
+     "id": "03xmv",
+     "position": "PF/C",
+     "status": "ACTIVE"
+    },
+    {
+     "id": "05qtt",
+     "position": "C",
+     "status": "RESERVE"
+    }
+   ]
+  },
+  "aygevjhvmpeez8dj": {
+   "teamName": "Cleveland Heights",
+   "rosterItems": [
+    {
+     "id": "06mmf",
+     "position": "PG",
+     "status": "ACTIVE"
+    },
+    {
+     "id": "076t8",
+     "position": "PF",
+     "status": "MINORS"
+    },
+    {
+     "id": "076u4",
+     "position": "SG",
+     "status": "MINORS"
+    },
+    {
+     "id": "031m2",
+     "position": "PF",
+     "status": "ACTIVE"
+    },
+    {
+     "id": "05qub",
+     "position": "PF",
+     "status": "INJURED_RESERVE"
+    },
+    {
+     "id": "06mkg",
+     "position": "SG",
+     "status": "RESERVE"
+    },
+    {
+     "id": "04ewu",
+     "position": "SG",
+     "status": "RESERVE"
+    },
+    {
+     "id": "06mk1",
+     "position": "C",
+     "status": "RESERVE"
+    },
+    {
+     "id": "05qt3",
+     "position": "SF",
+     "status": "ACTIVE"
+    },
+    {
+     "id": "05uib",
+     "position": "SG",
+     "status": "ACTIVE"
+    },
+    {
+     "id": "05uih",
+     "position": "C",
+     "status": "INJURED_RESERVE"
+    },
+    {
+     "id": "06v5h",
+     "position": "C",
+     "status": "RESERVE"
+    },
+    {
+     "id": "06mjv",
+     "position": "PG",
+     "status": "RESERVE"
+    },
+    {
+     "id": "06mkd",
+     "position": "PF",
+     "status": "RESERVE"
+    },
+    {
+     "id": "0623a",
+     "position": "PG",
+     "status": "INJURED_RESERVE"
+    },
+    {
+     "id": "076su",
+     "position": "C",
+     "status": "RESERVE"
+    },
+    {
+     "id": "06cc5",
+     "position": "G",
+     "status": "ACTIVE"
+    },
+    {
+     "id": "06mka",
+     "position": "SF",
+     "status": "RESERVE"
+    },
+    {
+     "id": "06227",
+     "position": "SG",
+     "status": "RESERVE"
+    },
+    {
+     "id": "076t3",
+     "position": "SF",
+     "status": "MINORS"
+    },
+    {
+     "id": "06mju",
+     "position": "C",
+     "status": "ACTIVE"
+    },
+    {
+     "id": "027oz",
+     "position": "SG/SF",
+     "status": "INJURED_RESERVE"
+    },
+    {
+     "id": "0621c",
+     "position": "PF/C",
+     "status": "INJURED_RESERVE"
+    },
+    {
+     "id": "05qst",
+     "position": "C",
+     "status": "RESERVE"
+    },
+    {
+     "id": "05uj4",
+     "position": "PF",
+     "status": "INJURED_RESERVE"
+    },
+    {
+     "id": "06mk4",
+     "position": "G/F",
+     "status": "MINORS"
+    },
+    {
+     "id": "06mjt",
+     "position": "SF",
+     "status": "RESERVE"
+    },
+    {
+     "id": "06217",
+     "position": "F",
+     "status": "ACTIVE"
+    },
+    {
+     "id": "05qsp",
+     "position": "SG/SF",
+     "status": "INJURED_RESERVE"
+    },
+    {
+     "id": "05qt0",
+     "position": "SG/SF",
+     "status": "ACTIVE"
+    },
+    {
+     "id": "06210",
+     "position": "F",
+     "status": "INJURED_RESERVE"
+    },
+    {
+     "id": "042n7",
+     "position": "PF/C",
+     "status": "ACTIVE"
+    },
+    {
+     "id": "05qu9",
+     "position": "G/F",
+     "status": "ACTIVE"
+    },
+    {
+     "id": "06mkb",
+     "position": "PG",
+     "status": "RESERVE"
+    },
+    {
+     "id": "0621t",
+     "position": "PF",
+     "status": "INJURED_RESERVE"
+    }
+   ]
+  },
+  "yvhv3mpqmphanev0": {
+   "teamName": "Milwaukee Brats",
+   "rosterItems": [
+    {
+     "id": "06211",
+     "position": "G/F",
+     "status": "INJURED_RESERVE"
+    },
+    {
+     "id": "06v5y",
+     "position": "SG/SF",
+     "status": "RESERVE"
+    },
+    {
+     "id": "06v80",
+     "position": "C",
+     "status": "RESERVE"
+    },
+    {
+     "id": "06cc8",
+     "position": "C",
+     "status": "RESERVE"
+    },
+    {
+     "id": "03ams",
+     "position": "G/F",
+     "status": "RESERVE"
+    },
+    {
+     "id": "06mlm",
+     "position": "G/F",
+     "status": "RESERVE"
+    },
+    {
+     "id": "05uj3",
+     "position": "C",
+     "status": "RESERVE"
+    },
+    {
+     "id": "048zt",
+     "position": "SF",
+     "status": "RESERVE"
+    },
+    {
+     "id": "076tj",
+     "position": "PF",
+     "status": "MINORS"
+    },
+    {
+     "id": "051ot",
+     "position": "SG/SF",
+     "status": "ACTIVE"
+    },
+    {
+     "id": "051oj",
+     "position": "SG",
+     "status": "ACTIVE"
+    },
+    {
+     "id": "05qsq",
+     "position": "PG",
+     "status": "ACTIVE"
+    },
+    {
+     "id": "04qrk",
+     "position": "G",
+     "status": "ACTIVE"
+    },
+    {
+     "id": "06v58",
+     "position": "SG",
+     "status": "RESERVE"
+    },
+    {
+     "id": "0621x",
+     "position": "PF",
+     "status": "ACTIVE"
+    },
+    {
+     "id": "076tk",
+     "position": "PG",
+     "status": "MINORS"
+    },
+    {
+     "id": "04848",
+     "position": "PG",
+     "status": "RESERVE"
+    },
+    {
+     "id": "06v88",
+     "position": "C",
+     "status": "INJURED_RESERVE"
+    },
+    {
+     "id": "051oh",
+     "position": "F",
+     "status": "ACTIVE"
+    },
+    {
+     "id": "06cdn",
+     "position": "PG",
+     "status": "RESERVE"
+    },
+    {
+     "id": "06v5b",
+     "position": "C",
+     "status": "MINORS"
+    },
+    {
+     "id": "0621k",
+     "position": "SG",
+     "status": "RESERVE"
+    },
+    {
+     "id": "076t6",
+     "position": "PG",
+     "status": "MINORS"
+    },
+    {
+     "id": "03e6s",
+     "position": "C",
+     "status": "ACTIVE"
+    },
+    {
+     "id": "06cby",
+     "position": "PG",
+     "status": "RESERVE"
+    },
+    {
+     "id": "05uic",
+     "position": "SG",
+     "status": "RESERVE"
+    },
+    {
+     "id": "05uiu",
+     "position": "SF",
+     "status": "ACTIVE"
+    },
+    {
+     "id": "06v57",
+     "position": "PF/C",
+     "status": "ACTIVE"
+    },
+    {
+     "id": "06226",
+     "position": "PF/C",
+     "status": "RESERVE"
+    },
+    {
+     "id": "06v5g",
+     "position": "G/F",
+     "status": "ACTIVE"
+    },
+    {
+     "id": "06cac",
+     "position": "G/F",
+     "status": "INJURED_RESERVE"
+    }
+   ]
+  },
+  "xzwygdtfmq35l0a3": {
+   "teamName": "West Hills Action",
+   "rosterItems": [
+    {
+     "id": "062dn",
+     "position": "SF",
+     "status": "RESERVE"
+    },
+    {
+     "id": "05uiz",
+     "position": "SG",
+     "status": "RESERVE"
+    },
+    {
+     "id": "06mjz",
+     "position": "C",
+     "status": "RESERVE"
+    },
+    {
+     "id": "06mkc",
+     "position": "SG",
+     "status": "INJURED_RESERVE"
+    },
+    {
+     "id": "076tg",
+     "position": "PF",
+     "status": "MINORS"
+    },
+    {
+     "id": "06cch",
+     "position": "C",
+     "status": "RESERVE"
+    },
+    {
+     "id": "04qrn",
+     "position": "SG",
+     "status": "RESERVE"
+    },
+    {
+     "id": "06y2o",
+     "position": "C",
+     "status": "RESERVE"
+    },
+    {
+     "id": "042n1",
+     "position": "F",
+     "status": "INJURED_RESERVE"
+    },
+    {
+     "id": "06v5k",
+     "position": "SG/SF",
+     "status": "ACTIVE"
+    },
+    {
+     "id": "05qtq",
+     "position": "PG",
+     "status": "RESERVE"
+    },
+    {
+     "id": "06cc7",
+     "position": "F",
+     "status": "ACTIVE"
+    },
+    {
+     "id": "04ewk",
+     "position": "PF",
+     "status": "RESERVE"
+    },
+    {
+     "id": "03nwk",
+     "position": "SF",
+     "status": "RESERVE"
+    },
+    {
+     "id": "06ca8",
+     "position": "SF",
+     "status": "ACTIVE"
+    },
+    {
+     "id": "06212",
+     "position": "PF",
+     "status": "ACTIVE"
+    },
+    {
+     "id": "05ujc",
+     "position": "PG",
+     "status": "RESERVE"
+    },
+    {
+     "id": "06mkj",
+     "position": "SF",
+     "status": "RESERVE"
+    },
+    {
+     "id": "0622f",
+     "position": "C",
+     "status": "ACTIVE"
+    },
+    {
+     "id": "05ujs",
+     "position": "PF",
+     "status": "RESERVE"
+    },
+    {
+     "id": "03ad3",
+     "position": "C",
+     "status": "RESERVE"
+    },
+    {
+     "id": "06cbx",
+     "position": "G/F",
+     "status": "ACTIVE"
+    },
+    {
+     "id": "04qsd",
+     "position": "PF/C",
+     "status": "ACTIVE"
+    },
+    {
+     "id": "01eo6",
+     "position": "PG",
+     "status": "ACTIVE"
+    },
+    {
+     "id": "0722s",
+     "position": "SF",
+     "status": "MINORS"
+    },
+    {
+     "id": "051ox",
+     "position": "G",
+     "status": "ACTIVE"
+    },
+    {
+     "id": "0723c",
+     "position": "SG",
+     "status": "MINORS"
+    },
+    {
+     "id": "042n4",
+     "position": "SG",
+     "status": "ACTIVE"
+    }
+   ]
+  },
+  "3dcj85vrmpeclie8": {
+   "teamName": "Joinville Flying Capybaras",
+   "rosterItems": [
+    {
+     "id": "04qrr",
+     "position": "SF",
+     "status": "ACTIVE"
+    },
+    {
+     "id": "05uiw",
+     "position": "C",
+     "status": "RESERVE"
+    },
+    {
+     "id": "04qro",
+     "position": "PG",
+     "status": "ACTIVE"
+    },
+    {
+     "id": "04qrj",
+     "position": "C",
+     "status": "INJURED_RESERVE"
+    },
+    {
+     "id": "027pe",
+     "position": "SF",
+     "status": "INJURED_RESERVE"
+    },
+    {
+     "id": "04qrl",
+     "position": "PF/C",
+     "status": "ACTIVE"
+    },
+    {
+     "id": "06215",
+     "position": "SF",
+     "status": "INJURED_RESERVE"
+    },
+    {
+     "id": "076ti",
+     "position": "PF",
+     "status": "MINORS"
+    },
+    {
+     "id": "072af",
+     "position": "F",
+     "status": "MINORS"
+    },
+    {
+     "id": "03lls",
+     "position": "SG",
+     "status": "INJURED_RESERVE"
+    },
+    {
+     "id": "04ewe",
+     "position": "SG",
+     "status": "ACTIVE"
+    },
+    {
+     "id": "04azw",
+     "position": "PF",
+     "status": "INJURED_RESERVE"
+    },
+    {
+     "id": "049kb",
+     "position": "SG",
+     "status": "RESERVE"
+    },
+    {
+     "id": "076t1",
+     "position": "SG",
+     "status": "RESERVE"
+    },
+    {
+     "id": "06mlq",
+     "position": "G",
+     "status": "ACTIVE"
+    },
+    {
+     "id": "03aq2",
+     "position": "SF",
+     "status": "RESERVE"
+    },
+    {
+     "id": "0621i",
+     "position": "F",
+     "status": "ACTIVE"
+    },
+    {
+     "id": "04ewm",
+     "position": "C",
+     "status": "ACTIVE"
+    },
+    {
+     "id": "04s00",
+     "position": "SG",
+     "status": "INJURED_RESERVE"
+    },
+    {
+     "id": "051op",
+     "position": "PF",
+     "status": "RESERVE"
+    },
+    {
+     "id": "042n2",
+     "position": "PG",
+     "status": "RESERVE"
+    },
+    {
+     "id": "05uik",
+     "position": "SG/SF",
+     "status": "ACTIVE"
+    },
+    {
+     "id": "0558t",
+     "position": "SF",
+     "status": "RESERVE"
+    },
+    {
+     "id": "05qtr",
+     "position": "SG",
+     "status": "RESERVE"
+    },
+    {
+     "id": "049kf",
+     "position": "C",
+     "status": "RESERVE"
+    },
+    {
+     "id": "04qrw",
+     "position": "G/F",
+     "status": "ACTIVE"
+    },
+    {
+     "id": "05qug",
+     "position": "SG",
+     "status": "INJURED_RESERVE"
+    },
+    {
+     "id": "076tm",
+     "position": "SF",
+     "status": "MINORS"
+    },
+    {
+     "id": "03nwn",
+     "position": "C",
+     "status": "RESERVE"
+    },
+    {
+     "id": "042nm",
+     "position": "PF",
+     "status": "ACTIVE"
+    },
+    {
+     "id": "03r7d",
+     "position": "SF",
+     "status": "RESERVE"
+    },
+    {
+     "id": "06mk7",
+     "position": "PF",
+     "status": "RESERVE"
+    },
+    {
+     "id": "06cca",
+     "position": "PF",
+     "status": "RESERVE"
+    },
+    {
+     "id": "06cc1",
+     "position": "G/F",
+     "status": "RESERVE"
+    }
+   ]
+  }
+ }
+}

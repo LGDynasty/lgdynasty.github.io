@@ -1,0 +1,33 @@
+{
+ "updatedAt": "2026-11-18T13:05:39.219Z",
+ "seasonsChecked": [
+  {
+   "season": "2026",
+   "leagueId": "1344914797510004736",
+   "status": "no winner recorded in the bracket yet",
+   "previousLeagueId": "1243443639133159424",
+   "bracketMatches": 9,
+   "finalMatch": {
+    "m": 7,
+    "p": 1,
+    "r": 3,
+    "l": null,
+    "w": null,
+    "t1": null,
+    "t2": null,
+    "t2_from": {
+     "w": 5
+    },
+    "t1_from": {
+     "w": 4
+    }
+   }
+  },
+  {
+   "season": "2025",
+   "leagueId": "1243443639133159424",
+   "status": "already saved",
+   "previousLeagueId": null
+  }
+ ]
+}

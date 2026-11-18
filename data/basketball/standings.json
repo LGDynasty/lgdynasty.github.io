@@ -1,0 +1,74 @@
+[
+ {
+  "teamName": "Hanoi Haramball",
+  "totalPointsFor": 5459.9,
+  "teamId": "xoho393wmpebjlgp",
+  "gamesBack": 0,
+  "rank": 1,
+  "points": "7-1-0",
+  "winPercentage": 0.875
+ },
+ {
+  "teamName": "West Hills Action",
+  "totalPointsFor": 5461.5,
+  "teamId": "xzwygdtfmq35l0a3",
+  "gamesBack": 0,
+  "rank": 2,
+  "points": "7-1-0",
+  "winPercentage": 0.875
+ },
+ {
+  "teamName": "Cleveland Heights",
+  "totalPointsFor": 5229.5,
+  "teamId": "aygevjhvmpeez8dj",
+  "gamesBack": 0,
+  "rank": 3,
+  "points": "7-1-0",
+  "winPercentage": 0.875
+ },
+ {
+  "teamName": "Olympia Hippies",
+  "totalPointsFor": 4929.1,
+  "teamId": "r860p8dvmpejphif",
+  "gamesBack": 3,
+  "rank": 4,
+  "points": "4-4-0",
+  "winPercentage": 0.5
+ },
+ {
+  "teamName": "Maryland Raccoons",
+  "totalPointsFor": 5052.2,
+  "teamId": "84erhx5gmpddhfnw",
+  "gamesBack": 3,
+  "rank": 5,
+  "points": "4-4-0",
+  "winPercentage": 0.5
+ },
+ {
+  "teamName": "Joinville Flying Capybaras",
+  "totalPointsFor": 4860.5,
+  "teamId": "3dcj85vrmpeclie8",
+  "gamesBack": 5,
+  "rank": 6,
+  "points": "2-6-0",
+  "winPercentage": 0.25
+ },
+ {
+  "teamName": "MidWes BearTigers",
+  "totalPointsFor": 4729.5,
+  "teamId": "98x5yrsdmpoj14hk",
+  "gamesBack": 5,
+  "rank": 7,
+  "points": "2-6-0",
+  "winPercentage": 0.25
+ },
+ {
+  "teamName": "Milwaukee Brats",
+  "totalPointsFor": 4914.8,
+  "teamId": "yvhv3mpqmphanev0",
+  "gamesBack": 6,
+  "rank": 8,
+  "points": "1-7-0",
+  "winPercentage": 0.125
+ }
+]
