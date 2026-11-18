@@ -208,6 +208,7 @@
  },
  "06582": {
   "rotowireId": 18773,
+  "sportRadarId": "04b890af-568e-4dcf-9dd1-68459f410136",
   "name": "Adams, Luke",
   "fantraxId": "06582",
   "team": "MIL",
@@ -467,7 +468,7 @@
   "sportRadarId": "a1c49b6e-4414-41b4-86cd-75c65687f979",
   "name": "Jung, Jace",
   "fantraxId": "05tzg",
-  "team": "DET",
+  "team": "LAA",
   "position": "DH"
  },
  "05tzh": {
@@ -1326,6 +1327,7 @@
  },
  "05ub1": {
   "rotowireId": 17953,
+  "sportRadarId": "e741609e-7d1d-47f0-865d-d3a659862e28",
   "name": "Graham, Peyton",
   "fantraxId": "05ub1",
   "team": "DET",
@@ -2066,6 +2068,7 @@
  },
  "063e6": {
   "rotowireId": 18030,
+  "sportRadarId": "70367fc6-1547-408d-bd5d-8ff2d13a56fd",
   "name": "Izzi, Ashton",
   "fantraxId": "063e6",
   "team": "ARI",
@@ -3591,6 +3594,8 @@
   "position": "RP"
  },
  "06fqr": {
+  "rotowireId": 21313,
+  "sportRadarId": "b3b0b33d-0f2b-4a8e-963e-f1c4a2dba43a",
   "name": "Kuehner, Tate",
   "fantraxId": "06fqr",
   "team": "MIL",
@@ -5756,6 +5761,7 @@
  },
  "051gy": {
   "rotowireId": 21201,
+  "sportRadarId": "f96d463e-31a9-4f1c-9f51-1b909176b0f4",
   "name": "Beck, Jace",
   "fantraxId": "051gy",
   "team": "MIA",
@@ -5782,6 +5788,7 @@
  },
  "051gv": {
   "rotowireId": 21269,
+  "sportRadarId": "2cc02310-6aca-4000-92c4-4c923c8e0bfc",
   "name": "Wagoner, Cameron",
   "fantraxId": "051gv",
   "team": "MIL",
@@ -9057,6 +9064,7 @@
  },
  "064nx": {
   "rotowireId": 18121,
+  "sportRadarId": "bf8ccfd2-419f-4775-b9a3-ec4ed714453b",
   "name": "ORae, Dylan",
   "fantraxId": "064nx",
   "team": "MIL",
@@ -9622,6 +9630,7 @@
  },
  "064o4": {
   "rotowireId": 19735,
+  "sportRadarId": "016febc7-a350-496b-9577-f0279250bbfa",
   "name": "Crisantes, Demetrio",
   "fantraxId": "064o4",
   "team": "ARI",
@@ -12210,6 +12219,7 @@
  },
  "066eq": {
   "rotowireId": 18929,
+  "sportRadarId": "681b7ec6-83bd-4ceb-b24d-494f865fbfe6",
   "name": "Jebb, Mitch",
   "fantraxId": "066eq",
   "team": "PIT",
@@ -12962,6 +12972,8 @@
   "position": "SP"
  },
  "066aa": {
+  "rotowireId": 21316,
+  "sportRadarId": "ef7fb0f1-9325-4d2f-be32-2e58913fe1d5",
   "name": "Koenig, Ian",
   "fantraxId": "066aa",
   "team": "SD",
@@ -13163,7 +13175,7 @@
   "sportRadarId": "55afc6fc-6355-4610-a34c-65275a076f3a",
   "name": "Cruz, Omar",
   "fantraxId": "04tf0",
-  "team": "SD",
+  "team": "WSH",
   "position": "SP"
  },
  "066dn": {
@@ -13480,6 +13492,7 @@
  },
  "066bw": {
   "rotowireId": 21203,
+  "sportRadarId": "7c83b4ee-bab1-4f8b-ae0a-cfb4cace582d",
   "name": "De Grandpre, Cedric",
   "fantraxId": "066bw",
   "team": "ATL",
@@ -14115,7 +14128,7 @@
  "078nb": {
   "name": "Roa, Angel",
   "fantraxId": "078nb",
-  "team": "BOS",
+  "team": "TB",
   "position": "SP"
  },
  "06hq4": {
@@ -15218,6 +15231,7 @@
   "position": "SP"
  },
  "06hol": {
+  "rotowireId": 21315,
   "name": "Fox, Luke",
   "fantraxId": "06hol",
   "team": "LAD",
@@ -15298,6 +15312,7 @@
  },
  "06hoc": {
   "rotowireId": 20124,
+  "sportRadarId": "d2b88600-0aa1-4b20-8654-948e6df9b754",
   "name": "Rodriguez, Raudi",
   "fantraxId": "06hoc",
   "team": "LAA",
@@ -15850,7 +15865,7 @@
   "sportRadarId": "3e72c29b-c305-4e6b-8311-0bec2e447b72",
   "name": "Miller, Bryce",
   "fantraxId": "05vy6",
-  "team": "SEA",
+  "team": "KC",
   "position": "SP"
  },
  "06yzu": {
@@ -16872,7 +16887,7 @@
   "sportRadarId": "3c07814a-966e-4358-82f5-f59c32af8c94",
   "name": "Garcia, Maikel",
   "fantraxId": "05g3x",
-  "team": "KC",
+  "team": "SEA",
   "position": "3B"
  },
  "078si": {
@@ -16893,7 +16908,7 @@
   "sportRadarId": "cf6ab3eb-49ac-4fa1-a60b-8f3a8c2b8672",
   "name": "Evans, Logan",
   "fantraxId": "06hv8",
-  "team": "SEA",
+  "team": "KC",
   "position": "SP"
  },
  "078sg": {
@@ -17502,6 +17517,7 @@
  },
  "06hwr": {
   "rotowireId": 20936,
+  "sportRadarId": "054f31fe-eab1-4cef-9f9a-f25c4f1983ae",
   "name": "Odle, Jacob",
   "fantraxId": "06hwr",
   "team": "STL",
@@ -18229,6 +18245,7 @@
  },
  "06hw6": {
   "rotowireId": 21257,
+  "sportRadarId": "11192625-60fd-46a6-85ee-fb47bc0b1e5e",
   "name": "Gair, Marty",
   "fantraxId": "06hw6",
   "team": "SF",
@@ -21812,6 +21829,7 @@
  },
  "066t9": {
   "rotowireId": 20594,
+  "sportRadarId": "aef8816d-9b22-4074-ad4f-cd75b91412a3",
   "name": "Matheus, Juan",
   "fantraxId": "066t9",
   "team": "MIA",
@@ -24872,6 +24890,7 @@
  },
  "05yib": {
   "rotowireId": 17868,
+  "sportRadarId": "8712ad7e-37af-40f1-9558-4be033258e57",
   "name": "Rada, Nelson",
   "fantraxId": "05yib",
   "team": "LAA",
@@ -25716,6 +25735,7 @@
  },
  "05yix": {
   "rotowireId": 18155,
+  "sportRadarId": "6b70626f-242f-4257-83ce-bd15090220b6",
   "name": "Chourio, Jaison",
   "fantraxId": "05yix",
   "team": "CLE",
@@ -27131,6 +27151,7 @@
  },
  "067xg": {
   "rotowireId": 20916,
+  "sportRadarId": "75d24425-042a-4528-97aa-545945c37483",
   "name": "Perry, Nolan",
   "fantraxId": "067xg",
   "team": "TOR",
@@ -29653,6 +29674,7 @@
  },
  "06krw": {
   "rotowireId": 19681,
+  "sportRadarId": "7bd99795-8990-4556-866f-6244fe14f98e",
   "name": "Dishmey, Eliazar",
   "fantraxId": "06krw",
   "team": "MIA",
@@ -29898,6 +29920,7 @@
  },
  "06m7d": {
   "rotowireId": 20403,
+  "sportRadarId": "b4acb14f-4713-478f-b569-546258c176ef",
   "name": "Aracena, Wellington",
   "fantraxId": "06m7d",
   "team": "ARI",
@@ -37122,6 +37145,7 @@
  },
  "06nyu": {
   "rotowireId": 20015,
+  "sportRadarId": "b2ab0188-184f-4e69-985b-6fb609c2c52e",
   "name": "Polo, Davis",
   "fantraxId": "06nyu",
   "team": "ATL",
@@ -47341,6 +47365,7 @@
  },
  "0603l": {
   "rotowireId": 19760,
+  "sportRadarId": "78508260-ccf1-4189-9031-53849377b4a0",
   "name": "Schreck, RJ",
   "fantraxId": "0603l",
   "team": "TOR",
@@ -48133,6 +48158,7 @@
   "position": "SP"
  },
  "06ajt": {
+  "sportRadarId": "534ca616-53c8-4de5-afc4-0ce371eb8737",
   "name": "White, Brandon",
   "fantraxId": "06ajt",
   "team": "MIA",
@@ -49947,6 +49973,7 @@
  },
  "06146": {
   "rotowireId": 17981,
+  "sportRadarId": "54765cd2-1895-4f33-81e9-e9544065588b",
   "name": "Cox, Jackson",
   "fantraxId": "06146",
   "team": "COL",
@@ -51446,7 +51473,7 @@
   "sportRadarId": "b004cc6c-f00c-4b5d-917a-ee1abf92179d",
   "name": "Gray, Sonny",
   "fantraxId": "0260v",
-  "team": "BOS",
+  "team": "MIN",
   "position": "SP"
  },
  "024nt": {
@@ -54243,6 +54270,8 @@
   "position": "SP"
  },
  "0626r": {
+  "rotowireId": 21314,
+  "sportRadarId": "f2e0f634-a2f1-4314-83bd-b9218611c7f6",
   "name": "Betancourt, Bryant",
   "fantraxId": "0626r",
   "team": "COL",
@@ -54893,6 +54922,7 @@
  },
  "0622o": {
   "rotowireId": 18247,
+  "sportRadarId": "fb026489-7fbb-4e18-ac29-519cd8b7418c",
   "name": "Plaz, Axiel",
   "fantraxId": "0622o",
   "team": "PIT",
@@ -58073,6 +58103,7 @@
  },
  "061wh": {
   "rotowireId": 19060,
+  "sportRadarId": "82e998a4-40a1-41f9-8663-95f542278be7",
   "name": "Rojas, Jefferson",
   "fantraxId": "061wh",
   "team": "NYM",
@@ -58183,6 +58214,7 @@
  },
  "0637j": {
   "rotowireId": 19070,
+  "sportRadarId": "2b6373fa-43e5-411f-94c4-c080ed739568",
   "name": "Briceno, Josue",
   "fantraxId": "0637j",
   "team": "DET",
@@ -58925,6 +58957,7 @@
  },
  "04q4k": {
   "rotowireId": 21312,
+  "sportRadarId": "15a5e7e8-be13-4b16-9f9a-a99975fc878b",
   "name": "Martin, Garrett",
   "fantraxId": "04q4k",
   "team": "NYY",
@@ -59040,6 +59073,7 @@
  },
  "061rf": {
   "rotowireId": 18173,
+  "sportRadarId": "4bf84ce1-7cd9-422f-a576-31ae2974ec43",
   "name": "Baez, Jesus",
   "fantraxId": "061rf",
   "team": "STL",
@@ -60930,6 +60964,7 @@
  },
  "06uhj": {
   "rotowireId": 21205,
+  "sportRadarId": "ce4900d2-75e8-43a5-8358-d7d21a30ecf9",
   "name": "Guerra, Daniel",
   "fantraxId": "06uhj",
   "team": "TOR",
@@ -61565,6 +61600,7 @@
  },
  "06dq6": {
   "rotowireId": 18963,
+  "sportRadarId": "6ca61712-f9e6-4a01-a671-0dff474d1bdd",
   "name": "Mahoney, Jack",
   "fantraxId": "06dq6",
   "team": "COL",
@@ -63066,6 +63102,7 @@
  },
  "06dmq": {
   "rotowireId": 18873,
+  "sportRadarId": "02e071e0-60b8-4536-9ff2-696d3201c4c3",
   "name": "Carr, Kyle",
   "fantraxId": "06dmq",
   "team": "NYY",
@@ -63097,6 +63134,7 @@
  },
  "06dmp": {
   "rotowireId": 19003,
+  "sportRadarId": "9a5ca268-016f-41a2-9c9a-7d9a68c89814",
   "name": "Anderson, Max",
   "fantraxId": "06dmp",
   "team": "DET",
@@ -63421,6 +63459,7 @@
  },
  "0648o": {
   "rotowireId": 20065,
+  "sportRadarId": "a9ff8c0b-873b-423c-8fdf-78c8c58cfbae",
   "name": "Giesting, Spencer",
   "fantraxId": "0648o",
   "team": "ARI",
@@ -63769,7 +63808,7 @@
   "sportRadarId": "e04a083b-9558-4e64-a494-5aae432bb792",
   "name": "McArthur, James",
   "fantraxId": "04pw3",
-  "team": "KC",
+  "team": "SEA",
   "position": "RP"
  },
  "075xr": {
@@ -65367,7 +65406,7 @@
   "sportRadarId": "25e9b010-c188-43f6-bbd3-1e29428b73ed",
   "name": "Fortes, Nick",
   "fantraxId": "04pqf",
-  "team": "TB",
+  "team": "BOS",
   "position": "C"
  },
  "027fx": {
@@ -65741,6 +65780,7 @@
  },
  "06482": {
   "rotowireId": 18132,
+  "sportRadarId": "4e35fea0-6a03-472c-ad71-ef7e3f3576f5",
   "name": "Wood, Matt",
   "fantraxId": "06482",
   "team": "MIL",
@@ -67088,6 +67128,7 @@
  },
  "062h4": {
   "rotowireId": 19118,
+  "sportRadarId": "a071dcb5-4c40-488e-a956-03f1e70f1b96",
   "name": "Lagrange, Carlos",
   "fantraxId": "062h4",
   "team": "NYY",
@@ -67730,6 +67771,7 @@
  },
  "062e4": {
   "rotowireId": 21230,
+  "sportRadarId": "18956644-f6cb-4f8f-b406-72f229a5d0b3",
   "name": "Graham, Carter",
   "fantraxId": "062e4",
   "team": "CIN",
@@ -67777,7 +67819,7 @@
   "sportRadarId": "73fdecbf-8738-4e32-adba-57d894931208",
   "name": "Ferrer, Jose",
   "fantraxId": "062ob",
-  "team": "SEA",
+  "team": "KC",
   "position": "RP"
  },
  "03mkv": {

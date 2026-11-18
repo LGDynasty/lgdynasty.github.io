@@ -431,8 +431,8 @@
     },
     {
      "id": "051os",
-     "position": "SF",
-     "status": "RESERVE"
+     "position": "G/F",
+     "status": "ACTIVE"
     },
     {
      "id": "04qru",
@@ -481,7 +481,7 @@
     },
     {
      "id": "05uig",
-     "position": "G/F",
+     "position": "G",
      "status": "ACTIVE"
     },
     {
@@ -502,7 +502,7 @@
     {
      "id": "05uus",
      "position": "G",
-     "status": "ACTIVE"
+     "status": "INJURED_RESERVE"
     },
     {
      "id": "051p4",
@@ -792,7 +792,7 @@
     {
      "id": "06227",
      "position": "SG",
-     "status": "RESERVE"
+     "status": "INJURED_RESERVE"
     },
     {
      "id": "076t3",
@@ -816,8 +816,8 @@
     },
     {
      "id": "05qst",
-     "position": "C",
-     "status": "RESERVE"
+     "position": "PF/C",
+     "status": "ACTIVE"
     },
     {
      "id": "05uj4",
@@ -856,13 +856,13 @@
     },
     {
      "id": "042n7",
-     "position": "PF/C",
+     "position": "G/F",
      "status": "ACTIVE"
     },
     {
      "id": "05qu9",
      "position": "G/F",
-     "status": "ACTIVE"
+     "status": "RESERVE"
     },
     {
      "id": "06mkb",
@@ -901,8 +901,8 @@
     },
     {
      "id": "03ams",
-     "position": "G/F",
-     "status": "RESERVE"
+     "position": "F",
+     "status": "ACTIVE"
     },
     {
      "id": "06mlm",
@@ -912,7 +912,7 @@
     {
      "id": "05uj3",
      "position": "C",
-     "status": "RESERVE"
+     "status": "ACTIVE"
     },
     {
      "id": "048zt",
@@ -926,8 +926,8 @@
     },
     {
      "id": "051ot",
-     "position": "SG/SF",
-     "status": "ACTIVE"
+     "position": "PG",
+     "status": "RESERVE"
     },
     {
      "id": "051oj",
@@ -952,7 +952,7 @@
     {
      "id": "0621x",
      "position": "PF",
-     "status": "ACTIVE"
+     "status": "INJURED_RESERVE"
     },
     {
      "id": "076tk",
@@ -971,7 +971,7 @@
     },
     {
      "id": "051oh",
-     "position": "F",
+     "position": "PF",
      "status": "ACTIVE"
     },
     {
@@ -991,13 +991,13 @@
     },
     {
      "id": "076t6",
-     "position": "PG",
-     "status": "MINORS"
+     "position": "G/F",
+     "status": "ACTIVE"
     },
     {
      "id": "03e6s",
      "position": "C",
-     "status": "ACTIVE"
+     "status": "INJURED_RESERVE"
     },
     {
      "id": "06cby",
@@ -1026,7 +1026,7 @@
     },
     {
      "id": "06v5g",
-     "position": "G/F",
+     "position": "SG/SF",
      "status": "ACTIVE"
     },
     {
