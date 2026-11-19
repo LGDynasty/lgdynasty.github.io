@@ -3043,6 +3043,7 @@
  },
  "06fpj": {
   "rotowireId": 18872,
+  "sportRadarId": "69860a6b-9a43-442f-9471-0c0d8885ffd5",
   "name": "Bostick, Josh",
   "fantraxId": "06fpj",
   "team": "SF",
@@ -18151,6 +18152,12 @@
   "fantraxId": "06ywk",
   "team": "NYY",
   "position": "RP"
+ },
+ "078tg": {
+  "name": "Ward, Kenneth",
+  "fantraxId": "078tg",
+  "team": "DET",
+  "position": "SP"
  },
  "06hw9": {
   "name": "Miller, Mason",
@@ -36395,6 +36402,42 @@
   "name": "Herring, Griffin",
   "fantraxId": "06owe",
   "team": "COL",
+  "position": "RP"
+ },
+ "07axr": {
+  "name": "Medina, Charlis",
+  "fantraxId": "07axr",
+  "team": "ATL",
+  "position": "RP"
+ },
+ "07axp": {
+  "name": "Navarro, Kenyer",
+  "fantraxId": "07axp",
+  "team": "TOR",
+  "position": "RP"
+ },
+ "07axq": {
+  "name": "Nelo, Jose",
+  "fantraxId": "07axq",
+  "team": "ATL",
+  "position": "C"
+ },
+ "07axn": {
+  "name": "Diaz, Abrahan",
+  "fantraxId": "07axn",
+  "team": "TOR",
+  "position": "SP"
+ },
+ "07axo": {
+  "name": "Ortega, Ayberson",
+  "fantraxId": "07axo",
+  "team": "TOR",
+  "position": "C"
+ },
+ "07axm": {
+  "name": "Barria, Olmedo",
+  "fantraxId": "07axm",
+  "team": "NYM",
   "position": "RP"
  },
  "07axg": {
