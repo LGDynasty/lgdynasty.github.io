@@ -55,17 +55,22 @@ for (const [name, q] of Object.entries(ENDPOINTS)) {
 }
 
 // 3) Power rankings need points AGAINST, which standings lack: keep each finished scoring period's matchups.
+// Fantrax also lists a "game against the league average" for each team; only count real team-vs-team games
+const stand = Array.isArray(got.standings) ? got.standings : (got.standings && got.standings.standings) || [];
+const ids = new Set(stand.map(t => t.teamId));
+const clean = arr => ids.size ? arr.filter(g => ids.has(g.a) && ids.has(g.h)) : arr;
 const curPeriod = got.matchups && got.matchups.period;
 if (Date.now() >= SEASON_START && curPeriod > 1) {
   let cache = (await readJSON(`${OUT}/period-scores.json`)) || {};
   if (cache.season !== SEASON) cache = { season: SEASON, periods: {} };
+  for (const k of Object.keys(cache.periods)) cache.periods[k] = clean(cache.periods[k]); // tidy periods saved earlier
   for (let p = 1; p < curPeriod; p++) {
     if (cache.periods[p]) continue; // finished periods are cached
     try {
       const j = await get(`getMatchupScores?leagueId=${LEAGUE_ID}&period=${p}`);
       // category leagues may report category wins instead of a points score
       const val = t => t.score ?? t.categoryWins ?? 0;
-      cache.periods[p] = (j.matchups || []).map(m => ({ a: m.away.teamId, h: m.home.teamId, as: val(m.away), hs: val(m.home) }));
+      cache.periods[p] = clean((j.matchups || []).map(m => ({ a: m.away.teamId, h: m.home.teamId, as: val(m.away), hs: val(m.home) })));
       await new Promise(r => setTimeout(r, 300));
     } catch (e) { meta.errors["period-" + p] = String(e.message || e); }
   }
