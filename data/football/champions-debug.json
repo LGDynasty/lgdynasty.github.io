@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-19T03:55:26.719Z",
+ "updatedAt": "2026-11-19T07:10:48.705Z",
  "seasonsChecked": [
   {
    "season": "2026",
@@ -8,8 +8,8 @@
    "previousLeagueId": "1243443639133159424",
    "bracketMatches": 9,
    "finalMatch": {
-    "m": 7,
     "p": 1,
+    "m": 7,
     "r": 3,
     "l": null,
     "w": null,

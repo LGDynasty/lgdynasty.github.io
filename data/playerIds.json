@@ -4537,7 +4537,7 @@
  "0669q": {
   "name": "McCarty, Ryan",
   "fantraxId": "0669q",
-  "team": "PIT",
+  "team": "(N/A)",
   "position": "2B"
  },
  "077zr": {
@@ -13911,7 +13911,7 @@
   "sportRadarId": "2412a017-f7ec-4b7b-a19f-e441554cf49a",
   "name": "Martin, Richie",
   "fantraxId": "03pj6",
-  "team": "COL",
+  "team": "(N/A)",
   "position": "SS"
  },
  "03pj5": {
@@ -15434,8 +15434,8 @@
  "06hp2": {
   "name": "Kublick, Hunter",
   "fantraxId": "06hp2",
-  "team": "STL",
-  "position": "SP"
+  "team": "(N/A)",
+  "position": "RP"
  },
  "065jb": {
   "name": "Adametz, Joe",
@@ -15540,7 +15540,7 @@
   "name": "McCroskey, Mac",
   "fantraxId": "06hnh",
   "team": "LAA",
-  "position": "2B"
+  "position": "SS"
  },
  "065iy": {
   "rotowireId": 20464,
@@ -26791,7 +26791,7 @@
  "06l52": {
   "name": "Luciano, Ismael",
   "fantraxId": "06l52",
-  "team": "COL",
+  "team": "(N/A)",
   "position": "RP"
  },
  "06l3m": {
@@ -36254,7 +36254,7 @@
   "name": "Lashutka, Luke",
   "fantraxId": "06oom",
   "team": "MIA",
-  "position": "RP"
+  "position": "SP"
  },
  "06ooj": {
   "name": "Domingo, Vicarte",
@@ -36476,8 +36476,8 @@
   "sportRadarId": "5cd48a6e-6158-494d-b55b-67cc7f6b8934",
   "name": "Lopez, Alejo",
   "fantraxId": "03wkr",
-  "team": "KC",
-  "position": "3B"
+  "team": "(N/A)",
+  "position": "SS"
  },
  "07atr": {
   "name": "Urbina, Neomar",
@@ -44023,7 +44023,7 @@
   "name": "Kroeger, Jacob",
   "fantraxId": "06qhw",
   "team": "ATL",
-  "position": "SP"
+  "position": "RP"
  },
  "06qhx": {
   "rotowireId": 20802,
@@ -44766,8 +44766,8 @@
  "06c5a": {
   "name": "Key, Keythel",
   "fantraxId": "06c5a",
-  "team": "LAA",
-  "position": "SP"
+  "team": "(N/A)",
+  "position": "RP"
  },
  "04n0p": {
   "statsIncId": 11840,
@@ -45074,7 +45074,7 @@
  "06rsq": {
   "name": "Macias, Johan",
   "fantraxId": "06rsq",
-  "team": "LAA",
+  "team": "(N/A)",
   "position": "2B"
  },
  "06ru3": {
@@ -51825,7 +51825,7 @@
   "name": "Long, Ryan",
   "fantraxId": "06bxl",
   "team": "BAL",
-  "position": "SP"
+  "position": "RP"
  },
  "04o78": {
   "statsIncId": 11795,
@@ -58412,7 +58412,7 @@
  "06uvt": {
   "name": "Marquez, Luis",
   "fantraxId": "06uvt",
-  "team": "TEX",
+  "team": "(N/A)",
   "position": "2B"
  },
  "0765p": {
@@ -58737,7 +58737,7 @@
   "name": "Marte, Josehp",
   "fantraxId": "0764e",
   "team": "LAD",
-  "position": "SP"
+  "position": "RP"
  },
  "0764f": {
   "name": "Ramirez, Michael",
@@ -64309,8 +64309,8 @@
  "04py1": {
   "name": "Lucky, Nick",
   "fantraxId": "04py1",
-  "team": "NYM",
-  "position": "SS"
+  "team": "(N/A)",
+  "position": "CF"
  },
  "0516q": {
   "rotowireId": 19779,
@@ -64537,8 +64537,8 @@
   "sportRadarId": "ee1b26c8-b8ef-48ff-9cfd-454a01e5dcca",
   "name": "Kessinger, Grae",
   "fantraxId": "0511u",
-  "team": "PIT",
-  "position": "1B"
+  "team": "(N/A)",
+  "position": "SS"
  },
  "0511x": {
   "rotowireId": 16228,
@@ -66473,7 +66473,7 @@
   "name": "Kokoska, Zach",
   "fantraxId": "05tcc",
   "team": "COL",
-  "position": "1B"
+  "position": "LF"
  },
  "05tca": {
   "rotowireId": 17493,

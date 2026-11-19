@@ -356,8 +356,8 @@
    "rosterItems": [
     {
      "id": "07ag3",
-     "position": "SF",
-     "status": "MINORS"
+     "position": "G/F",
+     "status": "ACTIVE"
     },
     {
      "id": "051oo",
@@ -367,7 +367,7 @@
     {
      "id": "04qrp",
      "position": "G/F",
-     "status": "ACTIVE"
+     "status": "RESERVE"
     },
     {
      "id": "05qtj",
@@ -447,7 +447,7 @@
     {
      "id": "0496e",
      "position": "PG",
-     "status": "RESERVE"
+     "status": "INJURED_RESERVE"
     },
     {
      "id": "03al0",
@@ -865,6 +865,11 @@
      "status": "ACTIVE"
     },
     {
+     "id": "05uj0",
+     "position": "PG",
+     "status": "RESERVE"
+    },
+    {
      "id": "06mkb",
      "position": "SG/SF",
      "status": "ACTIVE"
@@ -1248,6 +1253,11 @@
      "id": "049kb",
      "position": "SG",
      "status": "ACTIVE"
+    },
+    {
+     "id": "06v8f",
+     "position": "PG",
+     "status": "RESERVE"
     },
     {
      "id": "076t1",
