@@ -14126,6 +14126,7 @@
   "position": "CF"
  },
  "078nb": {
+  "rotowireId": 21317,
   "name": "Roa, Angel",
   "fantraxId": "078nb",
   "team": "TB",
@@ -25253,6 +25254,7 @@
  },
  "05ym5": {
   "rotowireId": 19117,
+  "sportRadarId": "25fbd8fa-dea2-4f08-b00b-3582aaebf9a4",
   "name": "Lalane, Henry",
   "fantraxId": "05ym5",
   "team": "SF",
@@ -40330,7 +40332,7 @@
   "sportRadarId": "c4fd32cf-ff5f-4411-bb5e-a05e8f3ffa09",
   "name": "Perez, Steven",
   "fantraxId": "06s3j",
-  "team": "CLE",
+  "team": "STL",
   "position": "RP"
  },
  "06s3k": {
