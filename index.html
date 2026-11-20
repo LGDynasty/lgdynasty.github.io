@@ -33,16 +33,19 @@ td{padding:.55rem .6rem;font-size:.88rem}
 summary{cursor:pointer}
 td.mono,th{white-space:nowrap}
 #sport a{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;padding:.35rem .85rem;border:1.5px solid #f5b77a;border-radius:999px;color:#f5b77a}
+#hallLink{display:inline-block;margin-top:.4rem;font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:#f5b77a;border-bottom:1px solid transparent;padding-bottom:1px}
+#hallLink.on,#hallLink:hover{border-bottom-color:#f5b77a}
 #sport a.on{background:#f5b77a;color:var(--ink);font-weight:700}
 </style>
 </head>
 <body>
 <div class="max-w-3xl mx-auto px-4 pb-12">
   <header class="mt-4 mb-3 py-5 px-4 text-center" style="background:var(--ink);color:#fff;border-bottom:5px solid var(--red);border-radius:4px">
-    <div id="emblem" class="flex justify-center"></div>
+    <a href="#hall" aria-label="Hall of Fame"><div id="emblem" class="flex justify-center"></div></a>
+    <a id="hallLink" href="#hall">🏆 Hall of Fame</a>
     <h1 id="lname" class="slab text-3xl mt-2"></h1>
     <p id="lsub" class="mt-1" style="font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:#f5b77a"></p>
-    <div id="sport" class="mt-3 flex flex-wrap justify-center gap-2"><a data-s="hall" href="#hall">🏆 Hall</a><a data-s="bb" href="#home">⚾ Baseball</a><a data-s="fb" href="#fb-home">🏈 Football</a><a data-s="nb" href="#nb-home">🏀 Basketball</a></div>
+    <div id="sport" class="mt-3 flex flex-wrap justify-center gap-2"><a data-s="bb" href="#home">⚾ Baseball</a><a data-s="fb" href="#fb-home">🏈 Football</a><a data-s="nb" href="#nb-home">🏀 Basketball</a></div>
     <p id="updated" class="mono text-xs mt-3" style="color:#aab4c8">Loading…</p>
   </header>
   <nav id="tabs"></nav>
@@ -300,7 +303,7 @@ async function routeNB(h, keep){
   if(!keep) window.scrollTo(0,0);
 }
 let bbUpdated = "";
-const setSport = s => { document.querySelectorAll("#sport a").forEach(a => a.classList.toggle("on", a.dataset.s===s)); document.getElementById("lsub").textContent = s==="fb" ? (CFG.subFB||"Football Hub") : s==="nb" ? (CFG.subNB||"Basketball Hub") : s==="hall" ? (CFG.subHall||"Hall of Fame") : CFG.sub; };
+const setSport = s => { document.getElementById("hallLink").classList.toggle("on", s==="hall"); document.querySelectorAll("#sport a").forEach(a => a.classList.toggle("on", a.dataset.s===s)); document.getElementById("lsub").textContent = s==="fb" ? (CFG.subFB||"Football Hub") : s==="nb" ? (CFG.subNB||"Basketball Hub") : s==="hall" ? (CFG.subHall||"Hall of Fame") : CFG.sub; };
 const drawTabs = (list, prefix, cur) => { document.getElementById("tabs").innerHTML = list.map(([k,l]) => `<a href="#${prefix}${k}" class="tab ${k===cur?"on":""}">${l}</a>`).join(""); };
 async function routeFB(h, keep){
   setSport("fb");
@@ -368,3 +371,8 @@ function route(keep){
 </script>
 </body>
 </html>
+
+
+
+
+
