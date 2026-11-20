@@ -59,6 +59,7 @@ const LOGO = `<svg viewBox="0 0 100 100" width="76" height="76" xmlns="http://ww
 const CFG = { name: "Lollygaggers Dynasty", sub: "Baseball Hub", subFB: "Football Hub", subHall: "Hall of Fame", subNB: "Basketball Hub" };
 // Team logos: put an image named after each team's code in the repo's /logos folder (e.g. logos/POR.jpg).
 // The league logo is logos/league.jpg. Missing files are skipped, so you can add them a few at a time.
+const NB_LOGO_EXT = "PNG"; // basketball logos; the site also tries other file types if this one is not found
 const LOGO_EXT = "jpg"; // change to "png" if you switch file types
 const TEAM_CODES = {
   "tmbonzbmmhspuuiy":"POR", "exu2oyc7mhspuuiy":"WSW", "as3cegazmhspuuix":"FEN", "zaz8plfhmhspuuiy":"NPL",
@@ -79,7 +80,12 @@ const TABS = [["home","Home"],["standings","Standings"],["power","Power"],["matc
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const tn = id => D.tn[id] || id;
 const logoFile = id => SPORT === "nb" ? `basketball/${id}` : TEAM_CODES[id];
-const logo = (id, px = 20) => logoFile(id) ? `<img src="logos/${logoFile(id)}.${LOGO_EXT}" alt="" width="${px}" height="${px}" style="display:inline-block;vertical-align:middle;margin-right:6px;object-fit:contain;border-radius:4px" onerror="this.remove()">` : "";
+const ALL_EXTS = ["jpg","png","PNG","jpeg","JPG","JPEG"];
+const extList = pref => [pref, ...ALL_EXTS.filter(x => x !== pref)].join(",");
+// If an image is not found under one file type, swap the ending for the next one before giving up
+const TRY_NEXT = "var i=+(this.dataset.i||0)+1,e=this.dataset.e.split(',');if(i<e.length){this.dataset.i=i;this.src=this.src.replace(/\\.[A-Za-z]+$/,'.'+e[i])}else{FAILED}";
+const logo = (id, px = 20) => { const f = logoFile(id); if(!f) return ""; const pref = SPORT === "nb" ? NB_LOGO_EXT : LOGO_EXT;
+  return `<img src="logos/${f}.${pref}" data-e="${extList(pref)}" alt="" width="${px}" height="${px}" style="display:inline-block;vertical-align:middle;margin-right:6px;object-fit:contain;border-radius:4px" onerror="${TRY_NEXT.replace("FAILED","this.remove()")}">`; };
 const lnk = id => `${logo(id)}<a class="lnk" href="#team-${id}">${esc(tn(id))}</a>`;
 const ord = n => n + (["th","st","nd","rd"][(n%100>10&&n%100<14)?0:Math.min(n%10,4)%4] || "th");
 const empty = t => `<div class="card p-4 text-sm" style="color:var(--muted)">${t}</div>`;
@@ -287,7 +293,7 @@ async function buildCtx(dir, full){
 const nbLogos = () => !(D.standings||[]).length ? empty("No basketball data yet.") :
   `<p class="text-sm mb-3">Name each team’s logo exactly as shown and upload it to <span class="mono">logos/basketball/</span>.</p><div class="card overflow-hidden">` +
   [...D.standings].sort((a,b) => a.teamName.localeCompare(b.teamName)).map(t =>
-    `<div class="px-4 py-3 flex items-center gap-3 row text-sm"><div class="flex-1"><div>${esc(t.teamName)}</div><div class="mono text-xs" style="color:var(--muted)">${esc(t.teamId)}.${LOGO_EXT}</div></div><img src="logos/basketball/${t.teamId}.${LOGO_EXT}" width="40" height="40" style="object-fit:contain;border-radius:4px" onerror="this.replaceWith(Object.assign(document.createElement('span'),{textContent:'missing',className:'lbl'}))"></div>`).join("") + `</div>`;
+    `<div class="px-4 py-3 flex items-center gap-3 row text-sm"><div class="flex-1"><div>${esc(t.teamName)}</div><div class="mono text-xs" style="color:var(--muted)">${esc(t.teamId)}.${NB_LOGO_EXT}</div></div><img src="logos/basketball/${t.teamId}.${NB_LOGO_EXT}" data-e="${extList(NB_LOGO_EXT)}" width="40" height="40" style="object-fit:contain;border-radius:4px" onerror="${TRY_NEXT.replace("FAILED","this.replaceWith(Object.assign(document.createElement('span'),{textContent:'missing',className:'lbl'}))")}"></div>`).join("") + `</div>`;
 async function routeNB(h, keep){
   setSport("nb");
   const r = h.replace(/^nb-?/, "") || "home", isTeam = r.startsWith("team-");
@@ -371,8 +377,3 @@ function route(keep){
 </script>
 </body>
 </html>
-
-
-
-
-
