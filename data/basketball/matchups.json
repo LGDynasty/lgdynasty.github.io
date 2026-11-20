@@ -878,7 +878,7 @@
   {
    "away": {
     "teamName": "Olympia Hippies",
-    "score": 749.5,
+    "score": 750.2,
     "gamesPlayed": 35,
     "teamId": "r860p8dvmpejphif"
    },
@@ -1005,9 +1005,9 @@
     },
     {
      "away": {
-      "display": "126",
-      "value": 126,
-      "points": 88.2
+      "display": "127",
+      "value": 127,
+      "points": 88.9
      },
      "name": "Defensive Rebounds",
      "shortName": "DREB",
@@ -1171,7 +1171,7 @@
   {
    "away": {
     "teamName": "Olympia Hippies",
-    "score": 749.5,
+    "score": 750.2,
     "gamesPlayed": 35,
     "teamId": "r860p8dvmpejphif"
    },
@@ -1266,9 +1266,9 @@
     },
     {
      "away": {
-      "display": "126",
-      "value": 126,
-      "points": 88.2
+      "display": "127",
+      "value": 127,
+      "points": 88.9
      },
      "name": "Defensive Rebounds",
      "shortName": "DREB",
@@ -1384,7 +1384,7 @@
    ],
    "home": {
     "teamName": "League Average",
-    "score": 727.68,
+    "score": 727.76,
     "teamId": "-3"
    }
   },
@@ -1602,7 +1602,7 @@
    ],
    "home": {
     "teamName": "League Average",
-    "score": 727.68,
+    "score": 727.76,
     "teamId": "-3"
    }
   },
@@ -1820,7 +1820,7 @@
    ],
    "home": {
     "teamName": "League Average",
-    "score": 727.68,
+    "score": 727.76,
     "teamId": "-3"
    }
   },
@@ -2038,7 +2038,7 @@
    ],
    "home": {
     "teamName": "League Average",
-    "score": 727.68,
+    "score": 727.76,
     "teamId": "-3"
    }
   },
@@ -2258,7 +2258,7 @@
    ],
    "home": {
     "teamName": "League Average",
-    "score": 727.68,
+    "score": 727.76,
     "teamId": "-3"
    }
   },
@@ -2480,7 +2480,7 @@
    ],
    "home": {
     "teamName": "League Average",
-    "score": 727.68,
+    "score": 727.76,
     "teamId": "-3"
    }
   },
@@ -2700,7 +2700,7 @@
    ],
    "home": {
     "teamName": "League Average",
-    "score": 727.68,
+    "score": 727.76,
     "teamId": "-3"
    }
   },
@@ -2920,7 +2920,7 @@
    ],
    "home": {
     "teamName": "League Average",
-    "score": 727.68,
+    "score": 727.76,
     "teamId": "-3"
    }
   }
