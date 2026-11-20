@@ -30,7 +30,7 @@
   "sportRadarId": "71791d18-9c59-4e2f-863d-007d3cdd7efd",
   "name": "Castillo, Luis",
   "fantraxId": "03nuc",
-  "team": "CHW",
+  "team": "COL",
   "position": "SP"
  },
  "0527e": {
@@ -4413,6 +4413,12 @@
   "fantraxId": "06ya5",
   "team": "MIN",
   "position": "C"
+ },
+ "06ya0": {
+  "name": "Marinez, Stiven",
+  "fantraxId": "06ya0",
+  "team": "NYY",
+  "position": "SS"
  },
  "051ui": {
   "rotowireId": 17639,
@@ -47737,6 +47743,15 @@
   "team": "BAL",
   "position": "C"
  },
+ "03ywk": {
+  "statsIncId": 10851,
+  "rotowireId": 14650,
+  "sportRadarId": "29311663-0a56-451d-a9fa-7c8ff207013c",
+  "name": "Hernandez, Darwinzon",
+  "fantraxId": "03ywk",
+  "team": "NYM",
+  "position": "RP"
+ },
  "06ra9": {
   "name": "Reyes, Josmir",
   "fantraxId": "06ra9",
@@ -49617,7 +49632,7 @@
   "sportRadarId": "7fe0fc12-b751-46f2-88f0-583306497a78",
   "name": "Sullivan, Sean",
   "fantraxId": "06ahu",
-  "team": "COL",
+  "team": "CHW",
   "position": "SP"
  },
  "06rjf": {
@@ -64253,7 +64268,7 @@
   "sportRadarId": "0e023e0b-9637-4333-aabd-b860488d7763",
   "name": "Martin, Davis",
   "fantraxId": "04pxf",
-  "team": "CHW",
+  "team": "COL",
   "position": "SP"
  },
  "0517a": {
