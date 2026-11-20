@@ -18653,7 +18653,7 @@
   "sportRadarId": "011840ed-54e6-4dc2-b73d-7b29edd6d5d1",
   "name": "Tur, Yunior",
   "fantraxId": "06jbm",
-  "team": "ATH",
+  "team": "NYM",
   "position": "RP"
  },
  "06jbj": {
@@ -26706,7 +26706,7 @@
   "sportRadarId": "2c2f9c80-b6c8-44e1-9fda-c8d7b724b029",
   "name": "Lee, Chase",
   "fantraxId": "05xpv",
-  "team": "TOR",
+  "team": "COL",
   "position": "RP"
  },
  "05xps": {
@@ -28841,7 +28841,7 @@
   "sportRadarId": "6311ab79-af67-4028-a0c7-898f6d9463aa",
   "name": "Ellis, Duke",
   "fantraxId": "04es1",
-  "team": "NYY",
+  "team": "BOS",
   "position": "LF"
  },
  "06kwo": {
@@ -29204,7 +29204,7 @@
   "sportRadarId": "3ccf2b1c-d60f-4dea-910f-21c0180ff03d",
   "name": "File, Dylan",
   "fantraxId": "04esk",
-  "team": "DET",
+  "team": "TEX",
   "position": "SP"
  },
  "05j8n": {
@@ -36415,6 +36415,12 @@
   "fantraxId": "07axr",
   "team": "ATL",
   "position": "RP"
+ },
+ "07axs": {
+  "name": "Aro, Yonathan",
+  "fantraxId": "07axs",
+  "team": "LAA",
+  "position": "C"
  },
  "07axp": {
   "name": "Navarro, Kenyer",
@@ -48218,6 +48224,7 @@
   "position": "SP"
  },
  "06ajt": {
+  "rotowireId": 20939,
   "sportRadarId": "534ca616-53c8-4de5-afc4-0ce371eb8737",
   "name": "White, Brandon",
   "fantraxId": "06ajt",
@@ -50609,7 +50616,7 @@
   "sportRadarId": "9ff4bd8c-c74e-40b3-87f4-359b8ddecc55",
   "name": "Bart, Joey",
   "fantraxId": "04mn4",
-  "team": "CHW",
+  "team": "CHC",
   "position": "C"
  },
  "04mlr": {
