@@ -7273,7 +7273,7 @@
   "sportRadarId": "01776cda-8dd8-465b-8635-d314fb002c1a",
   "name": "Lewis, Royce",
   "fantraxId": "04aeb",
-  "team": "MIN",
+  "team": "LAD",
   "position": "1B"
  },
  "06z05": {
@@ -8089,8 +8089,8 @@
   "rotowireId": 20457,
   "name": "Dotson, Luke",
   "fantraxId": "06z13",
-  "team": "ARI",
-  "position": "RP"
+  "team": "BOS",
+  "position": "SP"
  },
  "051dl": {
   "rotowireId": 16204,
@@ -12950,7 +12950,7 @@
   "rotowireId": 18836,
   "name": "Stokes, Cole",
   "fantraxId": "06ig6",
-  "team": "TB",
+  "team": "SF",
   "position": "SP"
  },
  "06zge": {
@@ -15285,8 +15285,8 @@
  "078mw": {
   "name": "Coppola, Christian",
   "fantraxId": "078mw",
-  "team": "PHI",
-  "position": "RP"
+  "team": "CHW",
+  "position": "SP"
  },
  "06hoh": {
   "name": "True, Derek",
@@ -28127,7 +28127,7 @@
   "sportRadarId": "57ba104f-27dc-45fa-8532-d7b8b2909acf",
   "name": "Miller, Bobby",
   "fantraxId": "05gwz",
-  "team": "LAD",
+  "team": "MIN",
   "position": "SP"
  },
  "03aqt": {
@@ -34568,7 +34568,7 @@
   "sportRadarId": "3f1a41fe-5bdf-42f6-b827-7b76fdb46e48",
   "name": "Koss, Christian",
   "fantraxId": "04ydt",
-  "team": "SF",
+  "team": "TB",
   "position": "SS"
  },
  "04yds": {
@@ -35852,7 +35852,7 @@
   "sportRadarId": "a0c056de-bbc2-4370-a0d7-f503ddccc847",
   "name": "Oviedo, Johan",
   "fantraxId": "04674",
-  "team": "BOS",
+  "team": "ARI",
   "position": "SP"
  },
  "03dty": {
@@ -42594,7 +42594,7 @@
  "06qxw": {
   "name": "Espinoza, Francisco",
   "fantraxId": "06qxw",
-  "team": "LAD",
+  "team": "MIN",
   "position": "C"
  },
  "06qxx": {
@@ -50500,7 +50500,7 @@
   "sportRadarId": "47091635-56e2-484c-ac4c-dae9f9c3b29b",
   "name": "Leasure, Jordan",
   "fantraxId": "0614c",
-  "team": "CHW",
+  "team": "PHI",
   "position": "RP"
  },
  "05r6k": {
@@ -64190,7 +64190,7 @@
   "sportRadarId": "708dc84f-d81e-4283-945b-88a06e613d5e",
   "name": "Varland, Gus",
   "fantraxId": "04pxq",
-  "team": "WSH",
+  "team": "NYM",
   "position": "RP"
  },
  "062z3": {
