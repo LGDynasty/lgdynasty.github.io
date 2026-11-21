@@ -3,16 +3,16 @@
   {
    "away": {
     "teamName": "MidWes BearTigers",
-    "score": 934.1,
-    "gamesPlayed": 44,
+    "score": 937.9,
+    "gamesPlayed": 45,
     "teamId": "98x5yrsdmpoj14hk"
    },
    "categories": [
     {
      "away": {
-      "display": "231",
-      "value": 231,
-      "points": 69.3
+      "display": "232",
+      "value": 232,
+      "points": 69.6
      },
      "name": "Field Goals Made",
      "shortName": "FGM",
@@ -25,9 +25,9 @@
     },
     {
      "away": {
-      "display": "262.0",
-      "value": 262,
-      "points": -78.6
+      "display": "264.0",
+      "value": 264,
+      "points": -79.2
      },
      "name": "Field Goals Missed",
      "shortName": "FG-",
@@ -40,9 +40,9 @@
     },
     {
      "away": {
-      "display": "70",
-      "value": 70,
-      "points": 91
+      "display": "71",
+      "value": 71,
+      "points": 92.3
      },
      "name": "Three Pointers Made",
      "shortName": "3PTM",
@@ -55,9 +55,9 @@
     },
     {
      "away": {
-      "display": "128",
-      "value": 128,
-      "points": -89.6
+      "display": "129",
+      "value": 129,
+      "points": -90.3
      },
      "name": "Three Pointers Missed",
      "shortName": "3PT-",
@@ -100,9 +100,9 @@
     },
     {
      "away": {
-      "display": "659",
-      "value": 659,
-      "points": 461.3
+      "display": "662",
+      "value": 662,
+      "points": 463.4
      },
      "name": "Points",
      "shortName": "PTS",
@@ -130,9 +130,9 @@
     },
     {
      "away": {
-      "display": "170",
-      "value": 170,
-      "points": 119
+      "display": "173",
+      "value": 173,
+      "points": 121.1
      },
      "name": "Defensive Rebounds",
      "shortName": "DREB",
@@ -190,9 +190,9 @@
     },
     {
      "away": {
-      "display": "100",
-      "value": 100,
-      "points": -70
+      "display": "101",
+      "value": 101,
+      "points": -70.7
      },
      "name": "Turnovers",
      "shortName": "TO",
@@ -292,39 +292,39 @@
   {
    "away": {
     "teamName": "Hanoi Haramball",
-    "score": 879.3,
-    "gamesPlayed": 38,
+    "score": 900.1,
+    "gamesPlayed": 40,
     "teamId": "xoho393wmpebjlgp"
    },
    "categories": [
     {
      "away": {
-      "display": "237",
-      "value": 237,
-      "points": 71.1
+      "display": "240",
+      "value": 240,
+      "points": 72
      },
      "name": "Field Goals Made",
      "shortName": "FGM",
      "group": "Player",
      "home": {
-      "display": "264",
-      "value": 264,
-      "points": 79.2
+      "display": "269",
+      "value": 269,
+      "points": 80.7
      }
     },
     {
      "away": {
-      "display": "269.0",
-      "value": 269,
-      "points": -80.7
+      "display": "275.0",
+      "value": 275,
+      "points": -82.5
      },
      "name": "Field Goals Missed",
      "shortName": "FG-",
      "group": "Player",
      "home": {
-      "display": "277.0",
-      "value": 277,
-      "points": -83.1
+      "display": "279.0",
+      "value": 279,
+      "points": -83.7
      }
     },
     {
@@ -344,17 +344,17 @@
     },
     {
      "away": {
-      "display": "129",
-      "value": 129,
-      "points": -90.3
+      "display": "130",
+      "value": 130,
+      "points": -91
      },
      "name": "Three Pointers Missed",
      "shortName": "3PT-",
      "group": "Player",
      "home": {
-      "display": "148",
-      "value": 148,
-      "points": -103.6
+      "display": "149",
+      "value": 149,
+      "points": -104.3
      }
     },
     {
@@ -389,24 +389,24 @@
     },
     {
      "away": {
-      "display": "668",
-      "value": 668,
-      "points": 467.6
+      "display": "674",
+      "value": 674,
+      "points": 471.8
      },
      "name": "Points",
      "shortName": "PTS",
      "group": "Player",
      "home": {
-      "display": "737",
-      "value": 737,
-      "points": 515.9
+      "display": "745",
+      "value": 745,
+      "points": 521.5
      }
     },
     {
      "away": {
-      "display": "45",
-      "value": 45,
-      "points": 45
+      "display": "46",
+      "value": 46,
+      "points": 46
      },
      "name": "Offensive Rebounds",
      "shortName": "OREB",
@@ -419,9 +419,9 @@
     },
     {
      "away": {
-      "display": "160",
-      "value": 160,
-      "points": 112
+      "display": "168",
+      "value": 168,
+      "points": 117.6
      },
      "name": "Defensive Rebounds",
      "shortName": "DREB",
@@ -434,24 +434,24 @@
     },
     {
      "away": {
-      "display": "161",
-      "value": 161,
-      "points": 112.7
+      "display": "168",
+      "value": 168,
+      "points": 117.6
      },
      "name": "Assists",
      "shortName": "AST",
      "group": "Player",
      "home": {
-      "display": "157",
-      "value": 157,
-      "points": 109.9
+      "display": "160",
+      "value": 160,
+      "points": 112
      }
     },
     {
      "away": {
-      "display": "32",
-      "value": 32,
-      "points": 64
+      "display": "34",
+      "value": 34,
+      "points": 68
      },
      "name": "Steals",
      "shortName": "ST",
@@ -464,9 +464,9 @@
     },
     {
      "away": {
-      "display": "22",
-      "value": 22,
-      "points": 59.4
+      "display": "23",
+      "value": 23,
+      "points": 62.1
      },
      "name": "Blocks",
      "shortName": "BLK",
@@ -575,24 +575,24 @@
    ],
    "home": {
     "teamName": "West Hills Action",
-    "score": 1027.3,
-    "gamesPlayed": 48,
+    "score": 1035.2,
+    "gamesPlayed": 50,
     "teamId": "xzwygdtfmq35l0a3"
    }
   },
   {
    "away": {
     "teamName": "Milwaukee Brats",
-    "score": 920.1,
-    "gamesPlayed": 40,
+    "score": 945.4,
+    "gamesPlayed": 42,
     "teamId": "yvhv3mpqmphanev0"
    },
    "categories": [
     {
      "away": {
-      "display": "222",
-      "value": 222,
-      "points": 66.6
+      "display": "227",
+      "value": 227,
+      "points": 68.1
      },
      "name": "Field Goals Made",
      "shortName": "FGM",
@@ -605,9 +605,9 @@
     },
     {
      "away": {
-      "display": "239.0",
-      "value": 239,
-      "points": -71.7
+      "display": "245.0",
+      "value": 245,
+      "points": -73.5
      },
      "name": "Field Goals Missed",
      "shortName": "FG-",
@@ -620,9 +620,9 @@
     },
     {
      "away": {
-      "display": "60",
-      "value": 60,
-      "points": 78
+      "display": "62",
+      "value": 62,
+      "points": 80.6
      },
      "name": "Three Pointers Made",
      "shortName": "3PTM",
@@ -635,9 +635,9 @@
     },
     {
      "away": {
-      "display": "108",
-      "value": 108,
-      "points": -75.6
+      "display": "111",
+      "value": 111,
+      "points": -77.7
      },
      "name": "Three Pointers Missed",
      "shortName": "3PT-",
@@ -650,9 +650,9 @@
     },
     {
      "away": {
-      "display": "112",
-      "value": 112,
-      "points": 56
+      "display": "121",
+      "value": 121,
+      "points": 60.5
      },
      "name": "Free Throws Made",
      "shortName": "FTM",
@@ -680,9 +680,9 @@
     },
     {
      "away": {
-      "display": "616",
-      "value": 616,
-      "points": 431.2
+      "display": "637",
+      "value": 637,
+      "points": 445.9
      },
      "name": "Points",
      "shortName": "PTS",
@@ -695,9 +695,9 @@
     },
     {
      "away": {
-      "display": "60",
-      "value": 60,
-      "points": 60
+      "display": "61",
+      "value": 61,
+      "points": 61
      },
      "name": "Offensive Rebounds",
      "shortName": "OREB",
@@ -710,9 +710,9 @@
     },
     {
      "away": {
-      "display": "157",
-      "value": 157,
-      "points": 109.9
+      "display": "161",
+      "value": 161,
+      "points": 112.7
      },
      "name": "Defensive Rebounds",
      "shortName": "DREB",
@@ -725,9 +725,9 @@
     },
     {
      "away": {
-      "display": "180",
-      "value": 180,
-      "points": 126
+      "display": "183",
+      "value": 183,
+      "points": 128.1
      },
      "name": "Assists",
      "shortName": "AST",
@@ -878,8 +878,8 @@
   {
    "away": {
     "teamName": "Olympia Hippies",
-    "score": 991.9,
-    "gamesPlayed": 43,
+    "score": 997.5,
+    "gamesPlayed": 44,
     "teamId": "r860p8dvmpejphif"
    },
    "categories": [
@@ -893,24 +893,24 @@
      "shortName": "FGM",
      "group": "Player",
      "home": {
-      "display": "250",
-      "value": 250,
-      "points": 75
+      "display": "253",
+      "value": 253,
+      "points": 75.9
      }
     },
     {
      "away": {
-      "display": "269.0",
-      "value": 269,
-      "points": -80.7
+      "display": "273.0",
+      "value": 273,
+      "points": -81.9
      },
      "name": "Field Goals Missed",
      "shortName": "FG-",
      "group": "Player",
      "home": {
-      "display": "259.0",
-      "value": 259,
-      "points": -77.7
+      "display": "260.0",
+      "value": 260,
+      "points": -78
      }
     },
     {
@@ -930,9 +930,9 @@
     },
     {
      "away": {
-      "display": "115",
-      "value": 115,
-      "points": -80.5
+      "display": "118",
+      "value": 118,
+      "points": -82.6
      },
      "name": "Three Pointers Missed",
      "shortName": "3PT-",
@@ -983,9 +983,9 @@
      "shortName": "PTS",
      "group": "Player",
      "home": {
-      "display": "674",
-      "value": 674,
-      "points": 471.8
+      "display": "680",
+      "value": 680,
+      "points": 476
      }
     },
     {
@@ -998,39 +998,39 @@
      "shortName": "OREB",
      "group": "Player",
      "home": {
-      "display": "53",
-      "value": 53,
-      "points": 53
+      "display": "55",
+      "value": 55,
+      "points": 55
      }
     },
     {
      "away": {
-      "display": "154",
-      "value": 154,
-      "points": 107.8
+      "display": "156",
+      "value": 156,
+      "points": 109.2
      },
      "name": "Defensive Rebounds",
      "shortName": "DREB",
      "group": "Player",
      "home": {
-      "display": "179",
-      "value": 179,
-      "points": 125.3
+      "display": "180",
+      "value": 180,
+      "points": 126
      }
     },
     {
      "away": {
-      "display": "140",
-      "value": 140,
-      "points": 98
+      "display": "143",
+      "value": 143,
+      "points": 100.1
      },
      "name": "Assists",
      "shortName": "AST",
      "group": "Player",
      "home": {
-      "display": "123",
-      "value": 123,
-      "points": 86.1
+      "display": "124",
+      "value": 124,
+      "points": 86.8
      }
     },
     {
@@ -1050,9 +1050,9 @@
     },
     {
      "away": {
-      "display": "21",
-      "value": 21,
-      "points": 56.7
+      "display": "23",
+      "value": 23,
+      "points": 62.1
      },
      "name": "Blocks",
      "shortName": "BLK",
@@ -1165,16 +1165,16 @@
    ],
    "home": {
     "teamName": "Joinville Flying Capybaras",
-    "score": 924,
-    "gamesPlayed": 48,
+    "score": 932.2,
+    "gamesPlayed": 49,
     "teamId": "3dcj85vrmpeclie8"
    }
   },
   {
    "away": {
     "teamName": "Olympia Hippies",
-    "score": 991.9,
-    "gamesPlayed": 43,
+    "score": 997.5,
+    "gamesPlayed": 44,
     "teamId": "r860p8dvmpejphif"
    },
    "categories": [
@@ -1191,9 +1191,9 @@
     },
     {
      "away": {
-      "display": "269.0",
-      "value": 269,
-      "points": -80.7
+      "display": "273.0",
+      "value": 273,
+      "points": -81.9
      },
      "name": "Field Goals Missed",
      "shortName": "FG-",
@@ -1213,9 +1213,9 @@
     },
     {
      "away": {
-      "display": "115",
-      "value": 115,
-      "points": -80.5
+      "display": "118",
+      "value": 118,
+      "points": -82.6
      },
      "name": "Three Pointers Missed",
      "shortName": "3PT-",
@@ -1268,9 +1268,9 @@
     },
     {
      "away": {
-      "display": "154",
-      "value": 154,
-      "points": 107.8
+      "display": "156",
+      "value": 156,
+      "points": 109.2
      },
      "name": "Defensive Rebounds",
      "shortName": "DREB",
@@ -1279,9 +1279,9 @@
     },
     {
      "away": {
-      "display": "140",
-      "value": 140,
-      "points": 98
+      "display": "143",
+      "value": 143,
+      "points": 100.1
      },
      "name": "Assists",
      "shortName": "AST",
@@ -1301,9 +1301,9 @@
     },
     {
      "away": {
-      "display": "21",
-      "value": 21,
-      "points": 56.7
+      "display": "23",
+      "value": 23,
+      "points": 62.1
      },
      "name": "Blocks",
      "shortName": "BLK",
@@ -1388,23 +1388,23 @@
    ],
    "home": {
     "teamName": "League Average",
-    "score": 945.74,
+    "score": 954.69,
     "teamId": "-3"
    }
   },
   {
    "away": {
     "teamName": "MidWes BearTigers",
-    "score": 934.1,
-    "gamesPlayed": 44,
+    "score": 937.9,
+    "gamesPlayed": 45,
     "teamId": "98x5yrsdmpoj14hk"
    },
    "categories": [
     {
      "away": {
-      "display": "231",
-      "value": 231,
-      "points": 69.3
+      "display": "232",
+      "value": 232,
+      "points": 69.6
      },
      "name": "Field Goals Made",
      "shortName": "FGM",
@@ -1413,9 +1413,9 @@
     },
     {
      "away": {
-      "display": "262.0",
-      "value": 262,
-      "points": -78.6
+      "display": "264.0",
+      "value": 264,
+      "points": -79.2
      },
      "name": "Field Goals Missed",
      "shortName": "FG-",
@@ -1424,9 +1424,9 @@
     },
     {
      "away": {
-      "display": "70",
-      "value": 70,
-      "points": 91
+      "display": "71",
+      "value": 71,
+      "points": 92.3
      },
      "name": "Three Pointers Made",
      "shortName": "3PTM",
@@ -1435,9 +1435,9 @@
     },
     {
      "away": {
-      "display": "128",
-      "value": 128,
-      "points": -89.6
+      "display": "129",
+      "value": 129,
+      "points": -90.3
      },
      "name": "Three Pointers Missed",
      "shortName": "3PT-",
@@ -1468,9 +1468,9 @@
     },
     {
      "away": {
-      "display": "659",
-      "value": 659,
-      "points": 461.3
+      "display": "662",
+      "value": 662,
+      "points": 463.4
      },
      "name": "Points",
      "shortName": "PTS",
@@ -1490,9 +1490,9 @@
     },
     {
      "away": {
-      "display": "170",
-      "value": 170,
-      "points": 119
+      "display": "173",
+      "value": 173,
+      "points": 121.1
      },
      "name": "Defensive Rebounds",
      "shortName": "DREB",
@@ -1534,9 +1534,9 @@
     },
     {
      "away": {
-      "display": "100",
-      "value": 100,
-      "points": -70
+      "display": "101",
+      "value": 101,
+      "points": -70.7
      },
      "name": "Turnovers",
      "shortName": "TO",
@@ -1606,23 +1606,23 @@
    ],
    "home": {
     "teamName": "League Average",
-    "score": 945.74,
+    "score": 954.69,
     "teamId": "-3"
    }
   },
   {
    "away": {
     "teamName": "Hanoi Haramball",
-    "score": 879.3,
-    "gamesPlayed": 38,
+    "score": 900.1,
+    "gamesPlayed": 40,
     "teamId": "xoho393wmpebjlgp"
    },
    "categories": [
     {
      "away": {
-      "display": "237",
-      "value": 237,
-      "points": 71.1
+      "display": "240",
+      "value": 240,
+      "points": 72
      },
      "name": "Field Goals Made",
      "shortName": "FGM",
@@ -1631,9 +1631,9 @@
     },
     {
      "away": {
-      "display": "269.0",
-      "value": 269,
-      "points": -80.7
+      "display": "275.0",
+      "value": 275,
+      "points": -82.5
      },
      "name": "Field Goals Missed",
      "shortName": "FG-",
@@ -1653,9 +1653,9 @@
     },
     {
      "away": {
-      "display": "129",
-      "value": 129,
-      "points": -90.3
+      "display": "130",
+      "value": 130,
+      "points": -91
      },
      "name": "Three Pointers Missed",
      "shortName": "3PT-",
@@ -1686,9 +1686,9 @@
     },
     {
      "away": {
-      "display": "668",
-      "value": 668,
-      "points": 467.6
+      "display": "674",
+      "value": 674,
+      "points": 471.8
      },
      "name": "Points",
      "shortName": "PTS",
@@ -1697,9 +1697,9 @@
     },
     {
      "away": {
-      "display": "45",
-      "value": 45,
-      "points": 45
+      "display": "46",
+      "value": 46,
+      "points": 46
      },
      "name": "Offensive Rebounds",
      "shortName": "OREB",
@@ -1708,9 +1708,9 @@
     },
     {
      "away": {
-      "display": "160",
-      "value": 160,
-      "points": 112
+      "display": "168",
+      "value": 168,
+      "points": 117.6
      },
      "name": "Defensive Rebounds",
      "shortName": "DREB",
@@ -1719,9 +1719,9 @@
     },
     {
      "away": {
-      "display": "161",
-      "value": 161,
-      "points": 112.7
+      "display": "168",
+      "value": 168,
+      "points": 117.6
      },
      "name": "Assists",
      "shortName": "AST",
@@ -1730,9 +1730,9 @@
     },
     {
      "away": {
-      "display": "32",
-      "value": 32,
-      "points": 64
+      "display": "34",
+      "value": 34,
+      "points": 68
      },
      "name": "Steals",
      "shortName": "ST",
@@ -1741,9 +1741,9 @@
     },
     {
      "away": {
-      "display": "22",
-      "value": 22,
-      "points": 59.4
+      "display": "23",
+      "value": 23,
+      "points": 62.1
      },
      "name": "Blocks",
      "shortName": "BLK",
@@ -1824,7 +1824,7 @@
    ],
    "home": {
     "teamName": "League Average",
-    "score": 945.74,
+    "score": 954.69,
     "teamId": "-3"
    }
   },
@@ -2042,7 +2042,7 @@
    ],
    "home": {
     "teamName": "League Average",
-    "score": 945.74,
+    "score": 954.69,
     "teamId": "-3"
    }
   },
@@ -2262,23 +2262,23 @@
    ],
    "home": {
     "teamName": "League Average",
-    "score": 945.74,
+    "score": 954.69,
     "teamId": "-3"
    }
   },
   {
    "away": {
     "teamName": "Milwaukee Brats",
-    "score": 920.1,
-    "gamesPlayed": 40,
+    "score": 945.4,
+    "gamesPlayed": 42,
     "teamId": "yvhv3mpqmphanev0"
    },
    "categories": [
     {
      "away": {
-      "display": "222",
-      "value": 222,
-      "points": 66.6
+      "display": "227",
+      "value": 227,
+      "points": 68.1
      },
      "name": "Field Goals Made",
      "shortName": "FGM",
@@ -2287,9 +2287,9 @@
     },
     {
      "away": {
-      "display": "239.0",
-      "value": 239,
-      "points": -71.7
+      "display": "245.0",
+      "value": 245,
+      "points": -73.5
      },
      "name": "Field Goals Missed",
      "shortName": "FG-",
@@ -2298,9 +2298,9 @@
     },
     {
      "away": {
-      "display": "60",
-      "value": 60,
-      "points": 78
+      "display": "62",
+      "value": 62,
+      "points": 80.6
      },
      "name": "Three Pointers Made",
      "shortName": "3PTM",
@@ -2309,9 +2309,9 @@
     },
     {
      "away": {
-      "display": "108",
-      "value": 108,
-      "points": -75.6
+      "display": "111",
+      "value": 111,
+      "points": -77.7
      },
      "name": "Three Pointers Missed",
      "shortName": "3PT-",
@@ -2320,9 +2320,9 @@
     },
     {
      "away": {
-      "display": "112",
-      "value": 112,
-      "points": 56
+      "display": "121",
+      "value": 121,
+      "points": 60.5
      },
      "name": "Free Throws Made",
      "shortName": "FTM",
@@ -2342,9 +2342,9 @@
     },
     {
      "away": {
-      "display": "616",
-      "value": 616,
-      "points": 431.2
+      "display": "637",
+      "value": 637,
+      "points": 445.9
      },
      "name": "Points",
      "shortName": "PTS",
@@ -2353,9 +2353,9 @@
     },
     {
      "away": {
-      "display": "60",
-      "value": 60,
-      "points": 60
+      "display": "61",
+      "value": 61,
+      "points": 61
      },
      "name": "Offensive Rebounds",
      "shortName": "OREB",
@@ -2364,9 +2364,9 @@
     },
     {
      "away": {
-      "display": "157",
-      "value": 157,
-      "points": 109.9
+      "display": "161",
+      "value": 161,
+      "points": 112.7
      },
      "name": "Defensive Rebounds",
      "shortName": "DREB",
@@ -2375,9 +2375,9 @@
     },
     {
      "away": {
-      "display": "180",
-      "value": 180,
-      "points": 126
+      "display": "183",
+      "value": 183,
+      "points": 128.1
      },
      "name": "Assists",
      "shortName": "AST",
@@ -2484,23 +2484,23 @@
    ],
    "home": {
     "teamName": "League Average",
-    "score": 945.74,
+    "score": 954.69,
     "teamId": "-3"
    }
   },
   {
    "away": {
     "teamName": "West Hills Action",
-    "score": 1027.3,
-    "gamesPlayed": 48,
+    "score": 1035.2,
+    "gamesPlayed": 50,
     "teamId": "xzwygdtfmq35l0a3"
    },
    "categories": [
     {
      "away": {
-      "display": "264",
-      "value": 264,
-      "points": 79.2
+      "display": "269",
+      "value": 269,
+      "points": 80.7
      },
      "name": "Field Goals Made",
      "shortName": "FGM",
@@ -2509,9 +2509,9 @@
     },
     {
      "away": {
-      "display": "277.0",
-      "value": 277,
-      "points": -83.1
+      "display": "279.0",
+      "value": 279,
+      "points": -83.7
      },
      "name": "Field Goals Missed",
      "shortName": "FG-",
@@ -2531,9 +2531,9 @@
     },
     {
      "away": {
-      "display": "148",
-      "value": 148,
-      "points": -103.6
+      "display": "149",
+      "value": 149,
+      "points": -104.3
      },
      "name": "Three Pointers Missed",
      "shortName": "3PT-",
@@ -2564,9 +2564,9 @@
     },
     {
      "away": {
-      "display": "737",
-      "value": 737,
-      "points": 515.9
+      "display": "745",
+      "value": 745,
+      "points": 521.5
      },
      "name": "Points",
      "shortName": "PTS",
@@ -2597,9 +2597,9 @@
     },
     {
      "away": {
-      "display": "157",
-      "value": 157,
-      "points": 109.9
+      "display": "160",
+      "value": 160,
+      "points": 112
      },
      "name": "Assists",
      "shortName": "AST",
@@ -2704,23 +2704,23 @@
    ],
    "home": {
     "teamName": "League Average",
-    "score": 945.74,
+    "score": 954.69,
     "teamId": "-3"
    }
   },
   {
    "away": {
     "teamName": "Joinville Flying Capybaras",
-    "score": 924,
-    "gamesPlayed": 48,
+    "score": 932.2,
+    "gamesPlayed": 49,
     "teamId": "3dcj85vrmpeclie8"
    },
    "categories": [
     {
      "away": {
-      "display": "250",
-      "value": 250,
-      "points": 75
+      "display": "253",
+      "value": 253,
+      "points": 75.9
      },
      "name": "Field Goals Made",
      "shortName": "FGM",
@@ -2729,9 +2729,9 @@
     },
     {
      "away": {
-      "display": "259.0",
-      "value": 259,
-      "points": -77.7
+      "display": "260.0",
+      "value": 260,
+      "points": -78
      },
      "name": "Field Goals Missed",
      "shortName": "FG-",
@@ -2784,9 +2784,9 @@
     },
     {
      "away": {
-      "display": "674",
-      "value": 674,
-      "points": 471.8
+      "display": "680",
+      "value": 680,
+      "points": 476
      },
      "name": "Points",
      "shortName": "PTS",
@@ -2795,9 +2795,9 @@
     },
     {
      "away": {
-      "display": "53",
-      "value": 53,
-      "points": 53
+      "display": "55",
+      "value": 55,
+      "points": 55
      },
      "name": "Offensive Rebounds",
      "shortName": "OREB",
@@ -2806,9 +2806,9 @@
     },
     {
      "away": {
-      "display": "179",
-      "value": 179,
-      "points": 125.3
+      "display": "180",
+      "value": 180,
+      "points": 126
      },
      "name": "Defensive Rebounds",
      "shortName": "DREB",
@@ -2817,9 +2817,9 @@
     },
     {
      "away": {
-      "display": "123",
-      "value": 123,
-      "points": 86.1
+      "display": "124",
+      "value": 124,
+      "points": 86.8
      },
      "name": "Assists",
      "shortName": "AST",
@@ -2924,7 +2924,7 @@
    ],
    "home": {
     "teamName": "League Average",
-    "score": 945.74,
+    "score": 954.69,
     "teamId": "-3"
    }
   }

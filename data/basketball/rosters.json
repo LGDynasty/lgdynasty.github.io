@@ -316,8 +316,8 @@
     },
     {
      "id": "05ujd",
-     "position": "C",
-     "status": "RESERVE"
+     "position": "PF/C",
+     "status": "ACTIVE"
     },
     {
      "id": "076te",
@@ -982,7 +982,7 @@
     {
      "id": "06v5b",
      "position": "C",
-     "status": "MINORS"
+     "status": "ACTIVE"
     },
     {
      "id": "0621k",
@@ -1076,8 +1076,8 @@
     },
     {
      "id": "06y2o",
-     "position": "C",
-     "status": "RESERVE"
+     "position": "F",
+     "status": "ACTIVE"
     },
     {
      "id": "042n1",
@@ -1127,11 +1127,6 @@
     {
      "id": "06mkj",
      "position": "SG",
-     "status": "ACTIVE"
-    },
-    {
-     "id": "0622f",
-     "position": "F",
      "status": "ACTIVE"
     },
     {
