@@ -726,7 +726,7 @@
     },
     {
      "id": "06mkg",
-     "position": "SG",
+     "position": "PF",
      "status": "ACTIVE"
     },
     {
@@ -746,8 +746,8 @@
     },
     {
      "id": "05uib",
-     "position": "PG",
-     "status": "INJURED_RESERVE"
+     "position": "SG",
+     "status": "ACTIVE"
     },
     {
      "id": "05uih",
@@ -813,11 +813,6 @@
      "id": "05qst",
      "position": "PF/C",
      "status": "ACTIVE"
-    },
-    {
-     "id": "05uj4",
-     "position": "PF",
-     "status": "RESERVE"
     },
     {
      "id": "06mk4",
