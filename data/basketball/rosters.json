@@ -546,8 +546,8 @@
     },
     {
      "id": "04ewt",
-     "position": "G/F",
-     "status": "INJURED_RESERVE"
+     "position": "PG",
+     "status": "RESERVE"
     },
     {
      "id": "06v5a",
@@ -591,8 +591,8 @@
     },
     {
      "id": "06v5p",
-     "position": "PG",
-     "status": "RESERVE"
+     "position": "G/F",
+     "status": "INJURED_RESERVE"
     },
     {
      "id": "06v5d",
