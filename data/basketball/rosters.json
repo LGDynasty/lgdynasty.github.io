@@ -160,6 +160,11 @@
      "status": "RESERVE"
     },
     {
+     "id": "0626t",
+     "position": "SF",
+     "status": "RESERVE"
+    },
+    {
      "id": "076tl",
      "position": "SG/SF",
      "status": "ACTIVE"
@@ -405,11 +410,6 @@
      "status": "RESERVE"
     },
     {
-     "id": "076t7",
-     "position": "PF/C",
-     "status": "MINORS"
-    },
-    {
      "id": "02nf3",
      "position": "SG",
      "status": "INJURED_RESERVE"
@@ -508,6 +508,11 @@
      "id": "076tz",
      "position": "PF",
      "status": "MINORS"
+    },
+    {
+     "id": "076td",
+     "position": "PF",
+     "status": "RESERVE"
     },
     {
      "id": "04kj6",

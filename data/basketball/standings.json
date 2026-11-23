@@ -1,39 +1,39 @@
 [
  {
-  "teamName": "Hanoi Haramball",
-  "totalPointsFor": 6375.2,
-  "teamId": "xoho393wmpebjlgp",
-  "gamesBack": 0,
-  "rank": 1,
-  "points": "7-1-0",
-  "winPercentage": 0.875
- },
- {
   "teamName": "West Hills Action",
-  "totalPointsFor": 6490,
+  "totalPointsFor": 6490.7,
   "teamId": "xzwygdtfmq35l0a3",
   "gamesBack": 0,
-  "rank": 2,
-  "points": "7-1-0",
-  "winPercentage": 0.875
+  "rank": 1,
+  "points": "9-1-0",
+  "winPercentage": 0.9
  },
  {
   "teamName": "Cleveland Heights",
   "totalPointsFor": 6186.5,
   "teamId": "aygevjhvmpeez8dj",
   "gamesBack": 0,
+  "rank": 2,
+  "points": "9-1-0",
+  "winPercentage": 0.9
+ },
+ {
+  "teamName": "Hanoi Haramball",
+  "totalPointsFor": 6375.2,
+  "teamId": "xoho393wmpebjlgp",
+  "gamesBack": 2,
   "rank": 3,
-  "points": "7-1-0",
-  "winPercentage": 0.875
+  "points": "7-3-0",
+  "winPercentage": 0.7
  },
  {
   "teamName": "Olympia Hippies",
-  "totalPointsFor": 5987.1,
+  "totalPointsFor": 5987.8,
   "teamId": "r860p8dvmpejphif",
   "gamesBack": 3,
   "rank": 4,
-  "points": "4-4-0",
-  "winPercentage": 0.5
+  "points": "6-4-0",
+  "winPercentage": 0.6
  },
  {
   "teamName": "Maryland Raccoons",
@@ -41,34 +41,34 @@
   "teamId": "84erhx5gmpddhfnw",
   "gamesBack": 3,
   "rank": 5,
-  "points": "4-4-0",
-  "winPercentage": 0.5
+  "points": "6-4-0",
+  "winPercentage": 0.6
+ },
+ {
+  "teamName": "MidWes BearTigers",
+  "totalPointsFor": 5593.3,
+  "teamId": "98x5yrsdmpoj14hk",
+  "gamesBack": 7,
+  "rank": 6,
+  "points": "2-8-0",
+  "winPercentage": 0.2
  },
  {
   "teamName": "Joinville Flying Capybaras",
   "totalPointsFor": 5592.5,
   "teamId": "3dcj85vrmpeclie8",
-  "gamesBack": 5,
-  "rank": 6,
-  "points": "2-6-0",
-  "winPercentage": 0.25
- },
- {
-  "teamName": "MidWes BearTigers",
-  "totalPointsFor": 5591.9,
-  "teamId": "98x5yrsdmpoj14hk",
-  "gamesBack": 5,
+  "gamesBack": 7,
   "rank": 7,
-  "points": "2-6-0",
-  "winPercentage": 0.25
+  "points": "2-8-0",
+  "winPercentage": 0.2
  },
  {
   "teamName": "Milwaukee Brats",
   "totalPointsFor": 5793.3,
   "teamId": "yvhv3mpqmphanev0",
-  "gamesBack": 6,
+  "gamesBack": 8,
   "rank": 8,
-  "points": "1-7-0",
-  "winPercentage": 0.125
+  "points": "1-9-0",
+  "winPercentage": 0.1
  }
 ]
