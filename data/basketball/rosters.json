@@ -751,7 +751,7 @@
     },
     {
      "id": "05uih",
-     "position": "G/F",
+     "position": "PF",
      "status": "ACTIVE"
     },
     {
@@ -762,12 +762,12 @@
     {
      "id": "06mjv",
      "position": "PG",
-     "status": "ACTIVE"
+     "status": "RESERVE"
     },
     {
      "id": "06mkd",
-     "position": "PF",
-     "status": "RESERVE"
+     "position": "PF/C",
+     "status": "ACTIVE"
     },
     {
      "id": "0623a",
@@ -786,7 +786,7 @@
     },
     {
      "id": "06227",
-     "position": "G",
+     "position": "PG",
      "status": "ACTIVE"
     },
     {
@@ -836,7 +836,7 @@
     },
     {
      "id": "05qt0",
-     "position": "PF/C",
+     "position": "SF",
      "status": "ACTIVE"
     },
     {
@@ -846,7 +846,7 @@
     },
     {
      "id": "042n7",
-     "position": "PF",
+     "position": "G/F",
      "status": "ACTIVE"
     },
     {
@@ -856,12 +856,12 @@
     },
     {
      "id": "06mkb",
-     "position": "SG/SF",
+     "position": "G",
      "status": "ACTIVE"
     },
     {
      "id": "0621t",
-     "position": "SF",
+     "position": "SG/SF",
      "status": "ACTIVE"
     }
    ]
