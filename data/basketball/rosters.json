@@ -1172,7 +1172,7 @@
     {
      "id": "04qrr",
      "position": "SF",
-     "status": "RESERVE"
+     "status": "ACTIVE"
     },
     {
      "id": "05uiw",
@@ -1182,7 +1182,7 @@
     {
      "id": "04qro",
      "position": "PG",
-     "status": "ACTIVE"
+     "status": "INJURED_RESERVE"
     },
     {
      "id": "04qrj",
@@ -1197,7 +1197,7 @@
     {
      "id": "04qrl",
      "position": "C",
-     "status": "ACTIVE"
+     "status": "RESERVE"
     },
     {
      "id": "06215",
@@ -1221,7 +1221,7 @@
     },
     {
      "id": "04ewe",
-     "position": "SG/SF",
+     "position": "G",
      "status": "ACTIVE"
     },
     {
@@ -1247,12 +1247,12 @@
     {
      "id": "06mlq",
      "position": "SF",
-     "status": "ACTIVE"
+     "status": "RESERVE"
     },
     {
      "id": "03aq2",
      "position": "G/F",
-     "status": "RESERVE"
+     "status": "INJURED_RESERVE"
     },
     {
      "id": "0621i",
@@ -1272,12 +1272,12 @@
     {
      "id": "051op",
      "position": "PF",
-     "status": "RESERVE"
+     "status": "ACTIVE"
     },
     {
      "id": "042n2",
      "position": "PG",
-     "status": "RESERVE"
+     "status": "ACTIVE"
     },
     {
      "id": "05uik",
@@ -1291,8 +1291,8 @@
     },
     {
      "id": "05qtr",
-     "position": "SG",
-     "status": "RESERVE"
+     "position": "SG/SF",
+     "status": "ACTIVE"
     },
     {
      "id": "049kf",
@@ -1301,8 +1301,8 @@
     },
     {
      "id": "04qrw",
-     "position": "G",
-     "status": "ACTIVE"
+     "position": "SG",
+     "status": "RESERVE"
     },
     {
      "id": "05qug",
@@ -1316,8 +1316,8 @@
     },
     {
      "id": "03nwn",
-     "position": "G/F",
-     "status": "ACTIVE"
+     "position": "PF",
+     "status": "RESERVE"
     },
     {
      "id": "042nm",
@@ -1326,23 +1326,23 @@
     },
     {
      "id": "03r7d",
-     "position": "PF",
+     "position": "SG",
      "status": "RESERVE"
     },
     {
      "id": "06mk7",
      "position": "C",
-     "status": "RESERVE"
+     "status": "ACTIVE"
     },
     {
      "id": "06cca",
-     "position": "PF",
-     "status": "RESERVE"
+     "position": "G/F",
+     "status": "ACTIVE"
     },
     {
      "id": "06cc1",
      "position": "PF",
-     "status": "ACTIVE"
+     "status": "RESERVE"
     }
    ]
   }
