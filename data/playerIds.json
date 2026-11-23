@@ -8016,7 +8016,7 @@
   "sportRadarId": "d14f4bc1-f8fa-476a-9f13-4bbf06f17d5c",
   "name": "Church, Marc",
   "fantraxId": "051du",
-  "team": "TEX",
+  "team": "WSH",
   "position": "SP"
  },
  "051dt": {
@@ -36396,6 +36396,12 @@
   "position": "TmH",
   "shortName": "TH"
  },
+ "07axy": {
+  "name": "Castro, Josue",
+  "fantraxId": "07axy",
+  "team": "ATL",
+  "position": "RP"
+ },
  "06owd": {
   "rotowireId": 20948,
   "name": "Ramirez, Ronald",
@@ -36920,7 +36926,7 @@
   "sportRadarId": "fba71c66-344e-44b7-a5b8-1b67f6a3c767",
   "name": "Stephenson, Robert",
   "fantraxId": "02bq7",
-  "team": "LAA",
+  "team": "LAD",
   "position": "RP"
  },
  "03et8": {
@@ -51116,6 +51122,12 @@
   "team": "(N/A)",
   "position": "1B"
  },
+ "072qt": {
+  "name": "Serna, Diego",
+  "fantraxId": "072qt",
+  "team": "SD",
+  "position": "SP"
+ },
  "06bse": {
   "name": "Rivera, Raudy",
   "fantraxId": "06bse",
@@ -53201,7 +53213,7 @@
   "sportRadarId": "7c9c97fd-7a89-49e1-830b-0274a5c2209a",
   "name": "Goldschmidt, Paul",
   "fantraxId": "01ual",
-  "team": "NYY",
+  "team": "NYM",
   "position": "1B"
  },
  "037ab": {
