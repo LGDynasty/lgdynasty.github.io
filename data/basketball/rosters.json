@@ -1047,7 +1047,7 @@
     {
      "id": "06mkc",
      "position": "SG",
-     "status": "INJURED_RESERVE"
+     "status": "RESERVE"
     },
     {
      "id": "076tg",
@@ -1133,11 +1133,6 @@
      "id": "06cbx",
      "position": "G/F",
      "status": "ACTIVE"
-    },
-    {
-     "id": "04qsd",
-     "position": "C",
-     "status": "INJURED_RESERVE"
     },
     {
      "id": "01eo6",
