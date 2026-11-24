@@ -3,7 +3,7 @@
   {
    "away": {
     "teamName": "Maryland Raccoons",
-    "score": 203.2,
+    "score": 201.2,
     "gamesPlayed": 9,
     "teamId": "84erhx5gmpddhfnw"
    },
@@ -160,9 +160,9 @@
     },
     {
      "away": {
-      "display": "12",
-      "value": 12,
-      "points": 24
+      "display": "11",
+      "value": 11,
+      "points": 22
      },
      "name": "Steals",
      "shortName": "ST",
@@ -1354,7 +1354,7 @@
    ],
    "home": {
     "teamName": "League Average",
-    "score": 213.18,
+    "score": 212.93,
     "teamId": "-3"
    }
   },
@@ -1570,7 +1570,7 @@
    ],
    "home": {
     "teamName": "League Average",
-    "score": 213.18,
+    "score": 212.93,
     "teamId": "-3"
    }
   },
@@ -1786,14 +1786,14 @@
    ],
    "home": {
     "teamName": "League Average",
-    "score": 213.18,
+    "score": 212.93,
     "teamId": "-3"
    }
   },
   {
    "away": {
     "teamName": "Maryland Raccoons",
-    "score": 203.2,
+    "score": 201.2,
     "gamesPlayed": 9,
     "teamId": "84erhx5gmpddhfnw"
    },
@@ -1910,9 +1910,9 @@
     },
     {
      "away": {
-      "display": "12",
-      "value": 12,
-      "points": 24
+      "display": "11",
+      "value": 11,
+      "points": 22
      },
      "name": "Steals",
      "shortName": "ST",
@@ -2002,7 +2002,7 @@
    ],
    "home": {
     "teamName": "League Average",
-    "score": 213.18,
+    "score": 212.93,
     "teamId": "-3"
    }
   },
@@ -2218,7 +2218,7 @@
    ],
    "home": {
     "teamName": "League Average",
-    "score": 213.18,
+    "score": 212.93,
     "teamId": "-3"
    }
   },
@@ -2432,7 +2432,7 @@
    ],
    "home": {
     "teamName": "League Average",
-    "score": 213.18,
+    "score": 212.93,
     "teamId": "-3"
    }
   },
@@ -2650,7 +2650,7 @@
    ],
    "home": {
     "teamName": "League Average",
-    "score": 213.18,
+    "score": 212.93,
     "teamId": "-3"
    }
   },
@@ -2868,7 +2868,7 @@
    ],
    "home": {
     "teamName": "League Average",
-    "score": 213.18,
+    "score": 212.93,
     "teamId": "-3"
    }
   }
