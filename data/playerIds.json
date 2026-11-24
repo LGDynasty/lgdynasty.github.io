@@ -4740,6 +4740,7 @@
  },
  "06hj6": {
   "rotowireId": 20706,
+  "sportRadarId": "a0798db9-34d0-4a3b-af87-57941ca39af3",
   "name": "Sato, Teruaki",
   "fantraxId": "06hj6",
   "team": "CHC",
@@ -5725,6 +5726,12 @@
   "fantraxId": "06heg",
   "team": "(N/A)",
   "position": "SP"
+ },
+ "078e9": {
+  "name": "Barajas Jr., Rod",
+  "fantraxId": "078e9",
+  "team": "SF",
+  "position": "C"
  },
  "06heh": {
   "name": "Vincent, Colton",
@@ -30683,7 +30690,7 @@
   "sportRadarId": "646fa095-3f32-41f3-be45-12f5e2d087e4",
   "name": "Moll, Sam",
   "fantraxId": "0311r",
-  "team": "CIN",
+  "team": "CHC",
   "position": "RP"
  },
  "03134": {
@@ -34221,7 +34228,7 @@
   "sportRadarId": "c0b70a61-3271-412f-b312-fd6fbe322ce9",
   "name": "Leonard, Eddys",
   "fantraxId": "04yi5",
-  "team": "SF",
+  "team": "NYM",
   "position": "3B"
  },
  "04yi6": {
@@ -49421,10 +49428,11 @@
  },
  "06ag9": {
   "rotowireId": 19195,
+  "sportRadarId": "981d6663-0cb4-4439-963a-e3bafe27e9e3",
   "name": "Taira, Kaima",
   "fantraxId": "06ag9",
-  "team": "(N/A)",
-  "position": "SP"
+  "team": "TOR",
+  "position": "RP"
  },
  "06rgh": {
   "rotowireId": 20410,
