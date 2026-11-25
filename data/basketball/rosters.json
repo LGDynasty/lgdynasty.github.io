@@ -1,5 +1,5 @@
 {
- "period": 36,
+ "period": 37,
  "rosters": {
   "r860p8dvmpejphif": {
    "teamName": "Olympia Hippies",
@@ -17,17 +17,17 @@
     {
      "id": "04ewf",
      "position": "C",
-     "status": "RESERVE"
+     "status": "ACTIVE"
     },
     {
      "id": "051or",
-     "position": "SG/SF",
-     "status": "ACTIVE"
+     "position": "PF",
+     "status": "RESERVE"
     },
     {
      "id": "02nf1",
      "position": "C",
-     "status": "ACTIVE"
+     "status": "RESERVE"
     },
     {
      "id": "04qry",
@@ -46,8 +46,8 @@
     },
     {
      "id": "06213",
-     "position": "PF",
-     "status": "RESERVE"
+     "position": "SF",
+     "status": "ACTIVE"
     },
     {
      "id": "03e6n",
@@ -66,23 +66,23 @@
     },
     {
      "id": "05uiq",
-     "position": "PF",
-     "status": "RESERVE"
+     "position": "F",
+     "status": "ACTIVE"
     },
     {
      "id": "05qto",
      "position": "PG",
-     "status": "ACTIVE"
+     "status": "RESERVE"
     },
     {
      "id": "04ex8",
-     "position": "G/F",
+     "position": "SG",
      "status": "ACTIVE"
     },
     {
      "id": "05uie",
-     "position": "F",
-     "status": "ACTIVE"
+     "position": "PF",
+     "status": "RESERVE"
     },
     {
      "id": "02nfz",
@@ -116,8 +116,8 @@
     },
     {
      "id": "01uyj",
-     "position": "SF",
-     "status": "ACTIVE"
+     "position": "PF",
+     "status": "RESERVE"
     },
     {
      "id": "03ad2",
@@ -132,7 +132,7 @@
     {
      "id": "05uij",
      "position": "PG",
-     "status": "RESERVE"
+     "status": "ACTIVE"
     },
     {
      "id": "06216",
@@ -146,13 +146,13 @@
     },
     {
      "id": "027oj",
-     "position": "SG",
-     "status": "ACTIVE"
+     "position": "PG",
+     "status": "RESERVE"
     },
     {
      "id": "04qsa",
-     "position": "PG",
-     "status": "RESERVE"
+     "position": "G/F",
+     "status": "ACTIVE"
     },
     {
      "id": "02nf9",
@@ -166,8 +166,8 @@
     },
     {
      "id": "076tl",
-     "position": "SG",
-     "status": "RESERVE"
+     "position": "SG/SF",
+     "status": "ACTIVE"
     },
     {
      "id": "076sz",
@@ -181,8 +181,8 @@
    "rosterItems": [
     {
      "id": "051on",
-     "position": "SG",
-     "status": "RESERVE"
+     "position": "G",
+     "status": "ACTIVE"
     },
     {
      "id": "06v5v",
@@ -191,8 +191,8 @@
     },
     {
      "id": "076tc",
-     "position": "G",
-     "status": "ACTIVE"
+     "position": "SG",
+     "status": "RESERVE"
     },
     {
      "id": "05qtv",
@@ -201,8 +201,8 @@
     },
     {
      "id": "05uir",
-     "position": "F",
-     "status": "ACTIVE"
+     "position": "PF",
+     "status": "RESERVE"
     },
     {
      "id": "04ewn",
@@ -212,17 +212,17 @@
     {
      "id": "04ex6",
      "position": "C",
-     "status": "RESERVE"
+     "status": "ACTIVE"
     },
     {
      "id": "076t9",
-     "position": "SG/SF",
-     "status": "ACTIVE"
+     "position": "SG",
+     "status": "RESERVE"
     },
     {
      "id": "06v5m",
      "position": "PF",
-     "status": "RESERVE"
+     "status": "ACTIVE"
     },
     {
      "id": "076t0",
@@ -246,13 +246,13 @@
     },
     {
      "id": "06mk3",
-     "position": "PF",
-     "status": "RESERVE"
+     "position": "F",
+     "status": "ACTIVE"
     },
     {
      "id": "005ki",
-     "position": "C",
-     "status": "RESERVE"
+     "position": "PF/C",
+     "status": "ACTIVE"
     },
     {
      "id": "06v5i",
@@ -282,7 +282,7 @@
     {
      "id": "076sy",
      "position": "PF",
-     "status": "ACTIVE"
+     "status": "RESERVE"
     },
     {
      "id": "01enh",
@@ -301,13 +301,13 @@
     },
     {
      "id": "076sx",
-     "position": "SF",
-     "status": "RESERVE"
+     "position": "SG/SF",
+     "status": "ACTIVE"
     },
     {
      "id": "03e75",
      "position": "C",
-     "status": "ACTIVE"
+     "status": "RESERVE"
     },
     {
      "id": "06v5r",
@@ -316,8 +316,8 @@
     },
     {
      "id": "05ujd",
-     "position": "PF/C",
-     "status": "ACTIVE"
+     "position": "C",
+     "status": "RESERVE"
     },
     {
      "id": "076te",
@@ -372,7 +372,7 @@
     {
      "id": "05qtj",
      "position": "SF",
-     "status": "RESERVE"
+     "status": "ACTIVE"
     },
     {
      "id": "042nq",
@@ -381,13 +381,13 @@
     },
     {
      "id": "06mlz",
-     "position": "PG",
-     "status": "RESERVE"
+     "position": "G/F",
+     "status": "ACTIVE"
     },
     {
      "id": "03ajv",
      "position": "F",
-     "status": "RESERVE"
+     "status": "ACTIVE"
     },
     {
      "id": "05uid",
@@ -421,13 +421,13 @@
     },
     {
      "id": "03al2",
-     "position": "PF/C",
+     "position": "C",
      "status": "ACTIVE"
     },
     {
      "id": "051os",
      "position": "SF",
-     "status": "ACTIVE"
+     "status": "RESERVE"
     },
     {
      "id": "04qru",
@@ -437,22 +437,22 @@
     {
      "id": "05uif",
      "position": "PG",
-     "status": "ACTIVE"
+     "status": "RESERVE"
     },
     {
      "id": "0496e",
      "position": "PG",
-     "status": "INJURED_RESERVE"
+     "status": "RESERVE"
     },
     {
      "id": "03al0",
-     "position": "PF",
-     "status": "ACTIVE"
+     "position": "F",
+     "status": "RESERVE"
     },
     {
      "id": "051pi",
      "position": "C",
-     "status": "ACTIVE"
+     "status": "RESERVE"
     },
     {
      "id": "076tb",
@@ -467,7 +467,7 @@
     {
      "id": "02nf6",
      "position": "PG",
-     "status": "RESERVE"
+     "status": "ACTIVE"
     },
     {
      "id": "042n6",
@@ -481,7 +481,7 @@
     },
     {
      "id": "0527h",
-     "position": "G/F",
+     "position": "PF/C",
      "status": "ACTIVE"
     },
     {
@@ -507,7 +507,7 @@
     {
      "id": "076tz",
      "position": "F",
-     "status": "ACTIVE"
+     "status": "MINORS"
     },
     {
      "id": "076td",
@@ -531,8 +531,8 @@
     },
     {
      "id": "0011e",
-     "position": "F",
-     "status": "RESERVE"
+     "position": "PF",
+     "status": "ACTIVE"
     }
    ]
   },
@@ -702,7 +702,7 @@
     {
      "id": "06mmf",
      "position": "PG",
-     "status": "ACTIVE"
+     "status": "RESERVE"
     },
     {
      "id": "076t8",
@@ -716,18 +716,18 @@
     },
     {
      "id": "031m2",
-     "position": "C",
-     "status": "INJURED_RESERVE"
+     "position": "F",
+     "status": "ACTIVE"
     },
     {
      "id": "05qub",
-     "position": "PF",
-     "status": "RESERVE"
+     "position": "PF/C",
+     "status": "ACTIVE"
     },
     {
      "id": "06mkg",
-     "position": "PF/C",
-     "status": "ACTIVE"
+     "position": "PF",
+     "status": "RESERVE"
     },
     {
      "id": "04ewu",
@@ -737,12 +737,12 @@
     {
      "id": "06mk1",
      "position": "C",
-     "status": "RESERVE"
+     "status": "ACTIVE"
     },
     {
      "id": "05qt3",
-     "position": "F",
-     "status": "ACTIVE"
+     "position": "SF",
+     "status": "RESERVE"
     },
     {
      "id": "05uib",
@@ -751,8 +751,8 @@
     },
     {
      "id": "05uih",
-     "position": "C",
-     "status": "RESERVE"
+     "position": "G/F",
+     "status": "ACTIVE"
     },
     {
      "id": "06v5h",
@@ -762,7 +762,7 @@
     {
      "id": "06mjv",
      "position": "PG",
-     "status": "RESERVE"
+     "status": "ACTIVE"
     },
     {
      "id": "06mkd",
@@ -781,13 +781,13 @@
     },
     {
      "id": "06cc5",
-     "position": "SG/SF",
-     "status": "ACTIVE"
+     "position": "PG",
+     "status": "RESERVE"
     },
     {
      "id": "06227",
-     "position": "PG",
-     "status": "RESERVE"
+     "position": "SG/SF",
+     "status": "ACTIVE"
     },
     {
      "id": "076t3",
@@ -796,8 +796,8 @@
     },
     {
      "id": "06mju",
-     "position": "PF",
-     "status": "ACTIVE"
+     "position": "C",
+     "status": "RESERVE"
     },
     {
      "id": "027oz",
@@ -812,7 +812,7 @@
     {
      "id": "05qst",
      "position": "C",
-     "status": "ACTIVE"
+     "status": "RESERVE"
     },
     {
      "id": "06mk4",
@@ -822,7 +822,7 @@
     {
      "id": "06mjt",
      "position": "SF",
-     "status": "ACTIVE"
+     "status": "RESERVE"
     },
     {
      "id": "06217",
@@ -831,8 +831,8 @@
     },
     {
      "id": "05qsp",
-     "position": "SG",
-     "status": "ACTIVE"
+     "position": "SG/SF",
+     "status": "RESERVE"
     },
     {
      "id": "05qt0",
@@ -846,12 +846,12 @@
     },
     {
      "id": "042n7",
-     "position": "C",
-     "status": "RESERVE"
+     "position": "PF",
+     "status": "ACTIVE"
     },
     {
      "id": "05qu9",
-     "position": "SG/SF",
+     "position": "SG",
      "status": "RESERVE"
     },
     {
@@ -862,7 +862,7 @@
     {
      "id": "0621t",
      "position": "SF",
-     "status": "RESERVE"
+     "status": "ACTIVE"
     }
    ]
   },
@@ -936,8 +936,8 @@
     },
     {
      "id": "06v58",
-     "position": "PG",
-     "status": "ACTIVE"
+     "position": "SG",
+     "status": "RESERVE"
     },
     {
      "id": "0621x",
@@ -976,8 +976,8 @@
     },
     {
      "id": "0621k",
-     "position": "SG/SF",
-     "status": "ACTIVE"
+     "position": "SG",
+     "status": "RESERVE"
     },
     {
      "id": "076t6",
@@ -1031,13 +1031,13 @@
    "rosterItems": [
     {
      "id": "062dn",
-     "position": "F",
-     "status": "ACTIVE"
+     "position": "SF",
+     "status": "RESERVE"
     },
     {
      "id": "05uiz",
-     "position": "G",
-     "status": "ACTIVE"
+     "position": "SG",
+     "status": "RESERVE"
     },
     {
      "id": "06mjz",
@@ -1076,8 +1076,8 @@
     },
     {
      "id": "06v5k",
-     "position": "SG",
-     "status": "RESERVE"
+     "position": "G",
+     "status": "ACTIVE"
     },
     {
      "id": "05qtq",
@@ -1086,13 +1086,13 @@
     },
     {
      "id": "06cc7",
-     "position": "SF",
-     "status": "RESERVE"
+     "position": "SG/SF",
+     "status": "ACTIVE"
     },
     {
      "id": "04ewk",
-     "position": "SG/SF",
-     "status": "ACTIVE"
+     "position": "SF",
+     "status": "RESERVE"
     },
     {
      "id": "03nwk",
@@ -1126,8 +1126,8 @@
     },
     {
      "id": "03ad3",
-     "position": "C",
-     "status": "RESERVE"
+     "position": "F",
+     "status": "ACTIVE"
     },
     {
      "id": "06cbx",
@@ -1137,7 +1137,7 @@
     {
      "id": "01eo6",
      "position": "PG",
-     "status": "RESERVE"
+     "status": "ACTIVE"
     },
     {
      "id": "0722s",
@@ -1157,7 +1157,7 @@
     {
      "id": "042n4",
      "position": "PG",
-     "status": "ACTIVE"
+     "status": "RESERVE"
     }
    ]
   },
