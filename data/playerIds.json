@@ -6688,7 +6688,7 @@
   "name": "Barkett, Isaiah",
   "fantraxId": "06z3u",
   "team": "SF",
-  "position": "3B"
+  "position": "2B"
  },
  "077p7": {
   "name": "Johnson, Sherman",
@@ -9353,7 +9353,7 @@
   "name": "Biddison, Nick",
   "fantraxId": "064nn",
   "team": "PHI",
-  "position": "3B"
+  "position": "2B"
  },
  "077qk": {
   "name": "Lei, Mason",
@@ -10464,7 +10464,7 @@
   "name": "Cassedy, Brandon",
   "fantraxId": "06zdh",
   "team": "HOU",
-  "position": "SP"
+  "position": "RP"
  },
  "06ibx": {
   "rotowireId": 19365,
@@ -10608,7 +10608,7 @@
   "name": "Bay, John",
   "fantraxId": "06zcy",
   "team": "NYM",
-  "position": "RF"
+  "position": "CF"
  },
  "02mx5": {
   "rotowireId": 12527,
@@ -10832,7 +10832,7 @@
   "name": "Bonet, Jarrette",
   "fantraxId": "06zcf",
   "team": "MIL",
-  "position": "RP"
+  "position": "SP"
  },
  "06ic4": {
   "rotowireId": 19419,
@@ -14595,7 +14595,7 @@
   "name": "Bass, Jayson",
   "fantraxId": "06hrp",
   "team": "MIN",
-  "position": "1B"
+  "position": "RF"
  },
  "06yta": {
   "name": "Munoz, Albert",
@@ -16376,7 +16376,7 @@
   "name": "Bower, Sam",
   "fantraxId": "065uy",
   "team": "SF",
-  "position": "SP"
+  "position": "RP"
  },
  "004ee": {
   "statsIncId": 8193,
@@ -17061,7 +17061,7 @@
   "name": "Britton, Rio",
   "fantraxId": "06htm",
   "team": "ARI",
-  "position": "RP"
+  "position": "SP"
  },
  "078ry": {
   "name": "Thompson, Kyeler",
@@ -17737,7 +17737,7 @@
   "name": "Cande, Jarrod",
   "fantraxId": "06hvx",
   "team": "COL",
-  "position": "SP"
+  "position": "RP"
  },
  "06yxi": {
   "rotowireId": 20224,
@@ -21249,7 +21249,7 @@
   "name": "Cabrera, Manuel",
   "fantraxId": "066m9",
   "team": "WSH",
-  "position": "1B"
+  "position": "3B"
  },
  "066kw": {
   "rotowireId": 17487,
@@ -22552,8 +22552,8 @@
   "sportRadarId": "bae435b1-0ba9-4c94-b4fc-ce0532aee055",
   "name": "Brooks, Trenton",
   "fantraxId": "0420f",
-  "team": "HOU",
-  "position": "LF"
+  "team": "(N/A)",
+  "position": "1B"
  },
  "0420g": {
   "statsIncId": 11438,
@@ -23108,7 +23108,7 @@
   "name": "Braswell, Michael",
   "fantraxId": "05yh7",
   "team": "KC",
-  "position": "3B"
+  "position": "RP"
  },
  "05yfr": {
   "name": "Kent, Nic",
@@ -31840,7 +31840,7 @@
   "name": "Bowser, Drew",
   "fantraxId": "05jrl",
   "team": "CHC",
-  "position": "3B"
+  "position": "2B"
  },
  "05jri": {
   "rotowireId": 16735,
@@ -32738,8 +32738,8 @@
   "rotowireId": 19701,
   "name": "Candiotti, Clark",
   "fantraxId": "06o0d",
-  "team": "SD",
-  "position": "SP"
+  "team": "(N/A)",
+  "position": "RP"
  },
  "10160#50": {
   "teamName": "Miami Marlins",
@@ -33801,7 +33801,7 @@
   "name": "Cardenas, Anderson",
   "fantraxId": "06maw",
   "team": "ARI",
-  "position": "RP"
+  "position": "SP"
  },
  "06mc2": {
   "name": "Estevez, Samuel",
@@ -33847,7 +33847,7 @@
   "name": "Brown, Juan",
   "fantraxId": "06mdm",
   "team": "CIN",
-  "position": "RF"
+  "position": "1B"
  },
  "06mdn": {
   "name": "Lopez, Jose",
@@ -40856,7 +40856,7 @@
   "name": "Bauman, Tanner",
   "fantraxId": "06qu6",
   "team": "ATL",
-  "position": "SP"
+  "position": "RP"
  },
  "06qst": {
   "name": "Freethy, J.R.",
@@ -41290,7 +41290,7 @@
   "name": "Becerra, Christian",
   "fantraxId": "06qnd",
   "team": "MIN",
-  "position": "SP"
+  "position": "RP"
  },
  "06qna": {
   "name": "Goode, Cayman",
@@ -41320,7 +41320,7 @@
   "name": "Brooks, Steven",
   "fantraxId": "06qo6",
   "team": "BOS",
-  "position": "SP"
+  "position": "RP"
  },
  "06qo7": {
   "rotowireId": 20451,
@@ -41532,7 +41532,7 @@
   "name": "Alcantara, Henry",
   "fantraxId": "06s46",
   "team": "SEA",
-  "position": "RP"
+  "position": "SP"
  },
  "06qpq": {
   "name": "Johnson, Ben",
@@ -41714,7 +41714,7 @@
   "name": "Carpinteiro, Alan",
   "fantraxId": "06s37",
   "team": "SEA",
-  "position": "SP"
+  "position": "RP"
  },
  "06qou": {
   "name": "Shirk, Jake",
@@ -43133,7 +43133,7 @@
   "name": "Becker, Colton",
   "fantraxId": "06qjs",
   "team": "KC",
-  "position": "SS"
+  "position": "3B"
  },
  "06ql6": {
   "name": "Hoopes, Hunter",
@@ -43955,7 +43955,7 @@
   "name": "Biller, Denton",
   "fantraxId": "070d5",
   "team": "BAL",
-  "position": "RP"
+  "position": "SP"
  },
  "070bt": {
   "name": "deJong, Holden",
@@ -46571,7 +46571,7 @@
   "name": "Casanova, Esterlin",
   "fantraxId": "0731c",
   "team": "BOS",
-  "position": "SS"
+  "position": "3B"
  },
  "06c2s": {
   "rotowireId": 19241,
@@ -48496,7 +48496,7 @@
   "name": "Brima, Juan",
   "fantraxId": "06rob",
   "team": "ARI",
-  "position": "2B"
+  "position": "3B"
  },
  "06c10": {
   "rotowireId": 18032,
@@ -53320,7 +53320,7 @@
   "name": "Boudreau, Tyler",
   "fantraxId": "072jg",
   "team": "NYY",
-  "position": "RP"
+  "position": "SP"
  },
  "06bkw": {
   "name": "Montero, Ricardo",
@@ -55158,7 +55158,7 @@
   "name": "Carrera, David",
   "fantraxId": "06tvi",
   "team": "NYY",
-  "position": "LF"
+  "position": "RF"
  },
  "073se": {
   "name": "Goldstein, Cade",
@@ -57766,7 +57766,7 @@
   "name": "Castillo, Luis",
   "fantraxId": "061v8",
   "team": "MIL",
-  "position": "LF"
+  "position": "RF"
  },
  "061v7": {
   "rotowireId": 18201,
@@ -58077,8 +58077,8 @@
   "rotowireId": 18408,
   "name": "Boyle, Sean",
   "fantraxId": "04q78",
-  "team": "SD",
-  "position": "SP"
+  "team": "(N/A)",
+  "position": "RP"
  },
  "10210#50": {
   "teamName": "Cincinnati Reds",
@@ -58110,7 +58110,7 @@
   "name": "Benson, JT",
   "fantraxId": "074vq",
   "team": "NYM",
-  "position": "CF"
+  "position": "RF"
  },
  "04q5s": {
   "rotowireId": 19201,
@@ -58336,7 +58336,7 @@
   "name": "Brown, Graham",
   "fantraxId": "0766c",
   "team": "MIN",
-  "position": "CF"
+  "position": "LF"
  },
  "06uwd": {
   "name": "Martinez, Kevin",
@@ -62566,7 +62566,7 @@
   "name": "Blanco, Wilmer",
   "fantraxId": "06umf",
   "team": "PHI",
-  "position": "SP"
+  "position": "RP"
  },
  "06umg": {
   "name": "Zapata, Deyer",
@@ -67689,8 +67689,8 @@
  "075f1": {
   "name": "Biller, Sam",
   "fantraxId": "075f1",
-  "team": "NYM",
-  "position": "LF"
+  "team": "(N/A)",
+  "position": "CF"
  },
  "04paj": {
   "statsIncId": 11404,
@@ -67748,7 +67748,7 @@
   "name": "Brooks, Michael",
   "fantraxId": "075gi",
   "team": "ATH",
-  "position": "SS"
+  "position": "2B"
  },
  "075gj": {
   "name": "Birge, Alex",
