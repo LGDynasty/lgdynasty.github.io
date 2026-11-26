@@ -830,14 +830,14 @@
      "status": "MINORS"
     },
     {
-     "id": "06mjt",
-     "position": "SF",
-     "status": "ACTIVE"
-    },
-    {
      "id": "042n3",
      "position": "G",
      "status": "RESERVE"
+    },
+    {
+     "id": "06mjt",
+     "position": "SF",
+     "status": "ACTIVE"
     },
     {
      "id": "06217",
